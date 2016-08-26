@@ -341,7 +341,6 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/practice)
 	clumsy_check = 0
 	needs_permit = 0
-	pin = /obj/item/device/firing_pin
 	cell_type = /obj/item/weapon/stock_parts/cell/bluespace
 
 /obj/item/weapon/gun/energy/laser/chameleon/New()

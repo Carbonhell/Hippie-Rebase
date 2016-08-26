@@ -34,9 +34,9 @@
 	name = "pellet"
 	damage = 15
 
-/obj/item/projectile/bullet/pellet/weak/New()
+/obj/item/projectile/bullet/pellet/weak
 	damage = 6
-	range = rand(8)
+	range = 8
 
 /obj/item/projectile/bullet/pellet/weak/on_range()
  	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
@@ -44,9 +44,9 @@
  	sparks.start()
  	..()
 
-/obj/item/projectile/bullet/pellet/overload/New()
+/obj/item/projectile/bullet/pellet/overload
 	damage = 3
-	range = rand(10)
+	range = 10
 
 /obj/item/projectile/bullet/pellet/overload/on_hit(atom/target, blocked = 0)
  	..()
