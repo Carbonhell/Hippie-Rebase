@@ -13,10 +13,6 @@
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
-	pin = null
-
-/obj/item/weapon/gun/projectile/automatic/proto/unrestricted
-	pin = /obj/item/device/firing_pin
 
 /obj/item/weapon/gun/projectile/automatic/update_icon()
 	..()
@@ -91,10 +87,6 @@
 	fire_sound = 'sound/weapons/Gunshot_smg.ogg'
 	fire_delay = 2
 	burst_size = 2
-	pin = /obj/item/device/firing_pin/implant/pindicate
-
-/obj/item/weapon/gun/projectile/automatic/c20r/unrestricted
-	pin = /obj/item/device/firing_pin
 
 /obj/item/weapon/gun/projectile/automatic/c20r/New()
 	..()
@@ -145,7 +137,6 @@
 	var/obj/item/weapon/gun/projectile/revolver/grenadelauncher/underbarrel
 	burst_size = 3
 	fire_delay = 2
-	pin = /obj/item/device/firing_pin/implant/pindicate
 
 /obj/item/weapon/gun/projectile/automatic/m90/New()
 	..()
@@ -153,12 +144,9 @@
 	update_icon()
 	return
 
-/obj/item/weapon/gun/projectile/automatic/m90/unrestricted
-	pin = /obj/item/device/firing_pin
-
 /obj/item/weapon/gun/projectile/automatic/m90/unrestricted/New()
 	..()
-	underbarrel = new /obj/item/weapon/gun/projectile/revolver/grenadelauncher/unrestricted(src)
+	underbarrel = new /obj/item/weapon/gun/projectile/revolver/grenadelauncher(src)
 	update_icon()
 	return
 
@@ -250,11 +238,7 @@
 	can_suppress = 0
 	burst_size = 1
 	fire_delay = 0
-	pin = /obj/item/device/firing_pin/implant/pindicate
 	actions_types = list()
-
-/obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/unrestricted
-	pin = /obj/item/device/firing_pin
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/New()
 	..()
@@ -296,11 +280,6 @@
 	can_suppress = 0
 	burst_size = 3
 	fire_delay = 1
-	pin = /obj/item/device/firing_pin/implant/pindicate
-
-/obj/item/weapon/gun/projectile/automatic/l6_saw/unrestricted
-	pin = /obj/item/device/firing_pin
-
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw/attack_self(mob/user)
 	cover_open = !cover_open
@@ -380,7 +359,6 @@
 /obj/item/weapon/gun/projectile/automatic/sniper_rifle/syndicate
 	name = "syndicate sniper rifle"
 	desc = "Syndicate flavoured sniper rifle, it packs quite a punch, a punch to your face"
-	pin = /obj/item/device/firing_pin/implant/pindicate
 	origin_tech = "combat=7;syndicate=6"
 
 

@@ -158,7 +158,6 @@
 	icon_state = "goldrevolver"
 	fire_sound = 'sound/weapons/resonator_blast.ogg'
 	recoil = 8
-	pin = /obj/item/device/firing_pin
 
 /obj/item/weapon/gun/projectile/revolver/nagant
 	name = "nagant revolver"
