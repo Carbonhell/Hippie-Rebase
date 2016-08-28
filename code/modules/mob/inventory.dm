@@ -146,6 +146,9 @@
 	if((I.flags & NODROP) && !force)
 		return 0
 
+	if(istype(I, /obj/item/organ) && force)//don't want a guy's brain to fall on the floor due to unequipping
+		return 0
+
 	if(I == r_hand)
 		r_hand = null
 		update_inv_r_hand()

@@ -105,7 +105,10 @@
 			D.equip_to_slot_or_del(new /obj/item/weapon/card/id/admin(D), slot_wear_id)
 			D.equip_to_slot_or_del(new /obj/item/device/radio/headset/headset_cent(D), slot_ears)
 			D.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(D), slot_back)
-		//	T.turf_animation('icons/effects/96x96.dmi',"beamin",-32,0,MOB_LAYER+1,'sound/misc/adminspawn.ogg',5)
+			var/image/img = image(icon = 'icons/effects/96x96.dmi', icon_state = "beamin")
+			img.pixel_x = -world.icon_size
+			flick_overlay_static(img, D, 36)
+			playsound(T, 'sound/misc/adminspawn.ogg', 50, 1)
 			D.name = "Admin"
 			D.real_name = "Admin"
 			var/newname = ""

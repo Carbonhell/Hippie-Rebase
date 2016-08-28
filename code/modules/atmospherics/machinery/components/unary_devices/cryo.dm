@@ -7,7 +7,7 @@
 
 	var/on = FALSE
 	state_open = FALSE
-	var/autoeject = FALSE
+	var/autoeject = TRUE
 	var/volume = 100
 
 	var/efficiency = 1

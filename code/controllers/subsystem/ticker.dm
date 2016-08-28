@@ -452,7 +452,7 @@ var/datum/subsystem/ticker/ticker
 		world.log << dellog
 
 	//Collects persistence features
-	SSpersistence.CollectData()
+	//SSpersistence.CollectData()
 	return 1
 
 /datum/subsystem/ticker/proc/send_tip_of_the_round()

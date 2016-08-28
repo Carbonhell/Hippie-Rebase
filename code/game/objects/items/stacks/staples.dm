@@ -1,5 +1,5 @@
 /obj/item/stack/staples
-	name = "staples"
+	name = "Staples"
 	singular_name = "Staple"
 	desc = "Staples for use with staplegun."
 	icon = 'icons/obj/staples.dmi'
@@ -13,7 +13,7 @@
 	materials = list(MAT_METAL = 100)
 	max_amount = 10
 
-/obj/item/stack/staples/New(loc, amount=null)
+/obj/item/stack/staples/New(var/loc, var/amount=null)
 	update_icon()
 	return ..()
 
