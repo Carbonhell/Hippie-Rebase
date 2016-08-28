@@ -543,6 +543,7 @@ obj/item/proc/item_action_slot_check(slot, mob/user)
 	if(assthrown)
 		embed_chance = 100//you must embed!
 		embedded_ignore_throwspeed_threshold = 1
+		throw_range = initial(throw_range)
 	return A.hitby(src, 0, itempush)
 
 /obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=1)

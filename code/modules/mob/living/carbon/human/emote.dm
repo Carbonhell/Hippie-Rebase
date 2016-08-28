@@ -462,6 +462,7 @@
 				if(P.contents.len)
 					for(var/obj/item/O in P.contents)
 						P.remove_from_storage(O, get_turf(src))
+						O.throw_range = 7//will be reset on hit
 						O.assthrown = 1
 						var/turf/target = get_turf(O)
 						var/range = 7
