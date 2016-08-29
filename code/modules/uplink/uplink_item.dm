@@ -101,14 +101,6 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	category = "Job-specific Contraband"
 	surplus = 0
 
-//SCIENCE + MEDICAL
-/datum/uplink_item/job_specific/labcoat
-	name = "Armored Labcoat"
-	desc = "An armored labcoat with the ability to change how it looks into any standard Nanotrasen issue labcoat."
-	item = /obj/item/clothing/suit/labcoat/chameleon
-	cost = 4
-	jobs = list("Chemist", "Medical Doctor", "Chief Medical Officer", "Geneticist", "Virologist", "Research Director", "Scientist", "Roboticist") //all the labcoat jobs
-
 //MEDICAL
 /datum/uplink_item/job_specific/voodoo
 	name = "Voodoo Doll"
@@ -124,6 +116,14 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/item/weapon/twohanded/required/chainsaw/doomslayer
 	cost = 14
 	jobs = list("Botanist", "Bartender", "Chef")
+
+//CIVILIAN DIVISION
+/datum/uplink_item/job_specific/spiritcam
+	name = "Spirit Camera"
+	desc = "This special camera allows you to take long-distance photographs of any living person provided you know their name."
+	item = /obj/item/device/camera/spiritcam
+	cost = 4
+	jobs = list("Librarian", "Assistant", "Clown", "Mime", "Lawyer", "Chaplain")
 
 //LIBRARIAN
 /datum/uplink_item/job_specific/soulstone

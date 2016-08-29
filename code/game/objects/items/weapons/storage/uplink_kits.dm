@@ -1,7 +1,10 @@
-/obj/item/weapon/storage/box/syndicate/
+/obj/item/weapon/storage/box/syndicate
 
 /obj/item/weapon/storage/box/syndicate/New()
 	..()
+	if(istype(ticker.mode,/datum/game_mode/traitor/king_disk))
+		for(var/i in 1 to 14)
+			new /obj/item/weapon/pinpointer(src)
 	switch (pickweight(list("bloodyspai" = 3, "stealth" = 2, "bond" = 2, "screwed" = 2, "sabotage" = 3, "guns" = 2, "murder" = 2, "implant" = 1, "hacker" = 3, "lordsingulo" = 1, "darklord" = 1, "Sniper" = 1)))
 		if("bloodyspai") // 27 tc now this is more right
 			new /obj/item/clothing/under/chameleon(src) // 2 tc since it's not the full set
