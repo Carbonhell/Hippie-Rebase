@@ -80,6 +80,7 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 	var/embedded_impact_pain_multiplier = EMBEDDED_IMPACT_PAIN_MULTIPLIER //The coefficient of multiplication for the damage this item does when first embedded (this*w_class)
 	var/embedded_unsafe_removal_pain_multiplier = EMBEDDED_UNSAFE_REMOVAL_PAIN_MULTIPLIER //The coefficient of multiplication for the damage removing this without surgery causes (this*w_class)
 	var/embedded_unsafe_removal_time = EMBEDDED_UNSAFE_REMOVAL_TIME //A time in ticks, multiplied by the w_class.
+	var/embedded_ignore_throwspeed_threshold = FALSE
 
 	var/alternate_screams = list() // This is used to add alternate scream sounds to mobs when equipped
 
@@ -539,6 +540,10 @@ obj/item/proc/item_action_slot_check(slot, mob/user)
 	var/itempush = 1
 	if(w_class < 4)
 		itempush = 0 //too light to push anything
+	if(assthrown)
+		embed_chance = 100//you must embed!
+		embedded_ignore_throwspeed_threshold = 1
+		throw_range = initial(throw_range)
 	return A.hitby(src, 0, itempush)
 
 /obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=1)

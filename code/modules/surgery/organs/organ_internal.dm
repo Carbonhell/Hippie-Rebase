@@ -24,7 +24,7 @@
 	owner = M
 	M.internal_organs |= src
 	M.internal_organs_slot[slot] = src
-	loc = null
+	loc = M
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.Grant(M)
@@ -455,15 +455,38 @@
 	slot_flags = SLOT_HEAD
 	embed_chance = 5 //This is a joke
 	var/loose = 0
-	var/capacity = 2 // this is how much items the butt can hold. 1 means only 1 tiny item, while 2 means 2 tiny items OR 1 small item.
-	var/stored = 0 //how many items are inside
+	var/obj/item/weapon/storage/internal/pocket/butt/inv = /obj/item/weapon/storage/internal/pocket/butt
+
+/obj/item/organ/internal/butt/New()
+	..()
+	inv = new(src)
+
+/obj/item/organ/internal/butt/Remove(mob/living/carbon/M, special = 0)
+	..()
+	if(inv)
+		inv.close_all()
+
+/obj/item/organ/internal/butt/on_life()
+	if(owner && inv)
+		for(var/obj/item/I in inv.contents)
+			if(I.is_sharp() || is_pointed(I))
+				owner.bleed(4)
+
+/obj/item/organ/internal/butt/Destroy()
+	if(inv)
+		if(inv.contents.len)
+			for(var/i in inv.contents.len)
+				var/obj/item/I = i
+				inv.remove_from_storage(I, get_turf(src))
+		qdel(inv)
+	..()
 
 /obj/item/organ/internal/butt/xeno //XENOMORPH BUTTS ARE BEST BUTTS yes i agree
 	name = "alien butt"
 	desc = "best trophy ever"
 	icon_state = "xenobutt"
 	item_state = "xenobutt"
-	capacity = 3 // aka either 3 tiny items or 1 small+1 tiny. xenos are huge,their butt should be bigger too
+	inv = /obj/item/weapon/storage/internal/pocket/butt/xeno
 
 /obj/item/organ/internal/butt/bluebutt // bluespace butts, science
 	name = "butt of holding"
@@ -471,7 +494,7 @@
 	icon_state = "bluebutt"
 	item_state = "bluebutt"
 	origin_tech = "bluespace=5;biotech=4"
-	capacity = 4
+	inv = /obj/item/weapon/storage/internal/pocket/butt/bluespace
 
 /obj/item/organ/internal/butt/attackby(var/obj/item/W, mob/user as mob, params) // copypasting bot manufucturing process, im a lazy fuck
 

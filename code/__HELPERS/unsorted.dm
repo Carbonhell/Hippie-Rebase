@@ -817,6 +817,9 @@ var/global/list/common_tools = list(
 		return 1
 	if(is_pointed(W))
 		return 1
+	if(W.assthrown)
+		W.embedded_ignore_throwspeed_threshold = initial(W.embedded_ignore_throwspeed_threshold)//let's reset this
+		return 1
 
 	var/list/embed_items = list(\
 	/obj/item/stack/rods,\

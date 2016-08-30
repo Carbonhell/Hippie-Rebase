@@ -49,10 +49,11 @@
 				m_type = 2
 
 		if ("collapse","collapses")
-			Paralyse(2)
-			adjustStaminaLoss(100) // Hampers abuse against simple mobs, but still leaves it a viable option.
-			message = "<B>[src]</B> collapses!"
-			m_type = 2
+			if(status_flags & CANPARALYSE)	//You can't collapse if you can't actually collapse.
+				Paralyse(2)
+				adjustStaminaLoss(100) // Hampers abuse against simple mobs, but still leaves it a viable option.
+				message = "<B>[src]</B> collapses!"
+				m_type = 2
 
 		if ("cough","coughs")
 			if (miming)
@@ -151,9 +152,9 @@
 
 		if ("fart")
 			exception = 1
-			var/obj/item/organ/internal/butt/B = locate() in internal_organs
+			var/obj/item/organ/internal/butt/B = getorgan(/obj/item/organ/internal/butt)
 			if(!B)
-				src << "\red You don't have a butt!"
+				src << "<span class='danger'>You don't have a butt!</span>"
 				return
 			var/lose_butt = prob(6)
 			for(var/mob/living/M in get_turf(src))
@@ -177,17 +178,19 @@
 					"is a <b>farting</b> motherfucker!",
 					"<B><font color='red'>f</font><font color='blue'>a</font><font color='red'>r</font><font color='blue'>t</font><font color='red'>s</font></B>")]"
 			spawn(0)
-				var/obj/item/weapon/storage/book/bible/Y = locate() in get_turf(loc)
-				if(istype(Y))
-					var/obj/effect/lightning/L = new(get_turf(loc))
-					L.start()
+				var/obj/item/weapon/storage/book/bible/Y = locate() in get_turf(src)
+				if(Y)
+					var/image/img = image(icon = 'icons/effects/224x224.dmi', icon_state = "lightning")
+					img.pixel_x = -world.icon_size*3
+					img.pixel_y = -world.icon_size
+					flick_overlay_static(img, Y, 10)
 					playsound(Y,'sound/effects/thunder.ogg', 90, 1)
 					spawn(10)
 						gib()
 
-				B = locate() in internal_organs
-				if(B.contents.len)
-					var/obj/item/O = pick(B.contents)
+				var/obj/item/weapon/storage/internal/pocket/butt/theinv = B.inv
+				if(theinv.contents.len)
+					var/obj/item/O = pick(theinv.contents)
 					var/turf/location = get_turf(B)
 					if(istype(O, /obj/item/weapon/lighter))
 						var/obj/item/weapon/lighter/G = O
@@ -206,20 +209,15 @@
 					else
 						playsound(src, 'sound/misc/fart.ogg', 50, 1, 5)
 					if(prob(33))
-						O.loc = get_turf(src)
-						B.contents -= O
-						B.stored -= O.itemstorevalue
+						theinv.remove_from_storage(O, get_turf(src))
 				else
 					playsound(src, 'sound/misc/fart.ogg', 50, 1, 5)
 				sleep(1)
 				if(lose_butt)
-					for(var/obj/item/O in B.contents)
-						O.loc = get_turf(src)
-						B.contents -= O
-						B.stored -= O.itemstorevalue
-					B.Remove(src)
+					theinv.empty_object_contents(0, get_turf(src))
 					B.loc = get_turf(src)
-					new /obj/effect/decal/cleanable/blood(loc)
+					B.Remove(src)
+					new /obj/effect/decal/cleanable/blood(get_turf(src))
 					nutrition -= rand(15, 30)
 					visible_message("\red <b>[src]</b> blows their ass off!", "\red Holy shit, your butt flies off in an arc!")
 				else
@@ -431,10 +429,10 @@
 			exception = 1
 			var/obj/item/organ/internal/butt/B = locate() in internal_organs
 			if(!B)
-				src << "\red You don't have a butt!"
+				src << "<span class='danger'>You don't have a butt!</span>"
 				return
 			if(B.loose)
-				src << "\red Your butt's too loose to superfart!"
+				src << "<span class='danger'>Your butt's too loose to superfart!</span>"
 				return
 			B.loose = 1 // to avoid spamsuperfart
 			var/fart_type = 1 //Put this outside probability check just in case. There were cases where superfart did a normal fart.
@@ -446,25 +444,27 @@
 				fart_type = 3
 			spawn(0)
 				spawn(1)
-					for(var/obj/item/weapon/storage/book/bible/Y in range(0))
-						var/obj/effect/lightning/L = new(get_turf(loc))
-						L.start()
+					var/obj/item/weapon/storage/book/bible/Y = locate() in get_turf(src)
+					if(Y)
+						var/image/img = image(icon = 'icons/effects/224x224.dmi', icon_state = "lightning")
+						img.pixel_x = -world.icon_size*3
+						img.pixel_y = -world.icon_size
+						flick_overlay_static(img, Y, 10)
 						playsound(Y,'sound/effects/thunder.ogg', 90, 1)
 						spawn(10)
 							gib()
-						break //This is to prevent multi-gibbening
 				sleep(4)
-				for(var/i = 1, i <= 10, i++)
+				for(var/i in 1 to 10)
 					playsound(src, 'sound/misc/fart.ogg', 50, 1, 5)
 					sleep(1)
 				playsound(src, 'sound/misc/fartmassive.ogg', 75, 1, 5)
-				if(B.contents.len)
-					for(var/obj/item/O in B.contents)
+				var/obj/item/weapon/storage/internal/pocket/P = B.inv
+				if(P.contents.len)
+					for(var/obj/item/O in P.contents)
+						P.remove_from_storage(O, get_turf(src))
+						O.throw_range = 7//will be reset on hit
 						O.assthrown = 1
-						O.loc = get_turf(src)
-						B.contents -= O
-						B.stored -= O.itemstorevalue
-						var/turf/target = get_turf(O.loc)
+						var/turf/target = get_turf(O)
 						var/range = 7
 						var/turf/new_turf
 						var/new_dir
@@ -485,7 +485,7 @@
 						O.throw_at(target,range,O.throw_speed)
 						O.assthrown = 0 // so you can't just unembed it and throw it for insta embeds
 				B.Remove(src)
-				B.loc = get_turf(src)
+				B.forceMove(get_turf(src))
 				if(B.loose) B.loose = 0
 				new /obj/effect/decal/cleanable/blood(loc)
 				nutrition -= 500

@@ -363,49 +363,38 @@
 		skipcatch = 1
 		blocked = 1
 	else if(I)
-		if(I.throw_speed >= EMBED_THROWSPEED_THRESHOLD)
-			if(can_embed(I))
-				if(prob(I.embed_chance) && !(dna && (PIERCEIMMUNE in dna.species.specflags)))
-					throw_alert("embeddedobject", /obj/screen/alert/embeddedobject)
-					var/obj/item/bodypart/L = pick(bodyparts)
-					L.embedded_objects |= I
-					I.add_mob_blood(src)//it embedded itself in you, of course it's bloody!
-					I.loc = src
-					L.take_damage(I.w_class*I.embedded_impact_pain_multiplier)
-					visible_message("<span class='danger'>\the [I.name] embeds itself in [src]'s [L.name]!</span>","<span class='userdanger'>\the [I.name] embeds itself in your [L.name]!</span>")
-					hitpush = 0
-					skipcatch = 1 //can't catch the now embedded item
+		try_to_embed(I)
+		hitpush = 0
+		skipcatch = 1 //can't catch the now embedded item
 
 	return ..()
 
+/mob/living/carbon/human/proc/try_to_embed(obj/item/I, obj/item/bodypart/L, force = 0)
+	if((I.throw_speed >= EMBED_THROWSPEED_THRESHOLD) || I.embedded_ignore_throwspeed_threshold || force)
+		if(can_embed(I) || force)
+			if((prob(I.embed_chance) && !(dna && (PIERCEIMMUNE in dna.species.specflags))) || force)
+				throw_alert("embeddedobject", /obj/screen/alert/embeddedobject)
+				if(!L)
+					L = pick(bodyparts)
+				L.embedded_objects |= I
+				I.add_mob_blood(src)//it embedded itself in you, of course it's bloody!
+				I.loc = src
+				L.take_damage(I.w_class*I.embedded_impact_pain_multiplier)
+				visible_message("<span class='danger'>\the [I.name] embeds itself in [src]'s [L.name]!</span>","<span class='userdanger'>\the [I.name] embeds itself in your [L.name]!</span>")
+
 /mob/living/carbon/human/grabbedby(mob/living/carbon/user, supress_message = 0)
 	if(user.zone_selected == "groin")
-		var/obj/item/organ/internal/butt/B = src.getorgan(/obj/item/organ/internal/butt)
+		var/obj/item/organ/internal/butt/B = getorgan(/obj/item/organ/internal/butt)
 		if(!w_uniform)
-			if(B)
-				if(user == src)
-					user.visible_message("<span class='warning'>[user] starts inspecting his own ass!</span>", "<span class='warning'>You start inspecting your ass!</span>")
-				else
-					user.visible_message("<span class='warning'>[user] starts inspecting [src]'s ass!</span>", "<span class='warning'>You start inspecting [src]'s ass!</span>")
+			if(B && B.inv)
+				var/obj/item/weapon/storage/internal/pocket/butt/pocket = B.inv
+				user.visible_message("<span class='warning'>[user] starts inspecting [user == src ? "his own" : "[src]'s"] ass!</span>", "<span class='warning'>You start inspecting [user == src ? "your" : "[src]'s"] ass!</span>")
 				if(do_mob(user, src, 40))
-					if(B.contents.len)
-						if(user == src)
-							user.visible_message("<span class='warning'>[user] inspects his own ass!</span>", "<span class='warning'>You inspect your ass!</span>")
-						else
-							user.visible_message("<span class='warning'>[user] inspects [src]'s ass!</span>", "<span class='warning'>You inspect [src]'s ass!</span>")
-						var/obj/item/O = pick(B.contents)
-						O.loc = get_turf(src)
-						B.contents -= O
-						B.stored -= O.itemstorevalue
-						return 0
-					else
-						user.visible_message("<span class='warning'>There's nothing in here!</span>")
-						return 0
+					user.visible_message("<span class='warning'>[user] inspects [user == src ? "his own" : "[src]'s"] ass!</span>", "<span class='warning'>You inspect [user == src ? "your" : "[src]'s"] ass!</span>")
+					pocket.show_to(user)
+					return 0
 				else
-					if(user == src)
-						user.visible_message("<span class='warning'>[user] fails to inspect his own ass!</span>", "<span class='warning'>You fail to inspect your ass!</span>")
-					else
-						user.visible_message("<span class='warning'>[user] fails to inspect [src]'s ass!</span>", "<span class='warning'>You fail to inspect [src]'s ass!</span>")
+					user.visible_message("<span class='warning'>[user] fails to inspect [user == src ? "his own" : "[src]'s"] ass!</span>", "<span class='warning'>You fail to inspect [user == src ? "your" : "[src]'s"] ass!</span>")
 					return 0
 			else
 				user << "<span class='warning'>There's nothing to inspect!</span>"

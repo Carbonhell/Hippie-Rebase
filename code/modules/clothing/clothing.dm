@@ -405,6 +405,15 @@ BLIND     // can't see anything
 	if(!attachTie(I, user))
 		..()
 
+/obj/item/clothing/under/equipped(mob/user, slot)
+	..()
+	if(slot_flags & slotdefine2slotbit(slot))
+		var/obj/item/organ/internal/butt/B = user.getorgan(/obj/item/organ/internal/butt)
+		if(B)
+			var/obj/item/weapon/storage/internal/pocket/butt/pocket = B.inv
+			if(pocket)
+				pocket.close_all()
+
 /obj/item/clothing/under/proc/attachTie(obj/item/I, mob/user, notifyAttach = 1)
 	if(istype(I, /obj/item/clothing/tie))
 		var/obj/item/clothing/tie/T = I

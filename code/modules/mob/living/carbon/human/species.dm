@@ -810,17 +810,18 @@
 	if(!(RADIMMUNE in specflags))
 		if(H.radiation)
 			if (H.radiation > 100)
+				if(!H.weakened)
+					H.emote("collapse")
 				H.Weaken(10)
 				H << "<span class='danger'>You feel weak.</span>"
-				H.emote("collapse")
 
 			switch(H.radiation)
-
 				if(50 to 75)
 					if(prob(5))
+						if(!H.weakened)
+							H.emote("collapse")
 						H.Weaken(3)
 						H << "<span class='danger'>You feel weak.</span>"
-						H.emote("collapse")
 					if(prob(15))
 						if(!( H.hair_style == "Shaved") || !(H.hair_style == "Bald") || (HAIR in specflags))
 							H << "<span class='danger'>Your hair starts to \
@@ -1031,6 +1032,25 @@
 
 /datum/species/proc/spec_attacked_by(obj/item/I, mob/living/user, obj/item/bodypart/affecting, intent, target_area, mob/living/carbon/human/H)
 	// Allows you to put in item-specific reactions based on species
+	if(user.zone_selected == "groin")
+		if(user.a_intent == "grab")
+			var/mob/living/carbon/human/buttowner = H
+			if(!istype(buttowner))
+				return 0
+			if(buttowner.w_uniform)
+				H.visible_message("<span class='danger'>[H] pokes [H == user ? "his own" : "[user]'s"] butt with \the [I].<span>","<span class='danger'>You poke [H == user ? "your" : "[user]'s"] butt with \the [I].</span>")
+				return 0
+			var/obj/item/organ/internal/butt/B = buttowner.getorgan(/obj/item/organ/internal/butt)
+			if(B)
+				var/obj/item/weapon/storage/internal/pocket/butt/pocket = B.inv
+				if(!pocket)
+					return
+				user.visible_message("<span class='warning'>[user] starts hiding [I] inside [H == user ? "his own" : "[user]'s"] butt.</span>", "<span class='warning'>You start hiding [I] inside [user == src ? "your" : "[user]'s"] butt.</span>")
+				if(do_mob(user, H, 40) && pocket.can_be_inserted(I, 0, user))
+					pocket.handle_item_insertion(I, 0, user)
+					user.visible_message("<span class='warning'>[user] hides [I] inside [H == user ? "his own" : "[user]'s"] butt.</span>", "<span class='warning'>You hide [I] inside [user == src ? "your" : "[user]'s"] butt.</span>")
+					return 2//special return value to activate a few item's process(),like pills and snacks
+				return
 	if(user != H)
 		user.do_attack_animation(H)
 		if(H.check_shields(I.force, "the [I.name]", I, MELEE_ATTACK, I.armour_penetration))
@@ -1039,8 +1059,8 @@
 	var/hit_area
 	if(!affecting) //Something went wrong. Maybe the limb is missing?
 		affecting = H.bodyparts[1]
-
 	hit_area = affecting.name
+
 	var/def_zone = affecting.body_zone
 
 	var/armor_block = H.run_armor_check(affecting, "melee", "<span class='notice'>Your armor has protected your [hit_area].</span>", "<span class='notice'>Your armor has softened a hit to your [hit_area].</span>",I.armour_penetration)
@@ -1075,67 +1095,6 @@
 					user.add_mob_blood(H)
 
 		switch(hit_area)
-			if("groin")
-				if(user.a_intent == "grab")
-					var/obj/item/organ/internal/butt/B = H.getorgan(/obj/item/organ/internal/butt)
-					if(B)
-						if(!H.w_uniform)
-							var/buttspace = B.capacity - B.stored
-							if(!I.itemstorevalue)
-								switch(I.w_class)
-									if(1) I.itemstorevalue += 1 // tiny
-									if(2) I.itemstorevalue += 2 // small
-									if(3) I.itemstorevalue += 4 // normal
-									else I.itemstorevalue = -1 // too big
-							if(I.itemstorevalue != -1)//if the item is not too big
-								if(B.stored < B.capacity && I.itemstorevalue <= buttspace) // if the butt can still hold an item
-									if(H == user)
-										user.visible_message("<span class='warning'>[user] starts hiding [I] inside his own butt...</span>", "<span class='warning'>You start hiding [I] inside your own butt...</span>")
-									else
-										user.visible_message("<span class='warning'>[user] starts hiding [I] inside [H]'s butt...</span>", "<span class='warning'>You start hiding [I] inside [H]'s butt...</span>")
-									if(do_mob(user, H, 30))
-										user.drop_item()
-										B.contents += I
-										I.add_blood(H)
-										B.stored += I.itemstorevalue
-										if(H == user)
-											user.visible_message("<span class='warning'>[user] hides [I] inside his own butt.</span>", "<span class='warning'>You hide [I] inside your own butt.</span>")
-										else
-											user.visible_message("<span class='warning'>[user] hides [I] inside [H]'s.</span>", "<span class='warning'>You hide [I] inside [H]'s butt.</span>")
-										return 0
-									else
-										if(H == user)
-											user << "<span class='warning'>You fail to insert [I] in your butt.</span>"
-										else
-											user << "<span class='warning'>You fail to insert [I] in [H]'s butt.</span>"
-										return 0
-								else
-									if(H == user)
-										user << "<span class='warning'>Your butt is full!</span>"
-									else
-										user << "<span class='warning'>[H]'s butt is full!</span>"
-									return 0
-							else
-								if(H == user)
-									user << "<span class='warning'>This item is too big to fit in your butt!</span>"
-								else
-									user << "<span class='warning'>This item is too big to fit in [H]'s butt!</span>"
-								return 0
-						else
-							if(H == user)
-								user << "<span class='warning'>You'll need to remove your jumpsuit first.</span>"
-							else
-								user << "<span class='warning'>You'll need to remove [H]'s jumpsuit first.</span>"
-								H << "<span class='warning'>You feel your butt being poked with \the [I]!</span>"
-								user.visible_message("<span class='warning'>[user] pokes [H]'s butt with \the [I]!</span>", "<span class='warning'>You poke [H]'s butt with \the [I]!</span>")
-							return 0
-					else
-						if(H == user)
-							user << "<span class='warning'>You have no butt!</span>"
-						else
-							user << "<span class='warning'>[H] has no butt!</span>"
-						return 0
-
 			if("head")	//Harder to score a stun but if you do it lasts a bit longer
 				if(H.stat == CONSCIOUS && armor_block < 50)
 					if(prob(I.force))

@@ -1,20 +1,7 @@
-/obj/effect/lightning
-	name = "divine retribution"
-	icon = 'icons/effects/224x224.dmi'
-	icon_state = null
-	pixel_y = -32
-	pixel_x = -100
-	layer = 16
-
-	proc/start()
-		icon_state = "lightning" //i'm sure there's a more elegant way to do this.
-		spawn(20)
-			qdel(src)
-
 /client/proc/cmd_smite(mob/living/M in mob_list)
 	set category = "Fun"
 	set name = "Smite"
-	if(!holder)
+	if(!holder || !M)
 		usr << "no"
 		return
 
@@ -25,10 +12,11 @@
 	// Changed so that the damtype isn't used where it shouldn't be used. damtype_word is the word... damtype is an int.
 	var/damtype_word = input(src, "What kind of damage?", "PUT YOUR FAITH IN THE LIGHT") in list("burn","brute","oxy","tox","clone","heal","gib")
 	var/dam = input(src, "How much damage?", "THE LIGHT SHALL BURN YOU") as num
-	var/obj/effect/lightning/L = new /obj/effect/lightning()
-	L.loc = get_turf(M.loc)
-	L.start()
-	playsound(M,'sound/effects/thunder.ogg',50,1)
+	var/image/img = image(icon = 'icons/effects/224x224.dmi', icon_state = "lightning")
+	img.pixel_x = -world.icon_size*3
+	img.pixel_y = -world.icon_size
+	flick_overlay_static(img, M, 10)
+	playsound(get_turf(M),'sound/effects/thunder.ogg',50,1)
 	switch(damtype_word)
 		if("burn")
 			M.adjustFireLoss(dam)
