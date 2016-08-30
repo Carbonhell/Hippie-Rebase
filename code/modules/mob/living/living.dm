@@ -873,7 +873,7 @@
 	for(var/mob/M in viewers(A))
 		if(M.client)
 			viewing |= M.client
-	flick_overlay(I, viewing, 5) // 5 ticks/half a second
+	flick_overlay(I, viewing, 5, ITEM_ATTACK_ANIMATION) // 5 ticks/half a second
 
 	// Scale the icon.
 	I.transform *= 0.75
