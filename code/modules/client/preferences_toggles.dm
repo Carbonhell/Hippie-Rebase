@@ -357,3 +357,12 @@ var/global/list/ghost_orbits = list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	src << "You will now [(prefs.toggles & SOUND_ANNOUNCEMENTS) ? "hear announcement sounds" : "no longer hear announcements"]."
 	prefs.save_preferences()
 	feedback_add_details("admin_verb","TAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/toggle_item_attack()
+	set name = "Toggle Item Attack"
+	set category = "Preferences"
+	set desc = "Toggles the item attack effect"
+	prefs.toggles ^= ITEM_ATTACK_ANIMATION
+	src << "You will now [(prefs.toggles & ITEM_ATTACK_ANIMATION) ? "see item attacks" : "no longer see item attacks"]."
+	prefs.save_preferences()
+	feedback_add_details("admin_verb","TIA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

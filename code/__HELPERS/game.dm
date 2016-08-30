@@ -331,8 +331,10 @@
 			for(var/client/C in group)
 				C.screen -= O
 
-/proc/flick_overlay(image/I, list/show_to, duration)
+/proc/flick_overlay(image/I, list/show_to, duration, type) //Type can be used for turning certain overlays off if need be.
 	for(var/client/C in show_to)
+		if(!(C.prefs.toggles & ITEM_ATTACK_ANIMATION) && (type == ITEM_ATTACK_ANIMATION))
+			continue
 		C.images += I
 	spawn(duration)
 		for(var/client/C in show_to)
