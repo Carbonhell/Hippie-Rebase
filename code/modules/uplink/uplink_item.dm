@@ -315,7 +315,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	desc = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
 			in addition to dealing high amounts of damage to nearby personnel."
 	item = /obj/item/weapon/grenade/syndieminibomb
-	cost = 6
+	cost = 5
 
 /datum/uplink_item/dangerous/foamsmg
 	name = "Toy Submachine Gun"
@@ -372,6 +372,13 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	cost = 12
 	surplus = 35
 	include_modes = list(/datum/game_mode/nuclear)
+
+/datum/uplink_item/dangerous/guardian
+	name = "Holoparasite Injector"
+	desc = "Though capable of near sorcerous feats via use of hardlight holograms and nanomachines, they require an organic host as a home base and source of fuel."
+	item = /obj/item/weapon/storage/box/syndie_kit/guardian
+	exclude_modes = list(/datum/game_mode/nuclear,/datum/game_mode/gang)
+	cost = 20
 
 // Ammunition
 /datum/uplink_item/ammo
@@ -644,7 +651,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			The concussive effect from the explosion will knock the recipient out for a short period, and deafen \
 			them for longer. Beware, it has a chance to detonate your PDA."
 	item = /obj/item/weapon/cartridge/syndicate
-	cost = 6
+	cost = 4
 
 /datum/uplink_item/stealthy_weapons/suppressor
 	name = "Universal Suppressor"
@@ -766,7 +773,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	desc = "Screwed up and have security on your tail? This handy syringe will give you a completely new identity \
 			and appearance."
 	item = /obj/item/weapon/reagent_containers/syringe/mulligan
-	cost = 4
+	cost = 2
 	surplus = 30
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/gang)
 
@@ -877,7 +884,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			emitted as heat and light by objects. Hotter objects, such as warm bodies, cybernetic organisms \
 			and artificial intelligence cores emit more of this light than cooler objects like walls and airlocks."
 	item = /obj/item/clothing/glasses/thermal/syndi
-	cost = 4
+	cost = 6
 
 /datum/uplink_item/device_tools/binary
 	name = "Binary Translator Key"
@@ -908,7 +915,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	desc = "When used with an upload console, this module allows you to upload priority laws to an artificial intelligence. \
 			Be careful with wording, as artificial intelligences may look for loopholes to exploit."
 	item = /obj/item/weapon/aiModule/syndicate
-	cost = 14
+	cost = 10
 
 /datum/uplink_item/device_tools/magboots
 	name = "Blood-Red Magboots"
@@ -946,7 +953,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			load on the grid, causing a stationwide blackout. The sink is large and cannot be stored in most \
 			traditional bags and boxes."
 	item = /obj/item/device/powersink
-	cost = 6
+	cost = 8
 
 /datum/uplink_item/device_tools/singularity_beacon
 	name = "Power Beacon"
@@ -966,7 +973,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			transported to you that will teleport the actual bomb to it upon activation. Note that this bomb can \
 			be defused, and some crew may attempt to do so."
 	item = /obj/item/device/sbeacondrop/bomb
-	cost = 11
+	cost = 10
 
 /datum/uplink_item/device_tools/syndicate_detonator
 	name = "Syndicate Detonator"
@@ -1053,6 +1060,14 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/item/weapon/storage/box/syndie_kit/imp_storage
 	cost = 8
 
+/datum/uplink_item/implants/mindslave
+	name = "Mindslave Implant"
+	desc = "An implant injected into another body, forcing the victim to obey any command by the user for the rest of the shift."
+	item = /obj/item/weapon/storage/box/syndie_kit/imp_mindslave
+	cost = 10
+	exclude_modes = list(/datum/game_mode/nuclear)
+	surplus = 20
+
 /datum/uplink_item/implants/microbomb
 	name = "Microbomb Implant"
 	desc = "An implant injected into the body, and later activated either manually or automatically upon death. \
@@ -1060,7 +1075,6 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			This will permanently destroy your body, however."
 	item = /obj/item/weapon/storage/box/syndie_kit/imp_microbomb
 	cost = 2
-	include_modes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/implants/macrobomb
 	name = "Macrobomb Implant"
