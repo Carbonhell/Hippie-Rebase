@@ -212,6 +212,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/item/weapon/gun/projectile/revolver
 	cost = 13
 	surplus = 50
+	exclude_modes = list(/datum/game_mode/traitor/king_disk)
 
 /datum/uplink_item/dangerous/shotgun
 	name = "Bulldog Shotgun"
@@ -274,7 +275,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow
 	cost = 12
 	surplus = 50
-	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/gang)
+	exclude_modes = list(/datum/game_mode/traitor/king_disk, /datum/game_mode/gang)
 
 /datum/uplink_item/dangerous/flamethrower
 	name = "Flamethrower"
@@ -317,13 +318,18 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/item/weapon/grenade/syndieminibomb
 	cost = 5
 
+/datum/uplink_item/dangerous/cat_grenade
+	name = "Feral Cat Delivery Grenade"
+	desc = "The feral cat delivery grenade contains 8 dehydrated feral cats in a similar manner to dehydrated monkeys, which, upon detonation, will be rehydrated by a small reservoir of water contained within the grenade. These cats will then attack anything in sight."
+	item = /obj/item/weapon/grenade/spawnergrenade/feral_cats
+	cost = 5
+
 /datum/uplink_item/dangerous/foamsmg
 	name = "Toy Submachine Gun"
 	desc = "A fully-loaded Donksoft bullpup submachine gun that fires riot grade rounds with a 20-round magazine."
 	item = /obj/item/weapon/gun/projectile/automatic/c20r/toy
 	cost = 5
 	surplus = 0
-	include_modes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/dangerous/foammachinegun
 	name = "Toy Machine Gun"
@@ -332,7 +338,6 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/item/weapon/gun/projectile/automatic/l6_saw/toy
 	cost = 10
 	surplus = 0
-	include_modes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/dangerous/viscerators
 	name = "Viscerator Delivery Grenade"
@@ -404,7 +409,8 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	desc = "A speed loader that contains seven additional .357 Magnum rounds; usable with the Syndicate revolver. \
 			For when you really need a lot of things dead."
 	item = /obj/item/ammo_box/a357
-	cost = 4
+	cost = 2
+	exclude_modes = list(/datum/game_mode/traitor/king_disk)
 
 /datum/uplink_item/ammo/shotgun
 	cost = 2
@@ -735,6 +741,12 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			with these cards."
 	item = /obj/item/weapon/card/id/syndicate
 	cost = 2
+
+/datum/uplink_item/stealthy_tools/pickpocket_gloves
+	name = "Pickpocket Gloves"
+	desc = "These gloves allow you to quickly and stealthily remove items from people and puts them straight into your hands."
+	item = /obj/item/clothing/gloves/pickpocket
+	cost = 4
 
 /datum/uplink_item/stealthy_tools/chameleon_proj
 	name = "Chameleon Projector"
@@ -1172,7 +1184,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 			you will receive."
 	item = /obj/item/weapon/storage/box/syndicate
 	cost = 20
-	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/gang)
+	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/gang, /datum/game_mode/traitor/king_disk)
 
 /datum/uplink_item/badass/surplus
 	name = "Syndicate Surplus Crate"
@@ -1181,7 +1193,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	item = /obj/structure/closet/crate
 	cost = 20
 	player_minimum = 25
-	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/gang)
+	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/gang, /datum/game_mode/traitor/king_disk)
 
 /datum/uplink_item/badass/surplus/spawn_item(turf/loc, obj/item/device/uplink/U)
 	var/list/uplink_items = get_uplink_items()
