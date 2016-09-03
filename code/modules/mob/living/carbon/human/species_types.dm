@@ -11,6 +11,7 @@
 	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None")
 	use_skintones = 1
 	skinned_type = /obj/item/stack/sheet/animalhide/human
+	teeth_type = /obj/item/stack/teeth/human
 
 
 /datum/species/human/qualifies_for_rank(rank, list/features)
@@ -63,6 +64,7 @@
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
+	teeth_type = /obj/item/stack/teeth/lizard
 	skinned_type = /obj/item/stack/sheet/animalhide/lizard
 	exotic_bloodtype = "L"
 
@@ -109,7 +111,7 @@
 	default_features = list("wing" = "Plain")
 	attack_verb = "slash"
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/moth
-//	teeth_type = /obj/item/stack/teeth/lizard
+	teeth_type = /obj/item/stack/teeth/lizard
 	exotic_bloodtype = "L"
 
 /datum/species/moth/random_name(gender,unique,lastname)
@@ -157,7 +159,7 @@
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/cat
 	//mutations_to_have = list(CLUMSY, EPILEPSY, UNINTELLIGABLE, NERVOUS, COUGH)
-	//teeth_type = /obj/item/stack/teeth/cat
+	teeth_type = /obj/item/stack/teeth/cat
 	brutemod = 2	// multiplier for brute damage
 	burnmod = 2		// multiplier for burn damage
 	coldmod = 2		// multiplier for cold damage
