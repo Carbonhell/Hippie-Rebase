@@ -25,7 +25,7 @@
 			return
 
 		if("snake")
-			new /obj/item/weapon/melee/combatknife(src)
+			new /obj/item/weapon/kitchen/knife/combat(src)
 			new /obj/item/weapon/gun/projectile/automatic/pistol(src)
 			new /obj/item/weapon/suppressor(src)
 			new /obj/item/ammo_box/magazine/m10mm(src)
