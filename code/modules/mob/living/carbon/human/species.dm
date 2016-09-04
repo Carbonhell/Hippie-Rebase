@@ -59,7 +59,7 @@
 	var/fixed_mut_color = "" //to use MUTCOLOR with a fixed color that's independent of dna.feature["mcolor"]
 
 	var/invis_sight = SEE_INVISIBLE_LIVING
-	var/darksight = 2
+	var/darksight = 3
 
 	// species flags. these can be found in flags.dm
 	var/list/specflags = list()
