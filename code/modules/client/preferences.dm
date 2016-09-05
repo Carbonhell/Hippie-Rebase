@@ -89,6 +89,10 @@ var/list/preferences_datums = list()
 
 	var/list/ignoring = list()
 
+	var/space_parallax = 1
+	var/space_dust = 1
+	var/parallax_speed = 2
+
 /datum/preferences/New(client/C)
 	custom_names["ai"] = pick(ai_names)
 	custom_names["cyborg"] = pick(ai_names)

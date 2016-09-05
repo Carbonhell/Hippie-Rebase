@@ -66,6 +66,16 @@
 
 			add_fingerprint(usr)
 
+/obj/item/weapon/storage/AltClick() //Altclick is a shortcut to open the bag so you don't have to constantly drag&drop backpacks to check them w/o picking them up
+	..()
+	var/mob/M = usr
+	if(Adjacent(M))
+		orient2hud(M)
+		if(M.s_active)
+			M.s_active.close(M)
+		show_to(M)
+		add_fingerprint(usr)
+
 //Check if this storage can dump the items
 /obj/item/weapon/storage/proc/content_can_dump(atom/dest_object, mob/user)
 	if(Adjacent(user) && dest_object.Adjacent(user))
