@@ -538,6 +538,11 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 		feedback_add_details("colonies_dropped") //Number of times a base has been dropped!
 	..()
 
+/obj/machinery/computer/shuttle/auxillary_base/onShuttleMove(turf/T1, rotation)
+	..()
+	if(z == ZLEVEL_MINING) //Avoids double logging and landing on other Z-levels due to badminnery
+		feedback_add_details("colonies_dropped", "[x]|[y]|[z]") //Number of times a base has been dropped!
+
 /obj/machinery/computer/shuttle/auxillary_base/proc/set_mining_mode()
 	if(z == ZLEVEL_MINING) //The console switches to controlling the mining shuttle once landed.
 		req_access = list()

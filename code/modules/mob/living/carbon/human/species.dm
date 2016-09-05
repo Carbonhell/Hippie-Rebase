@@ -34,6 +34,7 @@
 	var/exotic_blood = ""	// If your race wants to bleed something other than bog standard blood, change this to reagent id.
 	var/exotic_bloodtype = "" //If your race uses a non standard bloodtype (A+, O-, AB-, etc)
 	var/meat = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/human //What the species drops on gibbing
+	var/teeth_type = /obj/item/stack/teeth/generic //What sort of teeth do the species have
 	var/skinned_type = /obj/item/stack/sheet/animalhide/generic
 	var/list/no_equip = list()	// slots the race can't equip stuff to
 	var/nojumpsuit = 0	// this is sorta... weird. it basically lets you equip stuff that usually needs jumpsuits without one, like belts and pockets and ids
@@ -58,7 +59,7 @@
 	var/fixed_mut_color = "" //to use MUTCOLOR with a fixed color that's independent of dna.feature["mcolor"]
 
 	var/invis_sight = SEE_INVISIBLE_LIVING
-	var/darksight = 2
+	var/darksight = 3
 
 	// species flags. these can be found in flags.dm
 	var/list/specflags = list()
@@ -855,7 +856,7 @@
 		. -= 2
 
 	if(!(H.status_flags & IGNORESLOWDOWN))
-		if(!has_gravity(H))
+		if(!H.has_gravity())
 			if(FLYING in specflags)
 				. += speedmod
 				return

@@ -47,6 +47,15 @@
 
 	//Note: Additional organs are generated/replaced on the dna.species level
 
+	//initialise teeth
+	var/obj/item/bodypart/head/U = locate() in bodyparts
+	if(istype(U))
+		U.teeth_list.Cut() //Clear out their mouth of teeth
+		var/obj/item/stack/teeth/T = new dna.species.teeth_type(U)
+		U.max_teeth = T.max_amount //Set max teeth for the head based on teeth spawntype
+		T.amount = T.max_amount
+		U.teeth_list += T
+
 	for(var/obj/item/organ/I in internal_organs)
 		I.Insert(src)
 
@@ -358,6 +367,14 @@
 			var/obj/item/place_item = usr.get_active_hand() // Item to place in the pocket, if it's empty
 
 			var/delay_denominator = 1
+			var/pickpocket = 0
+			if(ishuman(usr))
+				var/mob/living/carbon/human/H = usr
+				if(H.gloves && istype(H.gloves,/obj/item/clothing/gloves))
+					var/obj/item/clothing/gloves/G = H.gloves
+					pickpocket = G.pickpocket
+			if(pickpocket)
+				delay_denominator = pickpocket
 			if(pocket_item && !(pocket_item.flags&ABSTRACT))
 				if(pocket_item.flags & NODROP)
 					usr << "<span class='warning'>You try to empty [src]'s [pocket_side] pocket, it seems to be stuck!</span>"
@@ -372,6 +389,12 @@
 				if(pocket_item)
 					if(pocket_item == (pocket_id == slot_r_store ? r_store : l_store)) //item still in the pocket we search
 						unEquip(pocket_item)
+						if(pickpocket)
+							var/mob/living/carbon/human/H = usr
+							if(H.hand) //left active hand
+								H.equip_to_slot_if_possible(pocket_item, slot_l_hand, 0, 1)
+							else
+								H.equip_to_slot_if_possible(pocket_item, slot_r_hand, 0, 1) 
 				else
 					if(place_item)
 						usr.unEquip(place_item)

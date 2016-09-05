@@ -602,7 +602,7 @@
 			. += config.walk_speed
 
 /mob/living/proc/makeTrail(turf/T)
-	if(!has_gravity(src))
+	if(!has_gravity())
 		return
 	var/blood_exists = 0
 
@@ -768,20 +768,45 @@
 // The src mob is trying to strip an item from someone
 // Override if a certain type of mob should be behave differently when stripping items (can't, for example)
 /mob/living/stripPanelUnequip(obj/item/what, mob/who, where)
+	var/delay_denominator = 1
+	var/pickpocket = 0
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = usr
+		if(H.gloves && istype(H.gloves,/obj/item/clothing/gloves))
+			var/obj/item/clothing/gloves/G = H.gloves
+			pickpocket = G.pickpocket
+	if(pickpocket)
+		delay_denominator = pickpocket
 	if(what.flags & NODROP)
 		src << "<span class='warning'>You can't remove \the [what.name], it appears to be stuck!</span>"
 		return
-	who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
-					"<span class='userdanger'>[src] tries to remove [who]'s [what.name].</span>")
+	if(!pickpocket)
+		who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
+						"<span class='userdanger'>[src] tries to remove [who]'s [what.name].</span>")
 	what.add_fingerprint(src)
-	if(do_mob(src, who, what.strip_delay))
+	if(do_mob(src, who, what.strip_delay/delay_denominator))
 		if(what && what == who.get_item_by_slot(where) && Adjacent(who))
 			who.unEquip(what)
 			add_logs(src, who, "stripped", addition="of [what]")
+			if(pickpocket)
+				var/mob/living/carbon/human/H = usr
+				if(H.hand) //left active hand
+					H.equip_to_slot_if_possible(what, slot_l_hand, 0, 1)
+				else
+					H.equip_to_slot_if_possible(what, slot_r_hand, 0, 1)
 
 // The src mob is trying to place an item on someone
 // Override if a certain mob should be behave differently when placing items (can't, for example)
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
+	var/delay_denominator = 1
+	var/pickpocket = 0
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = usr
+		if(H.gloves && istype(H.gloves,/obj/item/clothing/gloves))
+			var/obj/item/clothing/gloves/G = H.gloves
+			pickpocket = G.pickpocket
+	if(pickpocket)
+		delay_denominator = pickpocket
 	what = src.get_active_hand()
 	if(what && (what.flags & NODROP))
 		src << "<span class='warning'>You can't put \the [what.name] on [who], it's stuck to your hand!</span>"
@@ -790,8 +815,9 @@
 		if(!what.mob_can_equip(who, src, where, 1))
 			src << "<span class='warning'>\The [what.name] doesn't fit in that place!</span>"
 			return
-		visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>")
-		if(do_mob(src, who, what.put_on_delay))
+		if(!pickpocket)
+			visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>")
+		if(do_mob(src, who, what.put_on_delay/delay_denominator))
 			if(what && Adjacent(who))
 				unEquip(what)
 				who.equip_to_slot_if_possible(what, where, 0, 1)

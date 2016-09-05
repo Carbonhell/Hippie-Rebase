@@ -98,6 +98,7 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 	// Needs to be in /obj/item because corgis can wear a lot of
 	// non-clothing items
 	var/datum/dog_fashion/dog_fashion = null
+	var/no_direct_insertion = 0 //items that require MouseDrop() to be inserted in a storage item. e.g. packageWrap
 
 
 /obj/item/proc/check_allowed_items(atom/target, not_inside, target_self)

@@ -173,6 +173,7 @@ BLIND     // can't see anything
 	slot_flags = SLOT_GLOVES
 	attack_verb = list("challenged")
 	var/transfer_prints = FALSE
+	var/pickpocket = 0 //Non-zero makes all stripping silent and divides the stripping time by this number
 	strip_delay = 20
 	put_on_delay = 40
 

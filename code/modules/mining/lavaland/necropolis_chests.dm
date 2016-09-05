@@ -4,6 +4,7 @@
 	name = "necropolis chest"
 	desc = "It's watching you closely."
 	icon_state = "necrocrate"
+	burn_state = LAVA_PROOF
 
 /obj/structure/closet/crate/necropolis/tendril
 	desc = "It's watching you suspiciously."
@@ -192,19 +193,22 @@
 	weaken = 3
 	var/chain
 
-/obj/item/ammo_casing/magic/hook/ready_proj(atom/target, mob/living/user, quiet, zone_override = "")
+/obj/item/projectile/hook/fire(setAngle)
+	if(firer)
+		chain = Beam(firer, icon_state = "chain", icon = 'icons/obj/lavaland/artefacts.dmi', time = INFINITY, maxdistance = INFINITY)
 	..()
-	var/obj/item/projectile/hook/P = BB
-	spawn(1)
-		P.chain = P.Beam(user,icon_state="chain",icon = 'icons/obj/lavaland/artefacts.dmi',time=1000, maxdistance = 30)
 
 /obj/item/projectile/hook/on_hit(atom/target)
 	. = ..()
 	if(isliving(target))
 		var/mob/living/L = target
-		L.visible_message("<span class='danger'>[L] is snagged by [firer]'s hook!</span>")
-		L.forceMove(get_turf(firer))
-		qdel(chain)
+		if(!L.anchored)
+			L.visible_message("<span class='danger'>[L] is snagged by [firer]'s hook!</span>")
+			L.forceMove(get_turf(firer))
+
+/obj/item/projectile/hook/Destroy()
+	qdel(chain)
+	return ..()
 
 //Immortality Talisman
 /obj/item/device/immortality_talisman
@@ -577,7 +581,10 @@
 
 	switch(random)
 		if(1)
-			user << "<span class='danger'>Other than tasting terrible, nothing really happens.</span>"
+			user << "<span class='danger'>Your appearence morphs to that of a very small humanoid ash dragon! You get to look like a freak without the cool abilities.</span>"
+			H.dna.features = list("mcolor" = "A02720", "tail_lizard" = "Dark Tiger", "tail_human" = "None", "snout" = "Sharp", "horns" = "Curled", "ears" = "None", "wings" = "None", "frills" = "None", "spines" = "Long", "body_markings" = "Dark Tiger Body")
+			H.eye_color = "fee5a3"
+			H.set_species(/datum/species/lizard)
 		if(2)
 			user << "<span class='danger'>Your flesh begins to melt! Miraculously, you seem fine otherwise.</span>"
 			H.set_species(/datum/species/skeleton)

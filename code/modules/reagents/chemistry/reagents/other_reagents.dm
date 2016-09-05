@@ -1016,13 +1016,6 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 
-/datum/reagent/fluorine
-	name = "Fluorine"
-	id = "fluorine"
-	description = "A slippery solution."
-	reagent_state = LIQUID
-	color = "#C8A5DC"
-
 /datum/reagent/carpet
 	name = "Carpet"
 	id = "carpet"
