@@ -236,8 +236,11 @@
 /obj/item/projectile/bullet/sniper/on_hit(atom/target, blocked = 0, hit_zone)
 	if((blocked != 100) && (!ismob(target) && breakthings))
 		target.ex_act(rand(1,2))
+	if((blocked != 100) && ishuman(target) && (hit_zone != ("chest" || "head")) && breakthings)
+		var/mob/living/carbon/human/H = target
+		var/obj/item/bodypart/L = H.get_bodypart(hit_zone)
+		L.dismember()
 	return ..()
-
 
 /obj/item/projectile/bullet/sniper/soporific
 	armour_penetration = 0
@@ -253,18 +256,17 @@
 	return ..()
 
 
-/obj/item/projectile/bullet/sniper/haemorrhage
-	armour_penetration = 15
-	damage = 15
+/obj/item/projectile/bullet/sniper/he
+	armour_penetration = 0
+	damage = 40
 	stun = 0
 	weaken = 0
-	breakthings = FALSE
+	breakthings = TRUE
 
-/obj/item/projectile/bullet/sniper/haemorrhage/on_hit(atom/target, blocked = 0, hit_zone)
-	if((blocked != 100) && iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.bleed(100)
-	return ..()
+/obj/item/projectile/bullet/sniper/he/on_hit(atom/target, blocked = 0, hit_zone)
+	..()
+	explosion(target, -1, 0, 2)
+	return 1
 
 
 /obj/item/projectile/bullet/sniper/penetrator
@@ -282,41 +284,5 @@
 
 
 /obj/item/projectile/bullet/saw
-	damage = 45
-	armour_penetration = 5
-
-/obj/item/projectile/bullet/saw/bleeding
-	damage = 20
-	armour_penetration = 0
-
-/obj/item/projectile/bullet/saw/bleeding/on_hit(atom/target, blocked = 0, hit_zone)
-	. = ..()
-	if((blocked != 100) && iscarbon(target))
-		var/mob/living/carbon/C = target
-		C.bleed(35)
-
-/obj/item/projectile/bullet/saw/hollow
 	damage = 60
-	armour_penetration = -10
-
-/obj/item/projectile/bullet/saw/ap
-	damage = 40
-	armour_penetration = 75
-
-/obj/item/projectile/bullet/saw/incen
-	damage = 7
-	armour_penetration = 0
-
-obj/item/projectile/bullet/saw/incen/Move()
-	..()
-	var/turf/location = get_turf(src)
-	if(location)
-		PoolOrNew(/obj/effect/hotspot, location)
-		location.hotspot_expose(700, 50, 1)
-
-/obj/item/projectile/bullet/saw/incen/on_hit(atom/target, blocked = 0)
-	. = ..()
-	if(iscarbon(target))
-		var/mob/living/carbon/M = target
-		M.adjust_fire_stacks(3)
-		M.IgniteMob()
+	armour_penetration = 10

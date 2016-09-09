@@ -177,10 +177,10 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 
 /datum/uplink_item/nukeoffer/sniper
 	name = "Sniper bundle"
-	desc = "Elegant and refined: Contains a collapsed sniper rifle in an expensive carrying case, a hollowpoint \
-			haemorrhage magazine, a soporific knockout magazine, a free surplus supressor, and a worn out suit and tie."
+	desc = "Elegant and refined: Contains a collapsed sniper rifle in an expensive carrying case, a \
+			high-explosive magazine, a soporific knockout magazine, a penetrator magazine a free surplus supressor, and a worn out suit and tie."
 	item = /obj/item/weapon/storage/briefcase/sniperbundle
-	cost = 20 // normally 26
+	cost = 25 // normally 29
 
 /datum/uplink_item/nukeoffer/chemical
 	name = "Bioterror bundle"
@@ -232,12 +232,19 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	surplus = 40
 	include_modes = list(/datum/game_mode/nuclear)
 
+/datum/uplink_item/dangerous/carbine
+	name = "C-90gl Carbine"
+	desc = "A fully-loaded three-round burst carbine that uses 30-round 5.56mm magazines with an underslung 40mm grenade launcher."
+	item = /obj/item/weapon/gun/projectile/automatic/c90
+	cost = 16
+	include_modes = list(/datum/game_mode/nuclear)
+
 /datum/uplink_item/dangerous/machinegun
 	name = "L6 Squad Automatic Weapon"
 	desc = "A fully-loaded Aussec Armoury belt-fed machine gun. \
-			This deadly weapon has a massive 50-round magazine of devastating 5.56x45mm ammunition."
+			This deadly weapon has a massive 50-round magazine of devastating 7.62 ammunition."
 	item = /obj/item/weapon/gun/projectile/automatic/l6_saw
-	cost = 18
+	cost = 24
 	surplus = 0
 	include_modes = list(/datum/game_mode/nuclear)
 
@@ -253,7 +260,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	name = "Sniper Rifle"
 	desc = "Ranged fury, Syndicate style. guaranteed to cause shock and awe or your TC back!"
 	item = /obj/item/weapon/gun/projectile/automatic/sniper_rifle/syndicate
-	cost = 16
+	cost = 14
 	surplus = 25
 	include_modes = list(/datum/game_mode/nuclear)
 
@@ -470,68 +477,58 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	cost = 20
 	include_modes = list(/datum/game_mode/nuclear)
 
+/datum/uplink_item/ammo/carbine
+	name = "5.56 Carbine Magazine"
+	desc = "An additional 30-round 5.56 magazine sutable for use with the C-90gl carbine. \
+			These bullets deal heavy enough damage to send an unarmoured target into critical condition with a single burst."
+	item = /obj/item/ammo_box/magazine/m556
+	cost = 4
+	include_modes = list(/datum/game_mode/nuclear)
+	
+/datum/uplink_item/ammo/grenades
+	name = "40mm Grenade Box"
+	desc = "A box containing four 40mm grenades for use with the C-90gl carbine. \
+			These grenades are absolutely devastating but the C-90 can only hold one at a time making them less than ideal primary weapons."
+	item = /obj/item/ammo_box/a40mm
+	cost = 4
+	include_modes = list(/datum/game_mode/nuclear)	
+
 /datum/uplink_item/ammo/machinegun
-	cost = 6
-	surplus = 0
+	name = "7.62 Box Magazine"
+	desc = "A 50-round magazine of 7.62 ammunition for use with the L6 SAW. \
+			Even the most well-armoured targets will be unable to stand after taking a burst of 7.62 bullets."
+	cost = 5
+	item = /obj/item/ammo_box/magazine/m762
 	include_modes = list(/datum/game_mode/nuclear)
 
-/datum/uplink_item/ammo/machinegun/basic
-	name = "5.56x45mm Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use with the L6 SAW. \
-			By the time you need to use this, you'll already be on a pile of corpses."
-	item = /obj/item/ammo_box/magazine/mm556x45
-
-/datum/uplink_item/ammo/machinegun/bleeding
-	name = "5.56x45mm (Bleeding) Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use in the L6 SAW; equipped with special properties \
-			to induce internal bleeding on targets."
-	item = /obj/item/ammo_box/magazine/mm556x45/bleeding
-
-/datum/uplink_item/ammo/machinegun/hollow
-	name = "5.56x45mm (Hollow-Point) Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use in the L6 SAW; equipped with hollow-point tips to help \
-			with the unarmored masses of crew."
-	item = /obj/item/ammo_box/magazine/mm556x45/hollow
-
-/datum/uplink_item/ammo/machinegun/ap
-	name = "5.56x45mm (Armor Penetrating) Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use in the L6 SAW; equipped with special properties \
-			to puncture even the most durable armor."
-	item = /obj/item/ammo_box/magazine/mm556x45/ap
-
-/datum/uplink_item/ammo/machinegun/incen
-	name = "5.56x45mm (Incendiary) Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use in the L6 SAW; tipped with a special flammable \
-			mixture that'll ignite anyone struck by the bullet. Some men just want to watch the world burn."
-	item = /obj/item/ammo_box/magazine/mm556x45/incen
-
 /datum/uplink_item/ammo/sniper
-	cost = 4
+	cost = 5
 	include_modes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/ammo/sniper/basic
 	name = ".50 Magazine"
-	desc = "An additional standard 6-round magazine for use with .50 sniper rifles."
+	desc = "An additional standard 5-round magazine for use with .50 sniper rifles."
 	item = /obj/item/ammo_box/magazine/sniper_rounds
 
 /datum/uplink_item/ammo/sniper/soporific
 	name = ".50 Soporific Magazine"
-	desc = "A 3-round magazine of soporific ammo designed for use with .50 sniper rifles. Put your enemies to sleep today!"
+	desc = "A 5-round magazine of soporific ammo designed for use with .50 sniper rifles. Put your enemies to sleep today!"
 	item = /obj/item/ammo_box/magazine/sniper_rounds/soporific
-	cost = 6
+	cost = 3
 
-/datum/uplink_item/ammo/sniper/haemorrhage
-	name = ".50 Haemorrhage Magazine"
-	desc = "A 5-round magazine of haemorrhage ammo designed for use with .50 sniper rifles; causes heavy bleeding \
-			in the target."
-	item = /obj/item/ammo_box/magazine/sniper_rounds/haemorrhage
+/datum/uplink_item/ammo/sniper/he
+	name = ".50 High-Explosive Magazine"
+	desc = "A 5-round magazine of high-exposives ammo designed for use with .50 sniper rifles; causes heavy collateral \
+			damage around the target."
+	item = /obj/item/ammo_box/magazine/sniper_rounds/he
+	cost = 6
 
 /datum/uplink_item/ammo/sniper/penetrator
 	name = ".50 Penetrator Magazine"
 	desc = "A 5-round magazine of penetrator ammo designed for use with .50 sniper rifles. \
 			Can pierce walls and multiple enemies."
 	item = /obj/item/ammo_box/magazine/sniper_rounds/penetrator
-	cost = 5
+	cost = 6
 
 /datum/uplink_item/ammo/toydarts
 	name = "Box of Riot Darts"
