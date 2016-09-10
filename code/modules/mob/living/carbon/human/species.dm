@@ -955,23 +955,41 @@
 			if(attacker_style && attacker_style.harm_act(M,H))
 				return 1
 			else
-				M.do_attack_animation(H)
-
 				var/atk_verb = M.dna.species.attack_verb
+				var/damage = rand(M.dna.species.punchdamagelow, M.dna.species.punchdamagehigh)
+				var/obj/item/bodypart/affecting = H.get_bodypart(ran_zone(M.zone_selected))
+				var/armor_block = H.run_armor_check(affecting, "melee")
+
 				if(H.lying)
 					atk_verb = "kick"
-
-				var/damage = rand(M.dna.species.punchdamagelow, M.dna.species.punchdamagehigh)
-
-				var/obj/item/bodypart/affecting = H.get_bodypart(ran_zone(M.zone_selected))
+					if(M.shoes)
+						var/obj/item/clothing/shoes/S = M.shoes
+						if(S.stomp > 0)
+							atk_verb = "stomp"
+							damage *= 1.5
+						if(S.stomp == 2)
+							M << "<span class='danger'>You raise your [S.name] over [H], ready to stomp them.</span>"
+							M.changeNext_move(55)
+							if(do_mob(M, H, 45) && H.lying)
+								playsound(H, 'sound/misc/splort.ogg', 70, 1)
+								H.emote("scream")
+								H.apply_damage(45, BRUTE, affecting, armor_block)
+								H.visible_message("<span class='danger'>[M] has [atk_verb]ed [H] with their [S.name]!</span>", \
+												"<span class='userdanger'>[M] has [atk_verb]ed [H] with their [S.name]!</span>")
+							else
+								H.visible_message("<span class='danger'>[M] has attempted to [atk_verb] [H] with [S]!</span>")
+								H.changeNext_move(CLICK_CD_MELEE)
+							playsound(H, 'sound/effects/meteorimpact.ogg', 70, 1)
+							M.do_attack_animation(H)
+							add_logs(M, H, "stomped")
+							return 1
 
 				if(!damage || !affecting)
 					playsound(H.loc, M.dna.species.miss_sound, 25, 1, -1)
 					H.visible_message("<span class='warning'>[M] has attempted to [atk_verb] [H]!</span>")
 					return 0
 
-
-				var/armor_block = H.run_armor_check(affecting, "melee")
+				M.do_attack_animation(H)
 
 				playsound(H.loc, M.dna.species.attack_sound, 25, 1, -1)
 
