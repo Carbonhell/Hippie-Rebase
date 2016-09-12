@@ -19,6 +19,8 @@
 		return 0
 	if(istype(mind.current, /mob/living/carbon/human) && (mind.assigned_role in list("Captain", "Chaplain")))
 		return 0
+	if(jobban_isbanned(mind.current, "catban"))
+		return 0
 	if(isloyal(mind.current))
 		return 0
 	if(issilicon(mind.current) || isbot(mind.current) || isdrone(mind.current))
