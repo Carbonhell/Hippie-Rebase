@@ -752,3 +752,54 @@
 	if(prob(30))
 		M << "You should sit down and take a rest..."
 	..()
+	
+/datum/reagent/toxin/bleach
+	name = "Bleach"
+	id = "bleach"
+	description = "A powerful cleaner.Toxic if injested"
+	reagent_state = LIQUID
+	color = "#FFFFFF"
+	toxpwr = 2
+
+/datum/reagent/toxin/bleach/on_mob_life(mob/living/M)
+	if(M && isliving(M) && M.color != initial(M.color))
+		M.color = initial(M.color)
+	..()
+	return
+/datum/reagent/toxin/bleach/reaction_mob(mob/living/M, reac_volume)
+	if(M && isliving(M) && M.color != initial(M.color))
+		M.color = initial(M.color)
+	..()
+/datum/reagent/toxin/bleach/reaction_obj(obj/O, reac_volume)
+	if(O && O.color != initial(O.color))
+		O.color = initial(O.color)
+	..()
+/datum/reagent/toxin/bleach/reaction_turf(turf/T, reac_volume)
+	if(T && T.color != initial(T.color))
+		T.color = initial(T.color)
+	..()
+
+/datum/reagent/toxin/rotatium //Rotatium. Fucks up your rotation and is hilarious
+	name = "Rotatium"
+	id = "rotatium"
+	description = "A constantly swirling, oddly colourful fluid. Causes the consumer's sense of direction and hand-eye coordination to become wild."
+	reagent_state = LIQUID
+	color = "#FFFF00" //RGB: 255, 255, 0 Bright ass yellow
+	metabolization_rate = 0.6 * REAGENTS_METABOLISM
+	toxpwr = 0
+	var/rotate_timer = 0
+
+/datum/reagent/toxin/rotatium/on_mob_life(mob/living/M)
+	rotate_timer++
+	if(M.reagents.get_reagent_amount("rotatium") < 2)
+		M.client.dir = NORTH
+		..()
+		return
+	if(rotate_timer >= rand(5,30)) //Random rotations are wildly unpredictable and hilarious
+		rotate_timer = 0
+		M.client.dir = pick(NORTH, EAST, SOUTH, WEST)
+	..()
+
+/datum/reagent/toxin/rotatium/on_mob_delete(mob/living/M)
+	M.client.dir = NORTH
+	..()
