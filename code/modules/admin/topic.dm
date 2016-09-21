@@ -858,6 +858,14 @@
 		else
 			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=alien candidate;jobban4=\ref[M]'>[replacetext("Alien", " ", "&nbsp")]</a></td>"
 
+		//Misc
+		jobs += "<table cellpadding='1' cellspacing='0' width='100%'>"
+		jobs += "<tr bgcolor='ffeeaa'><th colspan='10'>Misc</th></tr><tr align='center'>"
+		if(jobban_isbanned(M, "catban"))
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=catban;jobban4=\ref[M]'><font color=red>[replacetext("Cat Ban", " ", "&nbsp")]</font></a></td>"
+		else
+			jobs += "<td width='20%'><a href='?src=\ref[src];jobban3=catban;jobban4=\ref[M]'>[replacetext("Cat Ban", " ", "&nbsp")]</a></td>"
+			
 		jobs += "</tr></table>"
 
 		body = "<body>[jobs]</body>"

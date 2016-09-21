@@ -118,6 +118,18 @@
 	new /obj/item/clothing/glasses/hud/health/night(src)
 	return
 
+/obj/item/weapon/storage/firstaid/surgery
+	name = "surgery kit"
+	desc = "How all that stuff fits in there is beyond your comprehension."
+	icon_state = "purplefirstaid"
+	can_hold = list(/obj/item/weapon/retractor, /obj/item/weapon/hemostat, /obj/item/weapon/cautery, /obj/item/weapon/scalpel,
+					/obj/item/weapon/surgicaldrill, /obj/item/weapon/circular_saw/weakened, /obj/item/weapon/surgical_drapes)
+
+/obj/item/weapon/storage/firstaid/surgery/New()
+	..()
+	for(var/i in can_hold)
+		var/obj/item/I = i
+		new I(src)
 
 /*
  * Pill Bottles

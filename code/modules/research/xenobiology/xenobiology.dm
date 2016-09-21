@@ -466,6 +466,8 @@
 			continue
 		if (O.orbiting)
 			continue
+		if(jobban_isbanned(O, "catban"))
+			continue
 		ghost = O
 		break
 	if(ghost)
@@ -481,6 +483,8 @@
 		if(O.mind && O.mind.current && O.mind.current.stat != DEAD)
 			continue
 		if (O.orbiting)
+			continue
+		if(jobban_isbanned(O, "catban"))
 			continue
 		ghost = O
 		break

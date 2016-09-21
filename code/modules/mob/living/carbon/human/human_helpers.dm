@@ -100,6 +100,7 @@
 	if((ears && (ears.flags & EARBANGPROTECT)) || (head && (head.flags & HEADBANGPROTECT)))
 		return 1
 
+		
 /mob/living/carbon/human/abiotic(full_body = 0)
 	if(full_body && ((l_hand && !( src.l_hand.flags&NODROP )) || (r_hand && !( src.r_hand.flags&NODROP )) || (back && !(back.flags&NODROP)) || (wear_mask && !(wear_mask.flags&NODROP)) || (head && !(head.flags&NODROP)) || (shoes && !(shoes.flags&NODROP)) || (w_uniform && !(w_uniform.flags&NODROP)) || (wear_suit && !(wear_suit.flags&NODROP)) || (glasses && !(glasses.flags&NODROP)) || (ears && !(ears.flags&NODROP)) || (gloves && !(gloves.flags&NODROP)) ) )
 		return 1

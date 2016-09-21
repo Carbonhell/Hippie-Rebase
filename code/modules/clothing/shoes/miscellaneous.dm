@@ -21,6 +21,7 @@
 	strip_delay = 70
 	burn_state = FIRE_PROOF
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
+	stomp = 1
 
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "\improper SWAT boots"
@@ -81,6 +82,16 @@
 	else
 		footstep++
 
+/obj/item/clothing/shoes/clown_shoes/cluwne
+	icon_state = "cluwne"
+	item_state = "cluwne"
+	unacidable = 1
+	burn_state = -1
+	flags = NODROP
+
+/obj/item/clothing/shoes/clown_shoes/cluwne/dropped(mob/user)
+	qdel(src)
+		
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
 	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
@@ -91,6 +102,7 @@
 	put_on_delay = 50
 	burn_state = FIRE_PROOF
 	pockets = /obj/item/weapon/storage/internal/pocket/shoes
+	stomp = 1
 
 /obj/item/clothing/shoes/jackboots/fast
 	slowdown = -1

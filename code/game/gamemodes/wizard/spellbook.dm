@@ -219,6 +219,11 @@
 	spell_type = /obj/effect/proc_holder/spell/targeted/barnyardcurse
 	log_name = "BC"
 
+/datum/spellbook_entry/cluwnecurse
+	name = "Cluwne Curse"
+	spell_type = /obj/effect/proc_holder/spell/targeted/cluwnecurse
+	log_name = "CC"	
+
 /datum/spellbook_entry/charge
 	name = "Charge"
 	spell_type = /obj/effect/proc_holder/spell/targeted/charge
@@ -362,6 +367,14 @@
 	log_name = "CT"
 	category = "Assistance"
 
+/datum/spellbook_entry/item/plasma_fist
+	name = "Plasma Fist Scroll"
+	desc = "Consider this more of a \"Spell Bundle\". This artifact is NOT reccomended for weaklings. An ancient scroll that will teach you the art of Plasma Fist. With it's various combos you can knock people down in the area around you, light them on fire and finally perform the PLASMA FIST that will gib your target."
+	item_path = /obj/item/weapon/plasma_fist_scroll
+	log_name = "PF"
+	cost = 1
+	category = "Assistance"
+	
 /datum/spellbook_entry/item/bloodbottle
 	name = "Bottle of Blood"
 	desc = "A bottle of magically infused blood, the smell of which will attract extradimensional beings when broken. Be careful though, the kinds of creatures summoned by blood magic are indiscriminate in their killing, and you yourself may become a victim."

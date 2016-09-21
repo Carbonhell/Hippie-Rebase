@@ -6,7 +6,7 @@
 	icon_state = "rock"
 	var/smooth_icon = 'icons/turf/smoothrocks.dmi'
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
-	canSmoothWith = list (/turf/closed/mineral, /turf/closed/wall)
+	canSmoothWith = list (/turf/closed)
 	baseturf = /turf/open/floor/plating/asteroid/airless
 	initial_gas_mix = "TEMP=2.7"
 	opacity = 1
@@ -616,15 +616,18 @@
 
 /turf/open/chasm/Entered(atom/movable/AM)
 	START_PROCESSING(SSobj, src)
-	drop_stuff()
+	drop_stuff(AM)
 
 /turf/open/chasm/process()
 	if(!drop_stuff())
 		STOP_PROCESSING(SSobj, src)
 
-/turf/open/chasm/proc/drop_stuff()
+/turf/open/chasm/proc/drop_stuff(AM)
 	. = 0
-	for(var/thing in contents)
+	var/thing_to_check = src
+	if(AM)
+		thing_to_check = list(AM)
+	for(var/thing in thing_to_check)
 		if(droppable(thing))
 			. = 1
 			addtimer(src, "drop", 0, FALSE, thing)
@@ -810,48 +813,60 @@
 	name = "rock"
 	icon = 'icons/turf/mining.dmi'
 	smooth_icon = 'icons/turf/walls/rock_wall.dmi'
-	icon_state = "rock"
+	icon_state = "rock2"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
-	canSmoothWith = list (/turf/closed/mineral, /turf/closed/wall)
-	baseturf = /turf/open/floor/plating/ash
+	canSmoothWith = list (/turf/closed)
+	baseturf = /turf/open/floor/plating/ashplanet/wateryrock
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	environment_type = "waste"
-	turf_type = /turf/open/floor/plating/ash
+	turf_type = /turf/open/floor/plating/ashplanet/rocky
 	defer_change = 1
 
-/turf/open/floor/plating/ash
+/turf/open/floor/plating/ashplanet
 	icon = 'icons/turf/mining.dmi'
 	name = "ash"
 	icon_state = "ash"
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
-	canSmoothWith = list (/turf/open/floor/plating/ash, /turf/closed)
 	var/smooth_icon = 'icons/turf/floors/ash.dmi'
 	desc = "The ground is covered in volcanic ash."
-	baseturf = /turf/open/floor/plating/ash //I assume this will be a chasm eventually, once this becomes an actual surface
-	slowdown = 1
+	baseturf = /turf/open/floor/plating/ashplanet/wateryrock //I assume this will be a chasm eventually, once this becomes an actual surface
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	planetary_atmos = TRUE
 
-/turf/open/floor/plating/ash/New()
-	pixel_y = -4
-	pixel_x = -4
-	icon = smooth_icon
+/turf/open/floor/plating/ashplanet/New()
+	if(smooth)
+		pixel_y = -4
+		pixel_x = -4
+		icon = smooth_icon
 	..()
 
-/turf/open/floor/plating/ash/break_tile()
+/turf/open/floor/plating/ashplanet/break_tile()
 	return
 
-/turf/open/floor/plating/ash/burn_tile()
+/turf/open/floor/plating/ashplanet/burn_tile()
 	return
 
-/turf/open/floor/plating/ash/rocky
+/turf/open/floor/plating/ashplanet/ash
+	canSmoothWith = list(/turf/open/floor/plating/ashplanet/ash, /turf/closed)
+	layer = HIGH_TURF_LAYER
+	slowdown = 1
+
+/turf/open/floor/plating/ashplanet/rocky
 	name = "rocky ground"
 	icon_state = "rockyash"
-	icon = 'icons/turf/mining.dmi'
 	smooth_icon = 'icons/turf/floors/rocky_ash.dmi'
-	slowdown = 0
-	smooth = SMOOTH_MORE|SMOOTH_BORDER
-	canSmoothWith = list (/turf/open/floor/plating/ash/rocky, /turf/closed)
+	layer = MID_TURF_LAYER
+	canSmoothWith = list(/turf/open/floor/plating/ashplanet/rocky, /turf/closed)
+
+/turf/open/floor/plating/ashplanet/wateryrock
+	name = "wet rocky ground"
+	smooth = null
+	icon_state = "wateryrock"
+	slowdown = 2
+
+/turf/open/floor/plating/ashplanet/wateryrock/New()
+	icon_state = "[icon_state][rand(1, 9)]"
+	..()
 
 //Necropolis
 

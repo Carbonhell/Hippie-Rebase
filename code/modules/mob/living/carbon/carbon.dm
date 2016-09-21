@@ -182,7 +182,7 @@
 		if(has_bane(BANE_LIGHT))
 			mind.disrupt_spells(0)
 
-
+			
 //Throwing stuff
 /mob/living/carbon/proc/toggle_throw_mode()
 	if(stat)

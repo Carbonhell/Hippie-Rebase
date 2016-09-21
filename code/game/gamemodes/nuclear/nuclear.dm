@@ -344,5 +344,3 @@
 
 	var/obj/item/clothing/suit/space/hardsuit/syndi/suit = H.wear_suit
 	suit.ToggleHelmet()
-
-	H.internal = H.r_store

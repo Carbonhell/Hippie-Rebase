@@ -10,6 +10,7 @@
 	put_on_delay = 70
 	burn_state = FIRE_PROOF
 	origin_tech = "materials=3;magnets=4;engineering=4"
+	stomp = 1
 
 /obj/item/clothing/shoes/magboots/verb/toggle()
 	set name = "Toggle Magboots"
@@ -24,9 +25,11 @@
 	if(src.magpulse)
 		src.flags &= ~NOSLIP
 		src.slowdown = SHOES_SLOWDOWN
+		stomp = 1
 	else
 		src.flags |= NOSLIP
 		src.slowdown = slowdown_active
+		stomp = 2
 	magpulse = !magpulse
 	icon_state = "[magboot_state][magpulse]"
 	user << "<span class='notice'>You [magpulse ? "enable" : "disable"] the mag-pulse traction system.</span>"
@@ -58,3 +61,4 @@
 	icon_state = "syndiemag0"
 	magboot_state = "syndiemag"
 	origin_tech = "magnets=4;syndicate=2"
+	slowdown_active = 1
