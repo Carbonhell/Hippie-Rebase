@@ -21,6 +21,7 @@
 			return
 		T = get_turf(T)
 		loc = T
+		update_client_hook(loc)
 		cameranet.visibility(src)
 		if(ai.client)
 			ai.client.eye = src
@@ -48,6 +49,7 @@
 			AI.cameraFollow = null
 			if (isturf(src.loc) || isturf(src))
 				AI.eyeobj.setLoc(src)
+				AI.update_client_hook(src)
 
 // This will move the AIEye. It will also cause lights near the eye to light up, if toggled.
 // This is handled in the proc below this one.
@@ -64,6 +66,7 @@
 		var/turf/step = get_turf(get_step(user.eyeobj, direct))
 		if(step)
 			user.eyeobj.setLoc(step)
+			user.update_client_hook(step)
 
 	user.cooldown = world.timeofday + 5
 	if(user.acceleration)

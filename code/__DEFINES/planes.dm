@@ -6,3 +6,4 @@
 #define PLANE_SPACE_PARALLAX (PLANE_SPACE_BACKGROUND + 1)
 #define PLANE_SPACE_DUST (PLANE_SPACE_PARALLAX + 1)
 #define PLANE_BASE 0
+#define STATIC_PLANE 1 //THis is for the AI's static, to overlay ontop of the PARALLAX plane
