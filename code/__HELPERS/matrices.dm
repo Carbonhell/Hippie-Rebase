@@ -24,6 +24,15 @@
 		//doesn't have an object argument because this is "Stacking" with the animate call above
 		//3 billion% intentional
 
+/proc/animate_shockwave(var/atom/A)
+	if (!istype(A))
+		return
+	var/punchstr = rand(10, 20)
+	var/original_y = A.pixel_y
+	animate(A, transform = matrix(punchstr, MATRIX_ROTATE), pixel_y = 16, time = 2, color = "#eeeeee", easing = BOUNCE_EASING)
+	animate(transform = matrix(-punchstr, MATRIX_ROTATE), pixel_y = original_y, time = 2, color = "#ffffff", easing = BOUNCE_EASING)
+	animate(transform = null, time = 3, easing = BOUNCE_EASING)
+	return
 
 //Dumps the matrix data in format a-f
 /matrix/proc/tolist()
