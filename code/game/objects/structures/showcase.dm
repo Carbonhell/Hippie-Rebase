@@ -74,3 +74,11 @@
 			user << "The showcase has its screws loosened."
 		else
 			user << "If you see this, something is wrong."
+
+/obj/structure/showcase/mimestatue
+	name = "Mime Statue"
+	icon = 'icons/obj/statue.dmi'
+	icon_state = "mimestatue"
+	desc = "A creepy, silent statue, or an excellent mime."
+	density = 1
+	anchored = 0
