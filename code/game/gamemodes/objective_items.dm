@@ -71,6 +71,12 @@
 	difficulty = 5
 	excludefromjob = list("Research Director")
 
+/datum/objective_item/steal/gooncodedisk
+	name = "the Gooncode disk"
+	targetitem = /obj/item/weapon/disk/tech_disk/gooncode
+	difficulty = 5
+	excludefromjob = list("Research Director")
+
 /datum/objective_item/steal/documents
 	name = "any set of secret documents of any organization"
 	targetitem = /obj/item/documents //Any set of secret documents. Doesn't have to be NT's
