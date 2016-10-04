@@ -4,7 +4,7 @@
 
 		#define MINETYPE "lavaland"
 
-        #include "map_files\TgStation\tgstation.2.1.3.dmm"
+        #include "map_files\TgStation2\tgstation.2.1.3.dmm"
         #include "map_files\generic\z2.dmm"
         #include "map_files\generic\z3.dmm"
         #include "map_files\generic\z4.dmm"
@@ -16,7 +16,7 @@
 		#include "map_files\generic\z10.dmm"
 		#include "map_files\generic\z11.dmm"
 
-		#define MAP_PATH "map_files/TgStation"
+		#define MAP_PATH "map_files/TgStation2"
         #define MAP_FILE "tgstation.2.1.3.dmm"
         #define MAP_NAME "Box Station"
 
