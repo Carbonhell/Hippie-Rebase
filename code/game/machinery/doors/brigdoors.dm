@@ -57,6 +57,10 @@
 		if(C.id == id)
 			targets += C
 
+	for(var/obj/machinery/disposal/trapdoor/T in urange(20, src))
+		if (T.id == src.id)
+			targets += T
+
 	if(!targets.len)
 		stat |= BROKEN
 	update_icon()
@@ -101,6 +105,9 @@
 			continue
 		C.locked = 1
 		C.update_icon()
+
+	for(var/obj/machinery/disposal/trapdoor/T in targets)
+		T.close()
 	return 1
 
 
@@ -130,6 +137,9 @@
 			continue
 		C.locked = 0
 		C.update_icon()
+
+	for(var/obj/machinery/disposal/trapdoor/T in targets)
+		T.open()
 
 	return 1
 

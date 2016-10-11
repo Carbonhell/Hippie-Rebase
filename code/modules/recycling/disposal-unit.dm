@@ -86,11 +86,11 @@
 					user << "<span class='notice'>Eject the items first!</span>"
 					return
 				playsound(src.loc, 'sound/items/Welder2.ogg', 100, 1)
-				user << "<span class='notice'>You start slicing the floorweld off \the [src]...</span>"
+				user << "<span class='notice'>You start slicing the floorweld off \the [name]...</span>"
 				if(do_after(user,20/I.toolspeed, target = src))
 					if(!W.isOn())
 						return
-					user << "<span class='notice'>You slice the floorweld off \the [src].</span>"
+					user << "<span class='notice'>You slice the floorweld off \the [name].</span>"
 					Deconstruct()
 			return
 
@@ -104,9 +104,9 @@
 		return ..()
 
 /obj/machinery/disposal/proc/place_item_in_disposal(obj/item/I, mob/user)
-	I.loc = src
-	user.visible_message("[user.name] places \the [I] into \the [src].", \
-						"<span class='notice'>You place \the [I] into \the [src].</span>")
+	I.forceMove(src)
+	user.visible_message("[user.name] places \the [I] into \the [name].", \
+						"<span class='notice'>You place \the [I] into \the [name].</span>")
 
 
 // mouse drop another mob or self
@@ -123,26 +123,26 @@
 	if(target.buckled || target.has_buckled_mobs())
 		return
 	if(target.mob_size > MOB_SIZE_HUMAN)
-		user << "<span class='warning'>[target] doesn't fit inside [src]!</span>"
+		user << "<span class='warning'>[target] doesn't fit inside [name]!</span>"
 		return
 	add_fingerprint(user)
 	if(user == target)
-		user.visible_message("[user] starts climbing into [src].", \
-								"<span class='notice'>You start climbing into [src]...</span>")
+		user.visible_message("[user] starts climbing into [name].", \
+								"<span class='notice'>You start climbing into [name]...</span>")
 	else
-		target.visible_message("<span class='danger'>[user] starts putting [target] into [src].</span>", \
-								"<span class='userdanger'>[user] starts putting you into [src]!</span>")
+		target.visible_message("<span class='danger'>[user] starts putting [target] into [name].</span>", \
+								"<span class='userdanger'>[user] starts putting you into [name]!</span>")
 	if(do_mob(user, target, 20))
 		if (!loc)
 			return
 		target.forceMove(src)
 		if(user == target)
-			user.visible_message("[user] climbs into [src].", \
-									"<span class='notice'>You climb into [src].</span>")
+			user.visible_message("[user] climbs into [name].", \
+									"<span class='notice'>You climb into [name].</span>")
 		else
-			target.visible_message("<span class='danger'>[user] has placed [target] in [src].</span>", \
-									"<span class='userdanger'>[user] has placed [target] in [src].</span>")
-			add_logs(user, target, "stuffed", addition="into [src]")
+			target.visible_message("<span class='danger'>[user] has placed [target] in [name].</span>", \
+									"<span class='userdanger'>[user] has placed [target] in [name].</span>")
+			add_logs(user, target, "stuffed", addition="into [name]")
 			target.LAssailant = user
 		update_icon()
 
@@ -166,7 +166,7 @@
 // leave the disposal
 /obj/machinery/disposal/proc/go_out(mob/user)
 
-	user.loc = src.loc
+	user.forceMove(src.loc)
 	user.reset_perspective(null)
 	update_icon()
 	return
@@ -199,7 +199,7 @@
 /obj/machinery/disposal/attack_animal(mob/living/simple_animal/M)
 	if(M.environment_smash)
 		M.do_attack_animation(src)
-		visible_message("<span class='danger'>[M.name] smashes \the [src] apart!</span>")
+		visible_message("<span class='danger'>[M.name] smashes \the [name] apart!</span>")
 		qdel(src)
 	return
 
@@ -268,7 +268,7 @@
 /obj/machinery/disposal/Deconstruct()
 	if(stored)
 		var/turf/T = loc
-		stored.loc = T
+		stored.forceMove(T)
 		src.transfer_fingerprints_to(stored)
 		stored.anchored = 0
 		stored.density = 1
@@ -352,7 +352,7 @@
 		return
 
 	if(mode==-1 && !href_list["eject"]) // only allow ejecting if mode is -1
-		usr << "<span class='danger'>\The [src]'s power is disabled.</span>"
+		usr << "<span class='danger'>\The [name]'s power is disabled.</span>"
 		return
 	..()
 	usr.set_machine(src)
@@ -383,11 +383,11 @@
 		if(istype(I, /obj/item/projectile))
 			return
 		if(prob(75))
-			I.loc = src
-			visible_message("<span class='notice'>\the [I] lands in \the [src].</span>")
+			I.forceMove(src)
+			visible_message("<span class='notice'>\the [I] lands in \the [name].</span>")
 			update_icon()
 		else
-			visible_message("<span class='notice'>\the [I] bounces off of \the [src]'s rim!</span>")
+			visible_message("<span class='notice'>\the [I] bounces off of \the [name]'s rim!</span>")
 		return 0
 	else
 		return ..(mover, target, height)
@@ -518,7 +518,7 @@
 
 	if(istype(AM, /obj))
 		var/obj/O = AM
-		O.loc = src
+		O.forceMove(src)
 	else if(istype(AM, /mob))
 		var/mob/M = AM
 		if(prob(2)) // to prevent mobs being stuck in infinite loops
@@ -526,6 +526,179 @@
 			return
 		M.forceMove(src)
 	flush()
+
+//Trap Door
+/obj/machinery/disposal/trapdoor
+	name = "trapdoor"
+	desc = "Almost like a door, but on floor."
+	density = FALSE
+	icon = 'icons/obj/atmospherics/pipes/trapdoor.dmi'
+	icon_state = "closed"
+	mode = FALSE
+	layer = 2.01
+	var/id = 1
+	var/auto_close = 1200
+	var/auto_close_on_mob = 100
+	var/sound_open = 'sound/machines/blast_door.ogg'
+	var/sound_close = 'sound/machines/blast_door.ogg'
+	var/open = FALSE
+
+/obj/machinery/disposal/trapdoor/proc/open()
+	if(flushing)
+		return
+	if(open)
+		return
+	open = TRUE
+	flick("opening", src)
+	playsound(loc, sound_open, 100, 1)
+	icon_state = "open"
+	spawn(5)
+		for(var/mob/living/M in loc)
+			if(!M.floating)
+				M.forceMove(src)
+				trap_flush()
+				if(auto_close_on_mob)
+					spawn(auto_close_on_mob)
+						close()
+		for(var/obj/item/O in loc)
+			if(!O.throwing || !O.anchored)
+				O.forceMove(src)
+				trap_flush()
+	if(auto_close)
+		spawn(auto_close)
+			close()
+	return 1
+
+
+/obj/machinery/disposal/trapdoor/proc/close()
+	if(open)
+		flick("closing", src)
+		icon_state = "closed"
+		playsound(loc, sound_open, 100, 1)
+		open = FALSE
+		return 1
+
+/obj/machinery/disposal/trapdoor/New(loc,var/obj/structure/disposalconstruct/make_from)
+	..()
+	stored.ptype = DISP_END_CHUTE
+	spawn(5)
+		trunk = locate() in loc
+		if(trunk)
+			trunk.linked = src
+
+/obj/machinery/disposal/trapdoor/Crossed(AM as mob|obj)
+	if(open)
+		if(istype(AM, /mob/living))
+			var/mob/living/M = AM
+			if(M.floating)
+				return
+			M.forceMove(src)
+			trap_flush()
+			if(auto_close_on_mob)
+				spawn(auto_close_on_mob)
+					close()
+			return
+		if(istype(AM, /obj/item))
+			var/obj/item/O = AM
+			spawn(5)
+				if(O.throwing || O.anchored)
+					return
+				else if(O.loc == src.loc)
+					O.forceMove(src)
+					trap_flush()
+
+/obj/machinery/disposal/trapdoor/MouseDrop_T(mob/living/target, mob/living/user)
+	if (!open)
+		return
+	if(istype(target))
+		push_mob_in(target, user)
+		return 1
+
+/obj/machinery/disposal/trapdoor/proc/push_mob_in(mob/living/target, mob/living/carbon/human/user)
+	if(target.buckled)
+		return
+	add_fingerprint(user)
+	if(user == target)
+		if(target.floating)
+			user.visible_message("[user] is attempting to dive into [name].", \
+				"<span class='notice'>You start diving into [name]...</span>")
+			if(!do_mob(target, user, 10))
+				return
+			target.forceMove(src)
+			user.visible_message("[user] dives into [name].", \
+				"<span class='notice'>You dive into [name].</span>")
+			sleep(5)
+			trap_flush()
+			if(auto_close_on_mob)
+				spawn(auto_close_on_mob)
+					close()
+		else
+			user.visible_message("[user] is attempting to step on the edge of [name].", \
+				"<span class='notice'>You start attempting to step on the edge of [name]...</span>")
+			if(!do_mob(target, user, 30))
+				return
+			var/chance = 25 // normal chance, 25% to fall inside
+			var/turf/open/floor/T = get_turf(src)
+			var/M = "fall inside"
+			var/U = "falls inside"
+			if(user.disabilities & CLUMSY)
+				chance = 80
+				M = "accidentally do a backward flip, falling inside"
+				U = "accidentally does a backward flip, falling inside"
+			else if(user.getBrainLoss() >= 50)
+				chance = 70
+				M = "close your eyes and boldly step forward"
+				U = "closes his eyes and boldly steps forward"
+			else if(istype(T) && T.wet && isobj(user.shoes) && user.shoes.flags&NOSLIP)
+				chance = 60
+				M = "slip and fall inside"
+				U = "slips and falls inside"
+			if(prob(chance))
+				user.visible_message("[U] \the [name]!", "You [M] \the [name]!")
+				user.forceMove(src)
+				trap_flush()
+				user.Stun(10)
+				if(auto_close_on_mob)
+					spawn(auto_close_on_mob)
+						close()
+			else
+				target.forceMove(src.loc)
+				user.visible_message("[user] steps on the edge of [name].", \
+					"<span class='notice'>You step on the edge of [name].</span>")
+
+	if(user != target)
+		target.visible_message("<span class='danger'>[user] starts pushing [target] into [name].</span>", \
+			"<span class='userdanger'>[user] starts pushing you into [name]!</span>")
+		user.visible_message("<span class='notice'>You start pushing [target] into [name]...</span>")
+		if(do_mob(target, user, 10))
+			if (!loc)
+				return
+			target.forceMove(src)
+			target.visible_message("<span class='danger'>[user] has pushed [target] in \the [name].</span>", \
+				"<span class='userdanger'>[user] has pushedd [target] in \the [name].</span>")
+			add_logs(user, target, "pushed", addition="into [name]")
+			sleep(5)
+			trap_flush()
+
+/obj/machinery/disposal/trapdoor/proc/trap_flush()
+	if(flushing)
+		return
+
+	flushing = TRUE
+	if(last_sound < world.time + 1)
+		playsound(src, 'sound/machines/disposalflush.ogg', 50, 0, 0)
+		last_sound = world.time
+	sleep(5)
+	if(gc_destroyed)
+		return
+	var/obj/structure/disposalholder/H = new()
+	newHolderDestination(H)
+	H.init(src)
+	air_contents = new()
+	H.start(src)
+	flushing = FALSE
+	sleep(5)
+
 
 /atom/movable/proc/disposalEnterTry()
 	return 1

@@ -10,6 +10,7 @@
 	maturation = 8
 	production = 6
 	yield = 1
+	growing_icon = 'icons/obj/hydroponics/growing_flowers.dmi'
 	potency = 20
 	plant_type = 0
 	oneharvest = 1
