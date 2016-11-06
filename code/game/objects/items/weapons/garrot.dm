@@ -25,7 +25,7 @@
 			user << "<span class='warning'>You need 20 cables to make a garrote!</span>"
 			return
 
-//Wepon
+//Weapon
 /obj/item/weapon/garrote
 	name = "garrote"
 	desc = "Extremely robust for stealth takedowns and rapid chokeholds."
