@@ -34,7 +34,6 @@
 
 #define DROPDEL			       16384 // When dropped, it calls qdel on itself
 #define HOLOGRAM		       32768 // Holodeck shit should not be used in any fucking things
-#define BLOCKHAIR	           65536 // temporarily removes the user's hair icon
 
 //turf-only flags
 #define NOJAUNT		1
