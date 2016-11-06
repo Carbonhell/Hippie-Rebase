@@ -314,7 +314,8 @@
 		"orangejuice",
 		"limejuice",
 		"tomatojuice",
-		"lemonjuice"
+		"lemonjuice",
+		"grapejuice"
 	)
 	emagged_reagents = list(
 		"thirteenloko",
