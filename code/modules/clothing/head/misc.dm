@@ -169,7 +169,7 @@
 	desc = "A helmet made out of chitinous alien hide."
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	alternate_screams = list('sound/voice/hiss1.ogg','sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg','sound/voice/hiss5.ogg','sound/voice/hiss6.ogg')
-	flags = BLOCKHAIR | STOPSPRESSUREDMAGE
+	flags = STOPSPRESSUREDMAGE
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 
