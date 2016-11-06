@@ -169,6 +169,13 @@ var/list/teleportlocs = list()
 /area/shuttle/abandoned
 	name = "Abandoned Ship"
 	blob_allowed = FALSE
+	ambientsounds = list('sound/ambience/ambiatm1.ogg', 'sound/ambience/ambmaint.ogg',\
+						'sound/ambience/ambicreek1.ogg', 'sound/ambience/ambicreek2.ogg',\
+						'sound/ambience/ambicha2.ogg', 'sound/ambience/ambicha3.ogg')
+	ambloop = 'sound/ambience/loop/softhum.ogg'
+
+/area/shuttle/outpost
+	name = "Outpost Shuttle"
 
 /area/start
 	name = "start area"
@@ -177,6 +184,7 @@ var/list/teleportlocs = list()
 	luminosity = 1
 	lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
 	has_gravity = 1
+
 
 // CENTCOM
 
@@ -477,6 +485,22 @@ var/list/teleportlocs = list()
 	name = "Electrical Maintenance"
 	icon_state = "yellow"
 
+/area/maintenance/secelectrical
+	name = "Security Electrical Maintenance"
+	icon_state = "yellow"
+
+/area/maintenance/brigwest
+	name = "Brig West Wing Maintenance"
+	icon_state = "yellow"
+
+/area/maintenance/strangeroom
+	name = "Strange Room"
+	icon_state = "yellow"
+
+/area/maintenance/commiespy
+	name = "Russian Room"
+	icon_state = "yellow"
+
 //Hallway
 
 /area/hallway/primary/fore
@@ -631,6 +655,68 @@ var/list/teleportlocs = list()
 	name = "Law Office"
 	icon_state = "law"
 
+/area/clown
+	name = "Clown Office"
+	icon_state = "clown"
+
+/area/mime
+	name = "Mime Office"
+	icon_state = "mime"
+
+/area/rec_room
+	name = "Recreation Room"
+	icon_state = "yellow"
+
+/area/crew_quarters/pool
+	name = "Pool"
+	icon_state = "pool"
+
+// Holodeck
+/area/holodeck
+	name = "Holodeck"
+	icon_state = "Holodeck"
+	luminosity = 1
+	lighting_use_dynamic = DYNAMIC_LIGHTING_DISABLED
+
+/area/holodeck/alphadeck
+	name = "Holodeck Alpha"
+
+
+/area/holodeck/source_plating
+	name = "Holodeck - Off"
+	icon_state = "Holodeck"
+
+/area/holodeck/source_emptycourt
+	name = "Holodeck - Empty Court"
+
+/area/holodeck/source_boxingcourt
+	name = "Holodeck - Boxing Court"
+
+/area/holodeck/source_basketball
+	name = "Holodeck - Basketball Court"
+
+/area/holodeck/source_thunderdomecourt
+	name = "Holodeck - Thunderdome Court"
+
+/area/holodeck/source_beach
+	name = "Holodeck - Beach"
+	icon_state = "Holodeck" // Lazy.
+
+/area/holodeck/source_burntest
+	name = "Holodeck - Atmospheric Burn Test"
+
+/area/holodeck/source_wildlife
+	name = "Holodeck - Wildlife Simulation"
+
+/area/holodeck/source_wrestling
+	name = "Holodeck - Wrestling Arena"
+
+/area/holodeck/source_cqc
+	name = "Holodeck - CQC VR Training"
+
+/area/holodeck/source_krav_maga
+	name = "Holodeck - Krav Maga Training"
+
 //Engineering
 
 /area/engine
@@ -659,6 +745,18 @@ var/list/teleportlocs = list()
 /area/engine/gravity_generator
 	name = "Gravity Generator Room"
 	icon_state = "blue"
+
+/area/engine/supermatter
+	name = "Supermatter"
+	icon_state = "red"
+
+/area/engine/heat_exchange
+	name = "Filtering Room"
+	icon_state = "yellow"
+
+/area/engine/port_engineering
+	name = "Port Engineering"
+	icon_state = "green"
 
 //Solars
 
@@ -1008,6 +1106,14 @@ var/list/teleportlocs = list()
 /area/toxins/explab
 	name = "Experimentation Lab"
 	icon_state = "toxmisc"
+
+/area/toxins/shuttledock
+	name = "Research Shuttle Dock"
+	icon_state = "toxmisc"
+
+/area/toxins/shuttle
+	name = "Research Shuttle"
+	icon_state = "shuttle"
 
 //Storage
 
@@ -1598,6 +1704,7 @@ var/list/teleportlocs = list()
 
 /area/awaycontent/a30
 	icon_state = "awaycontent30"
+
 
 
 /////////////////////////////////////////////////////////////////////
