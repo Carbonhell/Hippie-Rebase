@@ -3,15 +3,16 @@
 	name = "garrote handles"
 	desc = "Two handles for a garrote to be made. Needs cable to finish it."
 	icon_state = "garrothandles"
-	// item_state = "rods"
 	icon = 'icons/obj/garrote.dmi'
 	w_class = 2
 	materials = list(MAT_METAL=1000)
 
 /obj/item/garrotehandles/attackby(obj/item/I, mob/user, params)
 	..()
+
 	if(istype(I, /obj/item/stack/cable_coil))
 		var/obj/item/stack/cable_coil/R = I
+
 		if (R.use(20))
 			var/obj/item/weapon/garrote/W = new /obj/item/weapon/garrote
 			if(!remove_item_from_storage(user))
@@ -41,67 +42,75 @@
 	update_icon()
 
 /obj/item/weapon/garrote/Destroy()
-	SSobj.processing.Remove(src)
+	STOP_PROCESSING(SSobj, src)
 	..()
 
 /obj/item/weapon/garrote/update_icon()
 	if (!item_color)
 		item_color = pick("red", "yellow", "blue", "green")
+
 	icon_state = "garrot[garroting ? "_w" : ""][item_color ? "_[item_color]" : ""]"
+
+/obj/item/weapon/garrote/proc/begin_attack()
+	garroting = 1
+	START_PROCESSING(SSobj, src)
+	update_icon()
+	next_garrot = world.time + 10
+
+/obj/item/weapon/garrote/proc/stop_attack()
+	garroting = 0
+	STOP_PROCESSING(SSobj, src)
+	update_icon()
 
 /obj/item/weapon/garrote/attack_self(mob/user)
 	if(garroting)
 		user << "<span class='notice'>You release the garrote on your victim.</span>" //Not the grab, though. Only the garrote.
-		garroting = 0
-		SSobj.processing.Remove(src)
-		update_icon()
+		stop_attack()
 		return
-	if(world.time <= next_garrot) return
+
+	if(world.time <= next_garrot) 
+		return
 
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
-		var/obj/item/weapon/grab/G = C.l_hand
-		if(!istype(G))
-			G = C.r_hand
-			if(!istype(G))
-				return
-		if(G && G.affecting)
-			G.affecting.LAssailant = user
+		var/mob/living/carbon/P = C.pulling
+
+		if(P)
 			playsound(C.loc, 'sound/weapons/grapple.ogg', 40, 1, -4)
 			playsound(C.loc, 'sound/weapons/cablecuff.ogg', 15, 1, -5)
-			garroting = 1
-			update_icon()
-			SSobj.processing.Add(src)
-			next_garrot = world.time + 10
+			
+			begin_attack()
+
 			user.visible_message(
-				"<span class='danger'>[user] has grabbed \the [G.affecting] with \the [src]!</span>",\
-				"<span class='danger'>You grab \the [G.affecting] with \the [src]!</span>",\
-				"You hear some struggling and muffled cries of surprise")
+				"<span class='danger'>[user] has grabbed [P] with \the [src]!</span>",\
+				"<span class='danger'>You grab [P] with \the [src]!</span>",\
+				"You hear some struggling and muffled craies of surprise")
+		else
+			stop_attack()
+			return
 
 /obj/item/weapon/garrote/afterattack(atom/A, mob/living/user as mob, proximity, click_parameters)
-	if(!proximity) return
+	if(!proximity) 
+		return
+
 	if(iscarbon(A))
 		var/mob/living/carbon/C = A
+
 		if(user != C && !user.get_inactive_hand())
-			if(user.zone_sel.selecting != "mouth" && user.zone_sel.selecting != "eyes" && user.zone_sel.selecting != "head")
+			if(user.zone_selected != "mouth" && user.zone_selected != "eyes" && user.zone_selected != "head")
 				user << "<span class='notice'>You must target head for garroting to work!</span>"
 				return
+
 			if(!garroting)
 				add_logs(user, C, "garroted")
-				var/obj/item/weapon/grab/G = new /obj/item/weapon/grab(user, C)
-				if(!G)	//the grab will delete itself in New if C is anchored
-					return 0
-				user.put_in_inactive_hand(G) //Autograb. The trick is to switch to grab intent and reinforce it for quick chokehold.
-				// N E V E R  autograb into Aggressive. Passive autograb is good enough.
-				// G.state = GRAB_AGGRESSIVE
-				// G.icon_state = "reinforce1"
-				C.LAssailant = user
+
+				user.grab_state = GRAB_AGGRESSIVE
+
 				playsound(C.loc, 'sound/weapons/grapple.ogg', 40, 1, -4)
 				playsound(C.loc, 'sound/weapons/cablecuff.ogg', 15, 1, -5)
-				garroting = 1
-				update_icon()
-				SSobj.processing.Add(src)
-				next_garrot = world.time + 10
+				
+				begin_attack() 
+
 				user.visible_message(
 					"<span class='danger'>[user] has grabbed \the [C] with \the [src]!</span>",\
 					"<span class='danger'>You grab \the [C] with \the [src]!</span>",\
@@ -114,39 +123,30 @@
 	if(iscarbon(loc))
 		var/mob/living/carbon/C = loc
 		if(src != C.r_hand && src != C.l_hand) //THE GARROTE IS NOT IN HANDS, ABORT
-			garroting = 0
-			SSobj.processing.Remove(src)
-			update_icon()
+			stop_attack()
 			return
-		var/obj/item/weapon/grab/G = C.l_hand
-		if(!istype(G))
-			G = C.r_hand
-			if(!istype(G))
-				garroting = 0
-				SSobj.processing.Remove(src)
-				update_icon()
-				return
-		if(!G.affecting)
-			garroting = 0
-			SSobj.processing.Remove(src)
-			update_icon()
+
+		var/mob/living/carbon/G = C.pulling
+
+		if(!G)
+			stop_attack()
 			return
-		if(ishuman(G.affecting))
-			var/mob/living/carbon/human/H = G.affecting
+
+		if(ishuman(G))
+			var/mob/living/carbon/human/H = G
+
 			if(H.is_mouth_covered())
-				garroting = 0
-				SSobj.processing.Remove(src)
-				update_icon()
+				stop_attack()
 				return
+
 			H.forcesay(list("-hrk!", "-hrgh!", "-urgh!", "-kh!", "-hrnk!"))
-		if(G.state >= GRAB_NECK) //Only do oxyloss if in neck grab to prevent passive grab choking or something.
-			if(G.state >= GRAB_KILL)
-				G.affecting.adjustOxyLoss(3) //Stack the chokes with additional oxyloss for quicker death
+
+		if(C.grab_state >= GRAB_NECK) //Only do oxyloss if in neck grab to prevent passive grab choking or something.
+			if(C.grab_state >= GRAB_KILL)
+				G.adjustOxyLoss(3) //Stack the chokes with additional oxyloss for quicker death
 			else
 				if(prob(40))
-					G.affecting.stuttering = max(G.affecting.stuttering, 3) //It will hamper your voice, being choked and all.
-					G.affecting.losebreath = min(G.affecting.losebreath + 2, 3) //Tell the game we're choking them
+					G.stuttering = max(G.stuttering + 1, 3) //It will hamper your voice, being choked and all.
+					G.losebreath = min(G.losebreath + 2, 3) //Tell the game we're choking them
 	else
-		garroting = 0
-		SSobj.processing.Remove(src)
-		update_icon()
+		stop_attack()
