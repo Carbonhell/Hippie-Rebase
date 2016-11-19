@@ -336,3 +336,34 @@
 				/obj/structure/closet/crate/secure/loot = 20,
 				"" = 80
 				)
+
+/obj/effect/spawner/lootdrop/plants
+//Total of 279 items. (26/10/2015)
+	name = "plant_spawner"
+	loot = list(
+				/obj/item/weapon/reagent_containers/food/snacks/grown/corn = 10,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/cherries = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/potato = 20,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/grapes = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/cabbage = 15,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/berries = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/cocoapod = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/sugarcane = 15,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/apple = 10,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/watermelon = 10,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/pumpkin = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/citrus/orange = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/citrus/lemon = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/citrus/lime = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/banana = 2,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/chili = 2,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/eggplant = 10,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/soybeans = 10,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = 15,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/wheat = 30,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/rice = 10,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/carrot = 15,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/plumphelmet = 5,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/chanterelle = 5,
+				"" = 10
+				)
