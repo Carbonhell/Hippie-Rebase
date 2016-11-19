@@ -419,3 +419,12 @@
 	reqs = list(/obj/item/weapon/grown/log = 5)
 	result = /obj/structure/bonfire
 	category = CAT_PRIMAL
+
+/datum/crafting_recipe/garrote_handles //Still need to apply some wires to finish it
+	name = "Garrote Handles"
+	result = /obj/item/garrotehandles
+	tools = list(/obj/item/weapon/weldingtool)
+	reqs = list(/obj/item/stack/cable_coil = 15,
+				/obj/item/stack/rods = 1,)
+	time = 120
+	category = CAT_WEAPON
