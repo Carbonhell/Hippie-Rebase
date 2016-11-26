@@ -6377,7 +6377,7 @@
 	 height = 5;
 	 id = "laborcamp";
 	 name = "perma prison shuttle";
-	 travelDir = 90;
+	 port_angle = 90;
 	 width = 9
 	},
 /obj/docking_port/stationary{
@@ -40961,7 +40961,7 @@
 	 height = 5;
 	 id = "outpost";
 	 name = "outpost shuttle";
-	 travelDir = 90;
+	 port_angle = 90;
 	 width = 7
 	},
 /turf/closed/wall/shuttle{
@@ -44100,7 +44100,7 @@
 /area/toxins/server)
 "bTp" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
-	current_temperature = 80;
+	 target_temperature = T0C + 80;
 	 dir = 2;
 	 on = 1
 	},
@@ -48955,7 +48955,7 @@
 	 height = 5;
 	 id = "mining";
 	 name = "mining shuttle";
-	 travelDir = 90;
+	 port_angle = 90;
 	 width = 7
 	},
 /obj/docking_port/stationary{
@@ -50953,7 +50953,7 @@
 	},
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "wloop_atm_meter";
+	 id_tag = "wloop_atm_meter";
 	 name = "Waste Loop"
 	},
 /turf/open/floor/plasteel,
@@ -50975,7 +50975,7 @@
 	},
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "dloop_atm_meter";
+	 id_tag = "dloop_atm_meter";
 	 name = "Distribution Loop"
 	},
 /turf/open/floor/plasteel,
@@ -52729,7 +52729,6 @@
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	 id_tag = "waste_sensor";
-	 output = 63
 	},
 /turf/open/floor/engine{
 	 name = "vacuum floor";
@@ -56563,7 +56562,6 @@
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	 id_tag = "tox_sensor";
-	 output = 11
 	},
 /turf/open/floor/engine{
 	 name = "plasma floor";
@@ -58641,7 +58639,6 @@
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	 id_tag = "co2_sensor";
-	 output = 35
 	},
 /turf/open/floor/engine{
 	 name = "co2 floor";
@@ -60760,7 +60757,6 @@
 	 input_tag = "air_in";
 	 name = "Mixed Air Supply Control";
 	 output_tag = "air_out";
-	 pressure_setting = 2000;
 	 sensors = list("air_sensor" = "Tank")
 	},
 /turf/open/floor/plasteel{
@@ -62118,7 +62114,7 @@
 /obj/structure/grille,
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "mair_in_meter";
+	 id_tag = "mair_in_meter";
 	 name = "Mixed Air Tank In"
 	},
 /turf/closed/wall/r_wall,
@@ -62128,7 +62124,7 @@
 /obj/structure/grille,
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "mair_out_meter";
+	 id_tag = "mair_out_meter";
 	 name = "Mixed Air Tank Out"
 	},
 /turf/closed/wall/r_wall,
@@ -62489,7 +62485,6 @@
 /obj/machinery/air_sensor{
 	frequency = 1443;
 	 id_tag = "air_sensor";
-	 output = 7
 	},
 /turf/open/floor/engine{
 	name = "air floor";
