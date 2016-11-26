@@ -46,6 +46,7 @@
 	var/auth_weapons = 0	//checks if it can shoot people that have a weapon they aren't authorized to have
 	var/stun_all = 0		//if this is active, the turret shoots everything that isn't security or head of staff
 	var/check_anomalies = 1	//checks if it can shoot at unidentified lifeforms (ie xenos)
+	var/ai		 = 0 		//if active, will shoot at anything not an AI or cyborg
 
 	var/attacked = 0		//if set to 1, the turret gets pissed off and shoots at people nearby (unless they have sec access!)
 
@@ -468,6 +469,11 @@
 			if(emagged && C.stat == DEAD)
 				continue
 
+			// If it's set to attack all non-silicons, target them!
+			if(ai)
+				targets += C
+				continue
+			
 			//if the target is a human and not in our faction, analyze threat level
 			if(istype(C, /mob/living/carbon/human) && !in_faction(C))
 				if(assess_perp(C) >= 4)
