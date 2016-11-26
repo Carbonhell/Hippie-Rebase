@@ -326,3 +326,56 @@
 	desc = "You sit in this. Either by will or force. Looks REALLY uncomfortable."
 	icon_state = "chairold"
 	item_chair = null
+
+// Wheeled chairs
+/obj/structure/chair/withwheels
+	var/delay = 10
+	var/cooldown = 0
+	var/reverse_direction = 1
+
+/obj/structure/chair/withwheels/relaymove(mob/user, direction)
+	if((!Process_Spacemove(direction)) || (!has_gravity(src.loc)) || (cooldown) || user.stat || user.stunned || user.weakened || user.paralysis || (user.restrained()))
+		return
+
+	step(src, direction)
+	if(has_buckled_mobs())
+		for(var/m in buckled_mobs)
+			var/mob/living/buckled_mob = m
+
+			if(reverse_direction)
+				switch(direction)
+					if(NORTH)
+						buckled_mob.dir = SOUTH
+					if(WEST)
+						buckled_mob.dir = EAST
+					if(SOUTH)
+						buckled_mob.dir = NORTH
+					if(EAST)
+						buckled_mob.dir = WEST
+
+			buckled_mob.setDir(direction)
+
+	handle_rotation()
+	handle_layer()
+	cooldown = 1
+	spawn(delay)
+		cooldown = 0
+
+// Wheelchair
+/obj/structure/chair/withwheels/wheelchair
+	name = "Wheelchair"
+	desc = "Chances are you don't really need this."
+	icon_state = "wheelchair"
+	anchored = 0
+	delay = 4
+	reverse_direction = 0
+
+/obj/structure/chair/withwheels/wheelchair/handle_rotation()
+	overlays = null
+	var/image/O = image(icon = 'icons/obj/objects.dmi', icon_state = "wheelchair_overlay", layer = FLY_LAYER, dir = src.dir)
+	overlays += O
+	
+	if(has_buckled_mobs())
+		for(var/m in buckled_mobs)
+			var/mob/living/buckled_mob = m
+			buckled_mob.setDir(dir)
