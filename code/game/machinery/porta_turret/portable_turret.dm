@@ -490,6 +490,9 @@
 				if(assess_perp(M.occupant) >= 4)
 					targets += M
 
+			if(ai || emagged)
+				targets += M
+
 	return targets
 
 /obj/machinery/porta_turret/proc/tryToShootAt(list/atom/movable/targets)
