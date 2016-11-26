@@ -277,3 +277,12 @@ micro-manipulator, console screen, beaker, Microlaser, matter bin, power cells.
 /obj/item/weapon/circuitboard/machine/clockwork
 	name = "clockwork board (Report This)"
 	icon_state = "clock_mod"
+
+/obj/item/weapon/circuitboard/machine/atmoslathe
+	name = "circuit board (Atmos Autolathe)"
+	build_path = /obj/machinery/autolathe/atmos
+	origin_tech = "engineering=3;programming=2"
+	req_components = list(
+							/obj/item/weapon/stock_parts/matter_bin = 3,
+							/obj/item/weapon/stock_parts/manipulator = 1,
+							/obj/item/weapon/stock_parts/console_screen = 1)
