@@ -380,6 +380,9 @@
 /obj/item/weapon/circuitboard/computer/mining_shuttle
 	name = "circuit board (Mining Shuttle)"
 	build_path = /obj/machinery/computer/shuttle/mining
+/obj/item/weapon/circuitboard/outpost_shuttle
+	name = "circuit Board (Outpost Shuttle)"
+	build_path = /obj/machinery/computer/shuttle/outpost
 /obj/item/weapon/circuitboard/computer/white_ship
 	name = "circuit board (White Ship)"
 	build_path = /obj/machinery/computer/shuttle/white_ship
