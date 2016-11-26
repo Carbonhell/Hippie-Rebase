@@ -44100,7 +44100,6 @@
 /area/toxins/server)
 "bTp" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
-	 target_temperature = T0C + 80;
 	 dir = 2;
 	 on = 1
 	},
