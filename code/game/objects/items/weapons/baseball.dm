@@ -28,9 +28,6 @@
 	w_class = 3
 	burn_state = 0
 
-// /mob/living/carbon/throw_item(atom/target)
-// 	..()
-
 /obj/item/weapon/baseballbat/wood
 
 /obj/item/weapon/baseballbat/metal
