@@ -713,7 +713,7 @@
 	},
 /area/mine/laborcamp/security)
 "bC" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 4;

@@ -1619,7 +1619,7 @@
 /turf/open/floor/plasteel/black,
 /area/centcom/ferry)
 "eQ" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark{
 	name = "Emergencyresponseteam"
 	},
@@ -1630,7 +1630,7 @@
 /turf/open/floor/vault,
 /area/centcom/ferry)
 "eS" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/effect/landmark{
@@ -1639,7 +1639,7 @@
 /turf/open/floor/plasteel/black,
 /area/centcom/ferry)
 "eT" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark{
@@ -1667,7 +1667,7 @@
 	},
 /area/centcom/ferry)
 "eY" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel/freezer{
 	dir = 2
 	},
@@ -1723,7 +1723,7 @@
 	},
 /area/centcom/ferry)
 "ff" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark{
@@ -1822,7 +1822,7 @@
 /turf/open/floor/wood,
 /area/centcom/ferry)
 "ft" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/wood,
 /area/centcom/ferry)
 "fu" = (
@@ -2057,7 +2057,7 @@
 	},
 /area/centcom/evac)
 "gh" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel/black,
 /area/centcom/evac)
 "gi" = (
@@ -2245,7 +2245,7 @@
 	},
 /area/centcom/evac)
 "gP" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel,
 /area/centcom/evac)
 "gQ" = (
@@ -2394,7 +2394,7 @@
 /turf/open/floor/plasteel/black,
 /area/centcom/control)
 "hp" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel/black,
@@ -2698,7 +2698,7 @@
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
 "in" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -5744,7 +5744,7 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "rR" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /turf/open/floor/mineral/titanium,
