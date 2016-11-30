@@ -173,17 +173,6 @@
 /obj/structure/chair/comfy/lime
 	color = rgb(255,251,0)
 
-/obj/structure/chair/office
-	anchored = 0
-	buildstackamount = 5
-	item_chair = null
-
-/obj/structure/chair/office/light
-	icon_state = "officechair_white"
-
-/obj/structure/chair/office/dark
-	icon_state = "officechair_dark"
-
 //Stool
 
 /obj/structure/chair/stool
@@ -266,9 +255,6 @@
 	user.unEquip(src,1) //Even NODROP chairs are destroyed.
 	qdel(src)
 
-
-
-
 /obj/item/chair/hit_reaction(mob/living/carbon/human/owner, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(attack_type == UNARMED_ATTACK && prob(hit_reaction_chance))
 		owner.visible_message("<span class='danger'>[owner] fends off [attack_text] with [src]!</span>")
@@ -286,7 +272,6 @@
 			if(C.health < C.maxHealth*0.5)
 				C.Weaken(1)
 		smash(user)
-
 
 /obj/item/chair/stool
 	name = "stool"
@@ -345,14 +330,15 @@
 			if(reverse_direction)
 				switch(direction)
 					if(NORTH)
-						buckled_mob.dir = SOUTH
+						direction = SOUTH
 					if(WEST)
-						buckled_mob.dir = EAST
+						direction = EAST
 					if(SOUTH)
-						buckled_mob.dir = NORTH
+						direction = NORTH
 					if(EAST)
-						buckled_mob.dir = WEST
+						direction = WEST
 
+			dir = direction
 			buckled_mob.setDir(direction)
 
 	handle_rotation()
@@ -360,6 +346,19 @@
 	cooldown = 1
 	spawn(delay)
 		cooldown = 0
+
+// Office chair (one you can move about on)
+/obj/structure/chair/withwheels/office
+	anchored = 0
+	buildstackamount = 5
+	item_chair = null
+
+/obj/structure/chair/withwheels/office/light
+	icon_state = "officechair_white"
+
+/obj/structure/chair/withwheels/office/dark
+	icon_state = "officechair_dark"
+
 
 // Wheelchair
 /obj/structure/chair/withwheels/wheelchair
@@ -372,7 +371,7 @@
 
 /obj/structure/chair/withwheels/wheelchair/handle_rotation()
 	overlays = null
-	var/image/O = image(icon = 'icons/obj/objects.dmi', icon_state = "wheelchair_overlay", layer = FLY_LAYER, dir = src.dir)
+	var/image/O = image(icon = 'icons/obj/chairs.dmi', icon_state = "wheelchair_overlay", layer = FLY_LAYER, dir = src.dir)
 	overlays += O
 	
 	if(has_buckled_mobs())
