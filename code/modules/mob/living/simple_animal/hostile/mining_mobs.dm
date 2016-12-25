@@ -1013,7 +1013,7 @@
 	for(var/F in RANGE_TURFS(1, src))
 		if(istype(F, /turf/closed/mineral))
 			var/turf/closed/mineral/M = F
-			M.ChangeTurf(M.turf_type)
+			M.ChangeTurf(M.turf_type,FALSE,TRUE)
 	gps = new /obj/item/device/gps/internal(src)
 
 /mob/living/simple_animal/hostile/spawner/lavaland/Destroy()
