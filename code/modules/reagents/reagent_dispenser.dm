@@ -6,6 +6,7 @@
 	density = 1
 	anchored = 0
 	pressure_resistance = 2*ONE_ATMOSPHERE
+	//var/list/brokenvars = list("storage tank", "chemtank", /obj/structure/reagent_dispensers)// when it blows up,what will it become,made it qdel src and make a statuelike thing to avoid having to change syringes,droppers,glasses etc with snowflakey checks
 	var/tank_volume = 1000 //In units, how much the dispenser can hold
 	var/reagent_id = "water" //The ID of the reagent that the dispenser uses
 
@@ -184,3 +185,57 @@
 	icon_state = "virus_food"
 	anchored = 1
 	reagent_id = "virusfood"
+
+//honkcooler
+/obj/structure/reagent_dispensers/honk_cooler
+	name = "Honk-Cooler"
+	desc = "A machine filled with the clown's thick juice! NICE!"
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "honk_cooler"
+	anchored = 1
+	var/cups = 50
+	//brokenvars = list("honk-cooler", "honk_cooler", /obj/structure/reagent_dispensers/honk_cooler)
+
+/obj/structure/reagent_dispensers/honk_cooler/New(loc, empty = 0)
+	..()
+	if(!empty) reagents.add_reagent("banana",500)
+
+/obj/structure/reagent_dispensers/honk_cooler/attack_hand(mob/living/carbon/human/user)
+	if((!istype(user)) || (user.stat))
+		return
+	if(cups <= 0)
+		user << "<span class='warning'>What? No cups?</span>"
+		return
+	cups--
+	user.put_in_hands(new /obj/item/weapon/reagent_containers/food/drinks/sillycup)
+	user.visible_message("[user] gets a cup from [src].","<span class='notice'>You get a cup from [src].</span>")
+
+/obj/structure/reagent_dispensers/honk_cooler/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/weapon/paper))
+		if(!user.drop_item())
+			return
+		qdel(I)
+		cups++
+		return
+
+	if (istype(I, /obj/item/weapon/wrench))
+		if (!anchored && !isinspace())
+			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+			user << "<span class='notice'> You begin to tighten \the [src] to the floor...</span>"
+			if (do_after(user, 20, target = src))
+				user.visible_message( \
+					"[user] tightens \the [src]'s casters.", \
+					"<span class='notice'>You tighten \the [src]'s casters. Anchoring it down.</span>", \
+					"<span class='italics'>You hear ratchet.</span>")
+				anchored = 1
+		else if(anchored)
+			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+			user << "<span class='notice'> You begin to loosen \the [src]'s casters...</span>"
+			if (do_after(user, 40, target = src))
+				user.visible_message( \
+					"[user] loosens \the [src]'s casters.", \
+					"<span class='notice'>You loosen \the [src]. Now it can be pulled somewhere else.</span>", \
+					"<span class='italics'>You hear ratchet.</span>")
+				anchored = 0
+	else
+		..()

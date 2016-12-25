@@ -22,4 +22,5 @@
 #define CRAFTLATHE	8	//Uses fuck if I know. For use eventually.
 #define MECHFAB		16 //Remember, objects utilising this flag should have construction_time and construction_cost vars.
 #define BIOGENERATOR 32 //Uses biomass
+#define ATMOSLATHE   64 // Used for crafting atmos items in atmoslathe
 //Note: More then one of these can be added to a design but imprinter and lathe designs are incompatable.

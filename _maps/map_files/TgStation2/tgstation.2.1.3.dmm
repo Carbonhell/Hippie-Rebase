@@ -3098,7 +3098,7 @@
 	},
 /area/security/main)
 "afz" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -4399,7 +4399,7 @@
 	},
 /area/security/brig)
 "ahR" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Warden"
 	},
@@ -5368,7 +5368,7 @@
 	 pixel_y = -26;
 	 req_access_txt = "1"
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/shuttle{
@@ -6377,7 +6377,7 @@
 	 height = 5;
 	 id = "laborcamp";
 	 name = "perma prison shuttle";
-	 travelDir = 90;
+	 port_angle = 90;
 	 width = 9
 	},
 /obj/docking_port/stationary{
@@ -6645,7 +6645,7 @@
 /turf/open/floor/plasteel,
 /area/security/brig)
 "alQ" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -8479,7 +8479,7 @@
 /turf/open/floor/plating,
 /area/maintenance/fpmaint)
 "apq" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Detective"
 	},
@@ -8565,7 +8565,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "apy" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -10580,7 +10580,7 @@
 /turf/open/floor/plating,
 /area/maintenance/fpmaint)
 "atv" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -13101,7 +13101,7 @@
 	icon_state = "0-4";
 	 d2 = 4
 	},
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start/depsec/medical,
 /turf/open/floor/plasteel{
 	icon_state = "red";
@@ -13493,7 +13493,7 @@
 	 name = "Speakeasy"
 	})
 "azP" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start/depsec/supply,
@@ -15730,7 +15730,7 @@
 /turf/closed/wall,
 /area/maintenance/fpmaint2)
 "aHv" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel{
@@ -21672,7 +21672,7 @@
 /turf/open/floor/plasteel,
 /area/security/checkpoint2)
 "aVo" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -23012,7 +23012,7 @@
 /turf/open/floor/wood,
 /area/library)
 "aYp" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/camera{
 	c_tag = "Library North";
 	 dir = 2;
@@ -23024,7 +23024,7 @@
 /turf/open/floor/wood,
 /area/library)
 "aYq" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	 icon_state = "pipe-c"
@@ -23368,7 +23368,7 @@
 /turf/open/floor/plasteel/black,
 /area/mime)
 "aZg" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -23717,7 +23717,7 @@
 /turf/open/floor/wood,
 /area/library)
 "aZU" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/wood,
@@ -23734,7 +23734,7 @@
 /turf/open/floor/wood,
 /area/library)
 "aZX" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/wood,
@@ -24983,13 +24983,13 @@
 /turf/open/floor/wood,
 /area/library)
 "bcV" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/wood,
 /area/library)
 "bcW" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
@@ -28322,7 +28322,7 @@
 /obj/effect/landmark/start{
 	name = "Librarian"
 	},
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/wood,
 /area/library)
 "bln" = (
@@ -28497,7 +28497,7 @@
 /turf/open/floor/wood,
 /area/security/vacantoffice)
 "blG" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -28515,7 +28515,7 @@
 /turf/open/floor/wood,
 /area/security/vacantoffice)
 "blJ" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/wood,
@@ -30764,7 +30764,7 @@
 /turf/open/floor/wood,
 /area/security/vacantoffice)
 "bqH" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -30778,7 +30778,7 @@
 /turf/open/floor/carpet,
 /area/security/vacantoffice)
 "bqJ" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	tag = "icon-manifold-r-f (EAST)";
 	 dir = 4
@@ -34978,7 +34978,7 @@
 	},
 /area/medical/chemistry)
 "bAF" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -35128,7 +35128,7 @@
 	},
 /area/assembly/robotics)
 "bAX" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -37211,7 +37211,7 @@
 	},
 /area/medical/medbay)
 "bFL" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/machinery/button/door{
@@ -37230,7 +37230,7 @@
 	},
 /area/medical/medbay)
 "bFM" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/structure/sign/nosmoking_2{
@@ -38611,7 +38611,7 @@
 /obj/effect/landmark/start{
 	name = "Cargo Technician"
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -38723,7 +38723,7 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads)
 "bIH" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
@@ -39778,7 +39778,7 @@
 	},
 /area/medical/genetics)
 "bKW" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -40961,7 +40961,7 @@
 	 height = 5;
 	 id = "outpost";
 	 name = "outpost shuttle";
-	 travelDir = 90;
+	 port_angle = 90;
 	 width = 7
 	},
 /turf/closed/wall/shuttle{
@@ -41148,7 +41148,7 @@
 	},
 /area/ai_monitored/nuke_storage)
 "bNw" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel{
@@ -41438,7 +41438,7 @@
 	},
 /area/medical/genetics)
 "bNX" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /turf/open/floor/plasteel{
@@ -41788,7 +41788,7 @@
 	},
 /area/crew_quarters/heads)
 "bOH" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -42218,7 +42218,7 @@
 	},
 /area/toxins/explab)
 "bPD" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Scientist"
 	},
@@ -42484,7 +42484,7 @@
 /area/ai_monitored/nuke_storage)
 "bQf" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel,
 /area/ai_monitored/nuke_storage)
 "bQg" = (
@@ -43553,7 +43553,7 @@
 	},
 /area/crew_quarters/hor)
 "bSf" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -44036,9 +44036,7 @@
 /obj/machinery/r_n_d/server/robotics,
 /turf/open/floor/bluegrid{
 	name = "Server Base";
-	 nitrogen = 500;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=500;TEMP=80"
 	},
 /area/toxins/server)
 "bTl" = (
@@ -44050,9 +44048,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Server Base";
-	 nitrogen = 500;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=500;TEMP=80"
 	},
 /area/toxins/server)
 "bTm" = (
@@ -44104,7 +44100,6 @@
 /area/toxins/server)
 "bTp" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
-	current_temperature = 80;
 	 dir = 2;
 	 on = 1
 	},
@@ -44295,7 +44290,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
 "bTK" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Quartermaster"
 	},
@@ -44560,9 +44555,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Server Walkway";
-	 nitrogen = 500;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=500;TEMP=80"
 	},
 /area/toxins/server)
 "bUv" = (
@@ -44572,9 +44565,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Server Walkway";
-	 nitrogen = 500;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=500;TEMP=80"
 	},
 /area/toxins/server)
 "bUw" = (
@@ -44596,7 +44587,7 @@
 	},
 /area/toxins/server)
 "bUy" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 4
 	},
@@ -44641,7 +44632,7 @@
 /turf/open/floor/plasteel,
 /area/security/checkpoint/science)
 "bUD" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start/depsec/science,
@@ -45390,9 +45381,7 @@
 /obj/machinery/r_n_d/server/core,
 /turf/open/floor/bluegrid{
 	name = "Server Base";
-	 nitrogen = 500;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=500;TEMP=80"
 	},
 /area/toxins/server)
 "bVQ" = (
@@ -45407,9 +45396,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Server Base";
-	 nitrogen = 500;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=500;TEMP=80"
 	},
 /area/toxins/server)
 "bVR" = (
@@ -45833,7 +45820,7 @@
 	},
 /area/medical/cmo)
 "bWO" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Chief Medical Officer"
 	},
@@ -47756,7 +47743,7 @@
 	},
 /area/medical/medbay)
 "caF" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -48967,7 +48954,7 @@
 	 height = 5;
 	 id = "mining";
 	 name = "mining shuttle";
-	 travelDir = 90;
+	 port_angle = 90;
 	 width = 7
 	},
 /obj/docking_port/stationary{
@@ -50492,7 +50479,7 @@
 	},
 /area/medical/medbay)
 "cfL" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -50965,7 +50952,7 @@
 	},
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "wloop_atm_meter";
+	 id_tag = "wloop_atm_meter";
 	 name = "Waste Loop"
 	},
 /turf/open/floor/plasteel,
@@ -50987,7 +50974,7 @@
 	},
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "dloop_atm_meter";
+	 id_tag = "dloop_atm_meter";
 	 name = "Distribution Loop"
 	},
 /turf/open/floor/plasteel,
@@ -51725,7 +51712,7 @@
 	},
 /area/toxins/xenobiology)
 "cic" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Scientist"
 	},
@@ -52160,9 +52147,8 @@
 	 pump_direction = 0
 	},
 /turf/open/floor/engine{
-	name = "vacuum floor";
-	 nitrogen = 0.01;
-	 oxygen = 0.01
+	 name = "vacuum floor";
+	 initial_gas_mix = "o2=0.01;n2=0.01"
 	},
 /area/atmos)
 "ciV" = (
@@ -52170,16 +52156,14 @@
 	c_tag = "Atmospherics Waste Tank"
 	},
 /turf/open/floor/engine{
-	name = "vacuum floor";
-	 nitrogen = 0.01;
-	 oxygen = 0.01
+	 name = "vacuum floor";
+	 initial_gas_mix = "o2=0.01;n2=0.01"
 	},
 /area/atmos)
 "ciW" = (
 /turf/open/floor/engine{
-	name = "vacuum floor";
-	 nitrogen = 0.01;
-	 oxygen = 0.01
+	 name = "vacuum floor";
+	 initial_gas_mix = "o2=0.01;n2=0.01"
 	},
 /area/atmos)
 "ciX" = (
@@ -52744,12 +52728,10 @@
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	 id_tag = "waste_sensor";
-	 output = 63
 	},
 /turf/open/floor/engine{
-	name = "vacuum floor";
-	 nitrogen = 0.01;
-	 oxygen = 0.01
+	 name = "vacuum floor";
+	 initial_gas_mix = "o2=0.01;n2=0.01"
 	},
 /area/atmos)
 "ckq" = (
@@ -52757,9 +52739,8 @@
 	dir = 4
 	},
 /turf/open/floor/engine{
-	name = "vacuum floor";
-	 nitrogen = 0.01;
-	 oxygen = 0.01
+	 name = "vacuum floor";
+	 initial_gas_mix = "o2=0.01;n2=0.01"
 	},
 /area/atmos)
 "ckr" = (
@@ -53084,7 +53065,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "cle" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -53229,9 +53210,8 @@
 	 pixel_y = 1
 	},
 /turf/open/floor/engine{
-	name = "vacuum floor";
-	 nitrogen = 0.01;
-	 oxygen = 0.01
+	 name = "vacuum floor";
+	 initial_gas_mix = "o2=0.01;n2=0.01"
 	},
 /area/atmos)
 "clw" = (
@@ -55347,7 +55327,7 @@
 	},
 /area/toxins/misc_lab)
 "cpM" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Scientist"
 	},
@@ -55415,9 +55395,7 @@
 "cpU" = (
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cpV" = (
@@ -55425,9 +55403,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cpW" = (
@@ -55435,9 +55411,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cpX" = (
@@ -55457,9 +55431,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cpY" = (
@@ -55467,9 +55439,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cpZ" = (
@@ -55477,9 +55447,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cqa" = (
@@ -55660,7 +55628,7 @@
 	},
 /area/medical/virology)
 "cqr" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -55960,9 +55928,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cqU" = (
@@ -55970,9 +55936,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cqV" = (
@@ -55983,9 +55947,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cqW" = (
@@ -55993,9 +55955,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cqX" = (
@@ -56003,9 +55963,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cqY" = (
@@ -56025,7 +55983,7 @@
 	},
 /area/tcommsat/computer)
 "cra" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -56185,11 +56143,8 @@
 	 pump_direction = 0
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "crr" = (
@@ -56197,11 +56152,8 @@
 	c_tag = "Atmospherics Plasma Tank"
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "crs" = (
@@ -56210,11 +56162,8 @@
 	 pixel_x = -1
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "crt" = (
@@ -56518,9 +56467,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "crX" = (
@@ -56528,9 +56475,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "crY" = (
@@ -56538,9 +56483,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "crZ" = (
@@ -56548,9 +56491,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "csa" = (
@@ -56620,24 +56561,17 @@
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	 id_tag = "tox_sensor";
-	 output = 11
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "css" = (
 /obj/machinery/portable_atmospherics/canister/toxins,
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "cst" = (
@@ -56645,11 +56579,8 @@
 	dir = 4
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "csu" = (
@@ -56851,9 +56782,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "csR" = (
@@ -56869,9 +56798,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "csS" = (
@@ -56882,9 +56809,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "csT" = (
@@ -57028,7 +56953,7 @@
 	},
 /area/security/checkpoint/engineering)
 "ctj" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start/depsec/engineering,
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
 	on = 1;
@@ -57107,20 +57032,14 @@
 	 pixel_y = 1
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "cts" = (
 /turf/open/floor/engine{
-	carbon_dioxide = 0;
 	 name = "plasma floor";
-	 nitrogen = 0;
-	 oxygen = 0;
-	 toxins = 70000
+	 initial_gas_mix = "o2=0;n2=0;plasma=70000;co2=0"
 	},
 /area/atmos)
 "ctt" = (
@@ -57395,9 +57314,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "ctV" = (
@@ -57410,9 +57327,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "ctW" = (
@@ -57423,9 +57338,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "ctX" = (
@@ -57434,9 +57347,7 @@
 	dir = 8;
 	 icon_state = "vault";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "ctY" = (
@@ -57448,9 +57359,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "ctZ" = (
@@ -57461,9 +57370,7 @@
 	},
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cua" = (
@@ -58026,9 +57933,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cvb" = (
@@ -58217,10 +58122,8 @@
 	 pump_direction = 0
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cvx" = (
@@ -58228,18 +58131,14 @@
 	c_tag = "Atmospherics CO2 Tank"
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cvy" = (
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cvz" = (
@@ -58513,9 +58412,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cwa" = (
@@ -58523,9 +58420,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cwb" = (
@@ -58533,9 +58428,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cwc" = (
@@ -58745,22 +58638,17 @@
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	 id_tag = "co2_sensor";
-	 output = 35
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cwB" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cwC" = (
@@ -58768,10 +58656,8 @@
 	dir = 4
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cwD" = (
@@ -59062,9 +58948,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cxi" = (
@@ -59072,9 +58956,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cxj" = (
@@ -59082,9 +58964,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cxk" = (
@@ -59092,9 +58972,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cxl" = (
@@ -59107,7 +58985,7 @@
 	},
 /area/tcommsat/computer)
 "cxm" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -59363,10 +59241,8 @@
 	 pixel_y = 1
 	},
 /turf/open/floor/engine{
-	carbon_dioxide = 50000;
 	 name = "co2 floor";
-	 nitrogen = 0;
-	 oxygen = 0
+	 initial_gas_mix = "o2=0;n2=0;co2=50000"
 	},
 /area/atmos)
 "cxL" = (
@@ -59552,9 +59428,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cyi" = (
@@ -59562,9 +59436,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cyj" = (
@@ -59574,9 +59446,7 @@
 /obj/machinery/light,
 /turf/open/floor/bluegrid{
 	name = "Mainframe Base";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cyk" = (
@@ -59584,9 +59454,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cyl" = (
@@ -59594,9 +59462,7 @@
 /turf/open/floor/bluegrid{
 	icon_state = "dark";
 	 name = "Mainframe Floor";
-	 nitrogen = 100;
-	 oxygen = 0;
-	 temperature = 80
+	 initial_gas_mix = "o2=0;n2=100;TEMP=80"
 	},
 /area/tcommsat/server)
 "cym" = (
@@ -60890,7 +60756,6 @@
 	 input_tag = "air_in";
 	 name = "Mixed Air Supply Control";
 	 output_tag = "air_out";
-	 pressure_setting = 2000;
 	 sensors = list("air_sensor" = "Tank")
 	},
 /turf/open/floor/plasteel{
@@ -61497,7 +61362,7 @@
 	},
 /area/engine/chiefs_office)
 "cCk" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -61879,7 +61744,7 @@
 	 d2 = 8;
 	 icon_state = "4-8"
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -62248,7 +62113,7 @@
 /obj/structure/grille,
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "mair_in_meter";
+	 id_tag = "mair_in_meter";
 	 name = "Mixed Air Tank In"
 	},
 /turf/closed/wall/r_wall,
@@ -62258,7 +62123,7 @@
 /obj/structure/grille,
 /obj/machinery/meter{
 	frequency = 1443;
-	 id = "mair_out_meter";
+	 id_tag = "mair_out_meter";
 	 name = "Mixed Air Tank Out"
 	},
 /turf/closed/wall/r_wall,
@@ -62535,9 +62400,8 @@
 	 id = "n2_in"
 	},
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cEM" = (
@@ -62546,9 +62410,8 @@
 	 id_tag = "n2_sensor"
 	},
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cEN" = (
@@ -62564,9 +62427,8 @@
 	 pump_direction = 0
 	},
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cEO" = (
@@ -62577,8 +62439,7 @@
 	},
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cEP" = (
@@ -62588,8 +62449,7 @@
 	},
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cEQ" = (
@@ -62606,8 +62466,7 @@
 	},
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cER" = (
@@ -62618,20 +62477,17 @@
 	},
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cES" = (
 /obj/machinery/air_sensor{
 	frequency = 1443;
 	 id_tag = "air_sensor";
-	 output = 7
 	},
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cET" = (
@@ -62648,8 +62504,7 @@
 	},
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cEU" = (
@@ -62991,24 +62846,21 @@
 	 network = list("SS13")
 	},
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cFL" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cFM" = (
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cFN" = (
@@ -63019,23 +62871,20 @@
 	},
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cFO" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cFP" = (
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cFQ" = (
@@ -63050,23 +62899,20 @@
 	},
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cFR" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cFS" = (
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cFT" = (
@@ -63362,25 +63208,22 @@
 "cGI" = (
 /obj/machinery/light/small,
 /turf/open/floor/engine{
-	name = "n2 floor";
-	 nitrogen = 100000;
-	 oxygen = 0
+	 name = "n2 floor";
+	 initial_gas_mix = "o2=0;n2=100000"
 	},
 /area/atmos)
 "cGJ" = (
 /obj/machinery/light/small,
 /turf/open/floor/engine{
 	name = "o2 floor";
-	 nitrogen = 0;
-	 oxygen = 100000
+	 initial_gas_mix = "o2=100000;n2=0"
 	},
 /area/atmos)
 "cGK" = (
 /obj/machinery/light/small,
 /turf/open/floor/engine{
 	name = "air floor";
-	 nitrogen = 10580;
-	 oxygen = 2644
+	 initial_gas_mix = "o2=2644;n2=10580"
 	},
 /area/atmos)
 "cGL" = (
@@ -65633,7 +65476,7 @@
 /turf/open/floor/plasteel,
 /area/engine/port_engineering)
 "cKZ" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -66322,7 +66165,7 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "cMr" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/machinery/firealarm{
 	dir = 8;
 	 pixel_x = -24
@@ -68332,7 +68175,7 @@
 	},
 /area/turret_protected/ai)
 "cQp" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel{
@@ -69375,7 +69218,7 @@
 	},
 /area/engine/engine_smes)
 "cRX" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/structure/cable{
@@ -69423,7 +69266,7 @@
 	},
 /area/engine/supermatter)
 "cSa" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Station Engineer"
 	},

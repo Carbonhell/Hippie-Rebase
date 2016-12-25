@@ -488,6 +488,17 @@ var/highlander_claymores = 0
 	w_class = 5
 	var/homerun_ready = 0
 	var/homerun_able = 0
+	slot_flags = SLOT_BELT //Including the belt sprite to look cool
+	throw_speed = 3
+	throw_range = 4
+	special_throw = 1
+	deflectItem = 1
+	specthrowsound = 'sound/weapons/basebat.ogg'
+	throwrange_mult = 1.5 //Increases throw range by 1.5
+	throwforce_mult = 1.2 //Multiply the throwforce of thrown object meagerly - don't make this too high
+	specthrow_maxwclass = 2 //Max weight class that you can throw
+	specthrowmsg = "batted"
+	burn_state = 0
 
 /obj/item/weapon/melee/baseball_bat/homerun
 	name = "home run bat"

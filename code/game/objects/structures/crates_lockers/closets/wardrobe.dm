@@ -11,6 +11,19 @@
 		new /obj/item/clothing/shoes/sneakers/brown(src)
 	return
 
+/obj/structure/closet/wardrobe/blue
+	name = "wardrobe"
+	desc = "It's a storage unit for standard-issue Nanotrasen attire."
+	icon_door = "blue"
+
+/obj/structure/closet/wardrobe/blue/New()
+	..()
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/under/color/blue(src)
+	for(var/i in 1 to 3)
+		new /obj/item/clothing/shoes/sneakers/blue(src)
+	return
+
 /obj/structure/closet/wardrobe/pink
 	name = "pink wardrobe"
 	icon_door = "pink"
