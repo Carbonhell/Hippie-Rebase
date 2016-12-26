@@ -55162,7 +55162,7 @@
 "cpx" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 1;
-	 filter_type = 4;
+	 filter_type = "n2o";
 	 on = 1
 	},
 /turf/open/floor/plasteel,
@@ -57011,6 +57011,7 @@
 "ctp" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 1;
+	 filter_type = "plasma";
 	 on = 1
 	},
 /turf/open/floor/plasteel,
@@ -59219,7 +59220,7 @@
 "cxI" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 1;
-	 filter_type = 3;
+	 filter_type = "co2";
 	 on = 1
 	},
 /turf/open/floor/plasteel,
@@ -59913,7 +59914,7 @@
 "czo" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 2;
-	 filter_type = 2;
+	 filter_type = "n2";
 	 on = 1
 	},
 /turf/open/floor/plasteel,
@@ -60231,7 +60232,7 @@
 "cAa" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 4;
-	 filter_type = 1;
+	 filter_type = "o2";
 	 on = 1
 	},
 /turf/open/floor/plasteel,
