@@ -71,7 +71,7 @@
 
 	if (prob(mineralChance))
 		var/path = pickweight(mineralSpawnChanceList)
-		var/turf/T = ChangeTurf(path)
+		var/turf/T = ChangeTurf(path,FALSE,TRUE)
 
 		if(T && istype(T, /turf/closed/mineral))
 			var/turf/closed/mineral/M = T
@@ -339,7 +339,7 @@
 		if(istype(tunnel))
 			// Small chance to have forks in our tunnel; otherwise dig our tunnel.
 			if(i > 3 && prob(20))
-				var/turf/open/floor/plating/asteroid/airless/cave/C = tunnel.ChangeTurf(data_having_type)
+				var/turf/open/floor/plating/asteroid/airless/cave/C = tunnel.ChangeTurf(data_having_type,FALSE,TRUE)
 				C.going_backwards = FALSE
 				C.produce_tunnel_from_data(rand(10, 15), dir)
 			else
@@ -364,7 +364,7 @@
 		return
 
 	SpawnMonster(T)
-	T.ChangeTurf(turf_type)
+	T.ChangeTurf(turf_type,FALSE,TRUE)
 /turf/open/floor/plating/asteroid/airless/cave/proc/SpawnMonster(turf/T)
 	if(prob(30))
 		if(istype(loc, /area/mine/explored) || istype(loc, /area/lavaland/surface/outdoors/explored))
@@ -884,6 +884,7 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "necro1"
 	baseturf = /turf/open/indestructible/necropolis
+	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 
 /turf/open/indestructible/necropolis/New()
 	..()
