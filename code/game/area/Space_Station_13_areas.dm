@@ -1737,6 +1737,7 @@ var/list/the_station_areas = list (
 	/area/toxins,
 	/area/storage,
 	/area/construction,
+	/area/ai_monitored/security,
 	/area/ai_monitored/storage/eva, //do not try to simplify to "/area/ai_monitored" --rastaf0
 //	/area/ai_monitored/storage/secure,	//not present on map
 //	/area/ai_monitored/storage/emergency,	//not present on map

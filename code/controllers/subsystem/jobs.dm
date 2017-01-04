@@ -1,4 +1,5 @@
 var/datum/subsystem/job/SSjob
+var/list/datum/objective/crew/trackedCrewObjectives = list()
 
 /datum/subsystem/job
 	name = "Jobs"
@@ -388,6 +389,16 @@ var/datum/subsystem/job/SSjob
 	if(H.mind)
 		H.mind.assigned_role = rank
 
+		if(forgeJobObjectives(H.mind, rank))
+			H << "<b>Nanotrasen has given you the following tasks, they will be checked when the shift ends:</b>"
+
+			var/objectiveCount = 1
+
+			for(var/datum/objective/objective in H.mind.objectives)
+				H << "<b>Objective #[objectiveCount]</b>: [objective.explanation_text]"
+
+				objectiveCount++
+
 	if(job)
 		var/new_mob = job.equip(H)
 		if(ismob(new_mob))
@@ -402,6 +413,66 @@ var/datum/subsystem/job/SSjob
 	if(config.minimal_access_threshold)
 		H << "<FONT color='blue'><B>As this station was initially staffed with a [config.jobs_have_minimal_access ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></font>"
 	return H
+
+/datum/subsystem/job/proc/getDepartment(rank)
+	if(rank in engineering_positions) return "Engineering"
+	else if(rank in medical_positions) return "Medical"
+	else if(rank in science_positions) return "R&D"
+	else if(rank in supply_positions) return "Supply"
+	else if(rank in service_positions) return "Service"
+	else if(rank in civilian_positions) return "Civilian"
+	else if(rank in security_positions) return "Security"
+	else return
+
+/datum/subsystem/job/proc/getObjectives(rank, blacklist)
+	var/list/objectives = list()
+	var/list/validObjectives = list()
+	var/department = getDepartment(rank)
+
+	for(var/i in departments)
+		if(departments[i] == department)
+			objectives = typesof(i) - i
+			break
+
+	objectives -= blacklist
+
+	for(var/i in objectives)
+		var/datum/objective/crew/C = i
+		var/list/validJobs = splittext(initial(C.jobs), "#")
+
+		if(rank in validJobs)
+			validObjectives += i
+
+	return validObjectives
+
+/datum/subsystem/job/proc/forgeJobObjectives(datum/mind/M, rank)
+	if(M.special_role) return
+
+	if(M.current && !ishuman(M.current)) return
+
+	. = 1
+
+	var/list/blacklist = list()
+
+	while(TRUE)
+		var/list/objectives = getObjectives(rank, blacklist)
+		var/objective = pick_n_take(objectives)
+
+		if(objective)
+			var/datum/objective/crew/C = new objective(null, M)
+			if(!C.requirements())
+				M.objectives -= C
+				C.owner = null
+				blacklist += C.type
+				qdel(C)
+				continue
+
+			C.update_explanation_text()
+			break
+
+		else
+			. = 0
+			break
 
 
 /datum/subsystem/job/proc/setup_officer_positions()

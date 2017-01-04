@@ -543,6 +543,11 @@
 					if(tplus > tloss)
 						H.setBrainLoss( max(0, min(99, ((tlimit - tplus) / tlimit * 100))))
 					add_logs(user, M, "revived", defib)
+
+					if(user.mind)
+						feedback_add_details("medicalobjective", "[user.mind.key]|Defib")
+
+
 				if(req_defib)
 					defib.deductcharge(revivecost)
 					cooldown = 1
