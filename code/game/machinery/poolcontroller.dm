@@ -28,7 +28,7 @@
 	var/seconds_electrified = 0//Shocks morons, like an airlock.
 
 /obj/machinery/poolcontroller/New() //This proc automatically happens on world start
-	wires = new(src)
+	wires = new /datum/wires/poolcontroller(src)
 	for(var/turf/simulated/pool/water/W in range(srange,src)) //Search for /turf/simulated/beach/water in the range of var/srange
 		src.linkedturfs += W
 	for(var/obj/machinery/drain/pooldrain in range(srange,src))
