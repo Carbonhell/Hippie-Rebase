@@ -317,6 +317,14 @@ macro "hotkeys"
 		name = "CTRL+G"
 		command = "a-intent right"
 		is-disabled = false
+	elem
+		name = "H"
+		command = "reinf-grab"
+		is-disabled = false
+	elem
+		name = "CTRL+H"
+		command = "reinf-grab"
+		is-disabled = false
 	elem 
 		name = "M"
 		command = "me"

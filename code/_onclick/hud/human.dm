@@ -109,6 +109,11 @@
 	static_inventory += using
 	action_intent = using
 
+	grab_icon = new /obj/screen/grab_ind()
+	grab_icon.icon_state = "grab[mymob.grab_state]"
+	grab_icon.screen_loc = ui_grab
+	static_inventory += grab_icon
+
 	using = new /obj/screen/mov_intent()
 	using.icon = ui_style
 	using.icon_state = (mymob.m_intent == "run" ? "running" : "walking")

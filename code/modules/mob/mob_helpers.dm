@@ -339,6 +339,13 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		if(hud_used && hud_used.action_intent)
 			hud_used.action_intent.icon_state = "[a_intent]"
 
+/mob/verb/reinf_grab()
+	set name = "reinf-grab"
+	set hidden = 1
+
+	if(client && hud_used && hud_used.grab_icon)
+		hud_used.grab_icon.Click()
+
 /proc/is_blind(A)
 	if(ismob(A))
 		var/mob/B = A

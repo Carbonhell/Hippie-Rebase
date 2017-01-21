@@ -201,6 +201,8 @@
 		user.changeNext_move(CLICK_CD_GRABBING)
 		playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 
+		if(user.client && user.hud_used)
+			user.hud_used.grab_icon.icon_state = "grab[user.grab_state+1]"
 		if(user.grab_state) //only the first upgrade is instantaneous
 			var/old_grab_state = user.grab_state
 			var/grab_upgrade_time = 30
