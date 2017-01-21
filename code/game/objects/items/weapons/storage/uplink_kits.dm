@@ -327,3 +327,10 @@
 /obj/item/weapon/storage/box/syndie_kit/voodoo/New()
 	..()
 	new /obj/item/voodoo(src)
+
+/obj/item/weapon/storage/box/syndie_kit/lasereye
+	name = "laser eye kit"
+
+/obj/item/weapon/storage/box/syndie_kit/lasereye/New()
+	..()
+	new /obj/item/weapon/dnainjector/lasereyesmut(src)
