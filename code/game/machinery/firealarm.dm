@@ -316,6 +316,7 @@
 		if(health <= 0)
 			stat |= BROKEN
 			update_icon()
+			playsound(src, "shatter", 30, 1)
 
 /obj/machinery/clock/update_icon()
 	if((stat & BROKEN))
@@ -325,4 +326,7 @@
 
 /obj/machinery/clock/examine()
 	..()
-	usr << "The current time of the station is [worldtime2text()]. This means that the shift has been going on for [gameTimestamp("hh")] hour(s) and [gameTimestamp("mm")] minutes."
+	if((stat & BROKEN))
+		usr << "<span class='warning'>It appears to be broken!</span>"
+	else
+		usr << "The current time of the station is [worldtime2text()]. This means that the shift has been going on for [round(world.time / 600)] minutes."
