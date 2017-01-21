@@ -371,3 +371,28 @@
 	flag = "magic"
 	dismemberment = 50
 	nodamage = 0
+
+// Lord Staves
+/obj/item/projectile/magic/revenant
+	name = "bolt of revenant"
+	icon_state = "darkshard"
+	damage = 20
+	nodamage = 0
+	damage_type = TOX
+
+/obj/item/projectile/magic/revenant/level1
+	damage = 25
+/obj/item/projectile/magic/revenant/level2
+	damage = 30
+/obj/item/projectile/magic/revenant/level3
+	damage = 35
+/obj/item/projectile/magic/revenant/level4
+	damage = 40
+/obj/item/projectile/magic/revenant/level5
+	damage = 60
+/obj/item/projectile/magic/revenant/level666
+	damage = 200
+/obj/item/projectile/magic/revenant/level666/on_hit(mob/living/target)
+	..()
+	if(ismob(target))
+		target.gib()
