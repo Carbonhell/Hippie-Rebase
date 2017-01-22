@@ -290,8 +290,8 @@
 	return
 
 /obj/machinery/clock
-	name = "clock"
-	desc = "A device used to measure time."
+	name = "space clock"
+	desc = "A futuristic device used to measure time."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "clock"
 	anchored = 1
@@ -329,4 +329,4 @@
 	if((stat & BROKEN))
 		usr << "<span class='warning'>It appears to be broken!</span>"
 	else
-		usr << "The current time of the station is [worldtime2text()]. This means that the shift has been going on for [round(world.time / 600)] minutes."
+		usr << "The current time of the station is [worldtime2text()], Space Standard Time. This means that the shift has been going on for [round(world.time / 600)] minutes."
