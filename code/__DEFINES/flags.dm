@@ -26,11 +26,14 @@
 #define OPENCONTAINER	4096	// is an open container for chemistry purposes
 #define HEADBANGPROTECT		4096
 
+#define INJECTONLY		8192
+
 // BLOCK_GAS_SMOKE_EFFECT only used in masks at the moment.
-#define BLOCK_GAS_SMOKE_EFFECT 8192	// blocks the effect that chemical clouds would have on a mob --glasses, mask and helmets ONLY! (NOTE: flag shared with THICKMATERIAL)
-#define THICKMATERIAL 8192		//prevents syringes, parapens and hypos if the external suit or helmet (if targeting head) has this flag. Example: space suits, biosuit, bombsuits, thick suits that cover your body. (NOTE: flag shared with BLOCK_GAS_SMOKE_EFFECT)
-#define DROPDEL			16384 // When dropped, it calls qdel on itself
-#define HOLOGRAM		32768	// HOlodeck shit should not be used in any fucking things
+#define BLOCK_GAS_SMOKE_EFFECT 8192	 // blocks the effect that chemical clouds would have on a mob --glasses, mask and helmets ONLY! (NOTE: flag shared with THICKMATERIAL)
+#define THICKMATERIAL          8192  //prevents syringes, parapens and hypos if the external suit or helmet (if targeting head) has this flag. Example: space suits, biosuit, bombsuits, thick suits that cover your body. (NOTE: flag shared with BLOCK_GAS_SMOKE_EFFECT)
+
+#define DROPDEL			       16384 // When dropped, it calls qdel on itself
+#define HOLOGRAM		       32768 // Holodeck shit should not be used in any fucking things
 
 //turf-only flags
 #define NOJAUNT		1
@@ -87,6 +90,7 @@
 #define DRONE 32
 #define SWARMER 64
 #define RATVAR 128
+#define ZOMBIE 256
 
 // Flags for reagents
 #define REAGENT_NOREACT 1

@@ -163,6 +163,20 @@ research holder datum.
 		return
 	..()
 
+// Atmoslathe files
+/datum/research/atmoslathe/New()
+	for(var/T in (subtypesof(/datum/tech)))
+		possible_tech += new T(src)
+	for(var/path in subtypesof(/datum/design))
+		var/datum/design/D = new path(src)
+		possible_designs += D
+		if((D.build_type & ATMOSLATHE) && ("initial" in D.category))
+			AddDesign2Known(D)
+
+/datum/research/atmoslathe/AddDesign2Known(datum/design/D)
+	if(!(D.build_type & ATMOSLATHE))
+		return
+	..()
 
 /***************************************************************
 **						Technology Datums					  **
@@ -298,3 +312,10 @@ research holder datum.
 /obj/item/weapon/disk/tech_disk/New()
 	src.pixel_x = rand(-5, 5)
 	src.pixel_y = rand(-5, 5)
+
+/obj/item/weapon/disk/tech_disk/gooncode
+	name = "Gooncode disk"
+	desc = "A disk containing Goonstation source code for further research."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "gooncode"
+	stored = new/datum/tech/programming{level = 4}

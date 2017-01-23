@@ -68,6 +68,16 @@ var/global/image/fire_overlay = image("icon" = 'icons/effects/fire.dmi', "icon_s
 
 	var/mob/thrownby = null
 
+//Vars for things like baseball bats that do unique things with thrown items below
+	var/special_throw = 0
+	var/specthrowsound = null //Special throw sound for above functionality
+	var/specthrowmsg = null
+	var/throwrange_mult = 1 //Multiply the range of thrown item?
+	var/throwforce_mult = 1 //Multiply the force of thrown item?
+	var/specthrow_maxwclass = 2 //Max weight class of the thrown item
+	var/deflectItem = 0 //For deflecting items thrown at you when you have throw intent on
+	var/mult = 0 //For code to reset throwforce back to normal after it hits something
+
 	/obj/item/mouse_drag_pointer = MOUSE_ACTIVE_POINTER //the icon to indicate this object is being dragged
 
 	//So items can have custom embedd values
@@ -545,6 +555,9 @@ obj/item/proc/item_action_slot_check(slot, mob/user)
 		embed_chance = 100//you must embed!
 		embedded_ignore_throwspeed_threshold = 1
 		throw_range = initial(throw_range)
+	if(mult)
+		throwforce = initial(throwforce)
+		mult = 0
 	return A.hitby(src, 0, itempush)
 
 /obj/item/throw_at(atom/target, range, speed, mob/thrower, spin=1)

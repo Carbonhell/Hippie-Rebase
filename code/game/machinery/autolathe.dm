@@ -45,15 +45,25 @@
 							"Imported"
 							)
 
+	var/obj/item/weapon/circuitboard/machine/board = /obj/item/weapon/circuitboard/machine/autolathe
+
 /obj/machinery/autolathe/New()
 	..()
 	materials = new /datum/material_container(src, list(MAT_METAL, MAT_GLASS))
-	var/obj/item/weapon/circuitboard/machine/B = new /obj/item/weapon/circuitboard/machine/autolathe(null)
-	B.apply_default_parts(src)
+	board = new board(null)
+	board.apply_default_parts(src)
 
 	wires = new /datum/wires/autolathe(src)
 	files = new /datum/research/autolathe(src)
 	matching_designs = list()
+
+/obj/machinery/autolathe/atmos
+	name = "atmospheric fabricator"
+	desc = "It produces atmospheric related items using metal and glass."
+	icon_state = "mechfab1"
+	categories = list("Atmos")
+	board = /obj/item/weapon/circuitboard/machine/atmoslathe
+	files = /datum/research/atmoslathe
 
 /obj/item/weapon/circuitboard/machine/autolathe
 	name = "circuit board (Autolathe)"

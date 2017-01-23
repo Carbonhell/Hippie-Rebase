@@ -34,6 +34,28 @@
 	projectile_type = pick(typesof(/obj/item/projectile/magic))
 	..()
 
+/obj/item/ammo_casing/magic/staffofrevenant
+	projectile_type = /obj/item/projectile/magic/revenant
+
+/obj/item/ammo_casing/magic/staffofrevenant/level1
+	projectile_type = /obj/item/projectile/magic/revenant/level1
+
+/obj/item/ammo_casing/magic/staffofrevenant/level2
+	projectile_type = /obj/item/projectile/magic/revenant/level2
+
+/obj/item/ammo_casing/magic/staffofrevenant/level3
+	projectile_type = /obj/item/projectile/magic/revenant/level3
+
+/obj/item/ammo_casing/magic/staffofrevenant/level4
+	projectile_type = /obj/item/projectile/magic/revenant/level4
+
+/obj/item/ammo_casing/magic/staffofrevenant/level5
+	projectile_type = /obj/item/projectile/magic/revenant/level5
+
+/obj/item/ammo_casing/magic/staffofrevenant/level666
+	projectile_type = /obj/item/projectile/magic/revenant/level666
+
+
 /obj/item/ammo_casing/magic/honk
 	projectile_type = /obj/item/projectile/bullet/honker
 

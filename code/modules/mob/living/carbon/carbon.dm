@@ -182,7 +182,7 @@
 		if(has_bane(BANE_LIGHT))
 			mind.disrupt_spells(0)
 
-			
+
 //Throwing stuff
 /mob/living/carbon/proc/toggle_throw_mode()
 	if(stat)
@@ -209,19 +209,20 @@
 
 /mob/living/carbon/throw_item(atom/target)
 	throw_mode_off()
+
 	if(!target || !isturf(loc))
 		return
+
 	if(istype(target, /obj/screen))
 		return
 
-	var/atom/movable/thrown_thing
-	var/obj/item/I = src.get_active_hand()
+	var/atom/movable/item = get_active_hand()
 
-	if(!I)
+	if(!item)
 		if(pulling && isliving(pulling) && grab_state >= GRAB_AGGRESSIVE)
 			var/mob/living/throwable_mob = pulling
 			if(!throwable_mob.buckled)
-				thrown_thing = throwable_mob
+				item = throwable_mob
 				stop_pulling()
 				var/turf/start_T = get_turf(loc) //Get the start and target tile for the descriptors
 				var/turf/end_T = get_turf(target)
@@ -229,15 +230,31 @@
 					var/start_T_descriptor = "<font color='#6b5d00'>tile at [start_T.x], [start_T.y], [start_T.z] in area [get_area(start_T)]</font>"
 					var/end_T_descriptor = "<font color='#6b4400'>tile at [end_T.x], [end_T.y], [end_T.z] in area [get_area(end_T)]</font>"
 					add_logs(src, throwable_mob, "thrown", addition="from [start_T_descriptor] with the target [end_T_descriptor]")
+	
+	if(item)
+		var/obj/item/I = get_inactive_hand()
+		var/range = item.throw_range
+		var/throw_speed = item.throw_speed
+		var/did = "thrown"
 
-	else if(!(I.flags & (NODROP|ABSTRACT)))
-		thrown_thing = I
-		unEquip(I)
+		if(item.flags & (NODROP|ABSTRACT))
+			return
 
-	if(thrown_thing)
-		visible_message("<span class='danger'>[src] has thrown [thrown_thing].</span>")
+		var/obj/item/E = item
+		if(istype(I) && I.special_throw && istype(E) && I.specthrow_maxwclass >= E.w_class) //For special items that multiply something's throw range when in inactive hand (example: baseball bat)
+			range = round(range * I.throwrange_mult)
+			if(I.specthrowmsg)
+				did = I.specthrowmsg
+			if(I.specthrowsound)
+				playsound(loc, I.specthrowsound, 50, 1, -1)
+			if(I.throwforce_mult)
+				E.throwforce = round(E.throwforce * I.throwforce_mult)
+				E.mult = 1 //Tell the code we have modified this item's throwforce and would like for it to be set back to normal after it hits something.
+
+		visible_message("<span class='danger'>[src] has [did] [item].</span>")
+		unEquip(item)
 		newtonian_move(get_dir(target, src))
-		thrown_thing.throw_at(target, thrown_thing.throw_range, thrown_thing.throw_speed, src)
+		item.throw_at(target, range, throw_speed, src)
 
 /mob/living/carbon/restrained(ignore_grab)
 	. = (handcuffed || (!ignore_grab && pulledby && pulledby.grab_state >= GRAB_AGGRESSIVE))
