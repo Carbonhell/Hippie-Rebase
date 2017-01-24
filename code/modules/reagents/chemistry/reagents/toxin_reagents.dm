@@ -38,7 +38,7 @@
 		if(prob(98))
 			randmutb(M)
 		else
-			randmutg(M)
+			randmutvg(M)
 		M.updateappearance()
 		M.domutcheck()
 	..()
