@@ -46,6 +46,23 @@
 		M.swap_hand()
 	return 1
 
+/obj/screen/grab_ind
+	name = "reinforce grab"
+	icon_state = "grab"
+	layer = HUD_LAYER
+
+/obj/screen/grab_ind/Click()
+	var/mob/living/user = usr
+	if(user.next_move > world.time)
+		return
+	if(ismob(user.pulling))
+		var/mob/living/grabbedguy = user.pulling
+		grabbedguy.grabbedby(user)
+		update_icon(user)
+
+/obj/screen/grab_ind/update_icon(mob/user)
+	icon_state = "grab[user.grab_state]"
+
 /obj/screen/inventory/craft
 	name = "crafting menu"
 	icon = 'icons/mob/screen_midnight.dmi'

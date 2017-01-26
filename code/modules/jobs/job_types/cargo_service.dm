@@ -125,11 +125,11 @@ Bartender
 	shoes = /obj/item/clothing/shoes/laceup
 
 /*
-Cook
+Chef
 */
-/datum/job/cook
-	title = "Cook"
-	flag = COOK
+/datum/job/chef
+	title = "Chef"
+	flag = CHEF
 	department_head = list("Head of Personnel")
 	department_flag = CIVILIAN
 	faction = "Station"
@@ -137,32 +137,32 @@ Cook
 	spawn_positions = 1
 	supervisors = "the head of personnel"
 	selection_color = "#bbe291"
-	var/cooks = 0 //Counts cooks amount
+	var/chef = 0 //Counts chef amount
 
-	outfit = /datum/outfit/job/cook
+	outfit = /datum/outfit/job/chef
 
 	access = list(access_hydroponics, access_bar, access_kitchen, access_morgue)
 	minimal_access = list(access_kitchen, access_morgue)
 
-/datum/outfit/job/cook
-	name = "Cook"
+/datum/outfit/job/chef
+	name = "Chef"
 
-	belt = /obj/item/device/pda/cook
+	belt = /obj/item/device/pda/chef
 	ears = /obj/item/device/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/chef
 	suit = /obj/item/clothing/suit/toggle/chef
 	head = /obj/item/clothing/head/chefhat
 
-/datum/outfit/job/cook/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/chef/pre_equip(mob/living/carbon/human/H)
 	..()
-	var/datum/job/cook/J = SSjob.GetJob(H.job)
+	var/datum/job/chef/J = SSjob.GetJob(H.job)
 	if(J) // Fix for runtime caused by invalid job being passed
-		J.cooks++
-		if(J.cooks>1)//Cooks
+		J.chef++
+		if(J.chef>1)//Chef
 			suit = /obj/item/clothing/suit/apron/chef
 			head = /obj/item/clothing/head/soft/mime
 
-/datum/outfit/job/cook/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/chef/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
     ..()
     var/list/possible_boxes = subtypesof(/obj/item/weapon/storage/box/ingredients)
     var/chosen_box = pick(possible_boxes)

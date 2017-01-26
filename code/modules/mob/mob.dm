@@ -384,9 +384,11 @@ var/next_mob_id = 0
 		update_pull_hud_icon()
 
 /mob/proc/update_pull_hud_icon()
-	if(hud_used)
+	if(client && hud_used)
 		if(hud_used.pull_icon)
 			hud_used.pull_icon.update_icon(src)
+		if(hud_used.grab_icon)
+			hud_used.grab_icon.icon_state = "grab[grab_state]"
 
 /mob/verb/mode()
 	set name = "Activate Held Object"

@@ -109,6 +109,14 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	cost = 10
 	jobs = list("Chemist", "Medical Doctor", "Chief Medical Officer", "Geneticist", "Virologist")
 
+//GENETICIST
+/datum/uplink_item/job_specific/lasereye
+	name = "Laser Eyes DNA Injector"
+	desc = "An injector containing a syndicate modified retrovirus strain that mutates the user's eyes allowing them to project laser bolts at will."
+	item = /obj/item/weapon/storage/box/syndie_kit/lasereye
+	cost = 8
+	jobs = list("Geneticist")
+
 //SERVICE DIVISION
 /datum/uplink_item/job_specific/chainsaw
 	name = "Chainsaw"
