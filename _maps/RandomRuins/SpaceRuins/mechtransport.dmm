@@ -58,7 +58,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/ruin/powered)
 "n" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/mineral/titanium/blue,

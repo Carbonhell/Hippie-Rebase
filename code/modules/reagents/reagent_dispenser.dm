@@ -168,54 +168,12 @@
 	user.put_in_hands(S)
 	paper_cups--
 
-
-/obj/structure/reagent_dispensers/beerkeg
-	name = "beer keg"
-	desc = "Beer is liquid bread, it's good for you..."
-	icon_state = "beer"
-	reagent_id = "beer"
-
-/obj/structure/reagent_dispensers/beerkeg/blob_act(obj/effect/blob/B)
-	explosion(src.loc,0,3,5,7,10)
-
-
-/obj/structure/reagent_dispensers/virusfood
-	name = "virus food dispenser"
-	desc = "A dispenser of low-potency virus mutagenic."
-	icon_state = "virus_food"
-	anchored = 1
-	reagent_id = "virusfood"
-
-//honkcooler
-/obj/structure/reagent_dispensers/honk_cooler
-	name = "Honk-Cooler"
-	desc = "A machine filled with the clown's thick juice! NICE!"
-	icon = 'icons/obj/vending.dmi'
-	icon_state = "honk_cooler"
-	anchored = 1
-	var/cups = 50
-	//brokenvars = list("honk-cooler", "honk_cooler", /obj/structure/reagent_dispensers/honk_cooler)
-
-/obj/structure/reagent_dispensers/honk_cooler/New(loc, empty = 0)
-	..()
-	if(!empty) reagents.add_reagent("banana",500)
-
-/obj/structure/reagent_dispensers/honk_cooler/attack_hand(mob/living/carbon/human/user)
-	if((!istype(user)) || (user.stat))
-		return
-	if(cups <= 0)
-		user << "<span class='warning'>What? No cups?</span>"
-		return
-	cups--
-	user.put_in_hands(new /obj/item/weapon/reagent_containers/food/drinks/sillycup)
-	user.visible_message("[user] gets a cup from [src].","<span class='notice'>You get a cup from [src].</span>")
-
-/obj/structure/reagent_dispensers/honk_cooler/attackby(obj/item/I, mob/user, params)
+/obj/structure/reagent_dispensers/water_cooler/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/paper))
 		if(!user.drop_item())
 			return
 		qdel(I)
-		cups++
+		paper_cups++
 		return
 
 	if (istype(I, /obj/item/weapon/wrench))
@@ -239,3 +197,29 @@
 				anchored = 0
 	else
 		..()
+
+//honkcooler
+/obj/structure/reagent_dispensers/water_cooler/clown
+	name = "Honk-Cooler"
+	desc = "A machine filled with the clown's thick juice! NICE!"
+	icon_state = "honk_cooler"
+	reagent_id = "banana"
+	//brokenvars = list("honk-cooler", "honk_cooler", /obj/structure/reagent_dispensers/honk_cooler)
+
+
+/obj/structure/reagent_dispensers/beerkeg
+	name = "beer keg"
+	desc = "Beer is liquid bread, it's good for you..."
+	icon_state = "beer"
+	reagent_id = "beer"
+
+/obj/structure/reagent_dispensers/beerkeg/blob_act(obj/effect/blob/B)
+	explosion(src.loc,0,3,5,7,10)
+
+
+/obj/structure/reagent_dispensers/virusfood
+	name = "virus food dispenser"
+	desc = "A dispenser of low-potency virus mutagenic."
+	icon_state = "virus_food"
+	anchored = 1
+	reagent_id = "virusfood"
