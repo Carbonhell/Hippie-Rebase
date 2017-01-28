@@ -200,7 +200,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/djstation)
 "aI" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /turf/open/floor/plasteel/cafeteria,
 /area/djstation)
 "aJ" = (

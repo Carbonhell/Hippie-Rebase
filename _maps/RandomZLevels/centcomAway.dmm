@@ -2108,7 +2108,7 @@
 	},
 /area/awaymission/centcomAway/general)
 "gO" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel{
@@ -2116,7 +2116,7 @@
 	},
 /area/awaymission/centcomAway/general)
 "gP" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel{
@@ -2174,7 +2174,7 @@
 	},
 /area/awaymission/centcomAway/general)
 "gZ" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel{
 	icon_state = "floor"
 	},
@@ -3918,7 +3918,7 @@
 	},
 /area/awaymission/centcomAway/thunderdome)
 "mg" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/redyellow{

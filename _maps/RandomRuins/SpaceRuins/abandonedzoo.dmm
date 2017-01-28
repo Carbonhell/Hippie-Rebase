@@ -338,7 +338,7 @@
 	},
 /area/ruin/unpowered)
 "aO" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /turf/open/floor/plasteel/darkgreen,

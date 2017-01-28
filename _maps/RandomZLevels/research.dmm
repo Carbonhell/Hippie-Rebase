@@ -1061,7 +1061,7 @@
 /turf/open/floor/plasteel/purple,
 /area/awaymission/research/interior/genetics)
 "cV" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/darkpurple,
@@ -3264,7 +3264,7 @@
 /turf/open/floor/plasteel/purple,
 /area/awaymission/research/interior/genetics)
 "iy" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel/darkpurple,
 /area/awaymission/research/interior/genetics)

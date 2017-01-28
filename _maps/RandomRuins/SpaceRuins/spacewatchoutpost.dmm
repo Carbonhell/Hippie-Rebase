@@ -1,0 +1,604 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE 
+"a" = (
+/turf/open/space,
+/area/space)
+"b" = (
+/obj/item/weapon/shard{
+	icon_state = "medium"
+	},
+/turf/open/space,
+/area/space)
+"c" = (
+/turf/closed/wall/r_wall/rust,
+/area/space)
+"d" = (
+/obj/item/stack/rods{
+	amount = 2
+	},
+/turf/open/space,
+/area/space)
+"e" = (
+/obj/structure/cable{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/smes,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"f" = (
+/obj/structure/table_frame,
+/obj/item/weapon/flamethrower,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"g" = (
+/obj/structure/table,
+/obj/item/stack/sheet/metal,
+/obj/item/stack/sheet/glass,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"h" = (
+/mob/living/simple_animal/hostile/viscerator,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"i" = (
+/obj/machinery/power/terminal{
+	icon_state = "term";
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"j" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armor/reactive/fire,
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/grenade/chem_grenade/clf3,
+/turf/open/floor/plasteel/airless{
+	icon_state = "damaged2"
+	},
+/area/space)
+"k" = (
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"l" = (
+/obj/structure/table,
+/obj/item/stack/cable_coil,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"m" = (
+/obj/item/weapon/shard,
+/turf/open/space,
+/area/space)
+"n" = (
+/turf/closed/wall/rust,
+/area/space)
+"o" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/space)
+"p" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"q" = (
+/obj/structure/table,
+/obj/item/weapon/book/manual/wiki/engineering_construction,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"r" = (
+/turf/open/floor/plasteel/airless{
+	icon_state = "damaged2"
+	},
+/area/space)
+"s" = (
+/obj/structure/grille,
+/turf/open/floor/plating/airless,
+/area/space)
+"t" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
+"u" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"v" = (
+/obj/item/trash/deadmouse,
+/obj/item/trash/raisins,
+/obj/item/weapon/mop,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"w" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/weapon/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/weapon/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"x" = (
+/obj/item/weapon/grenade/chem_grenade/incendiary,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"y" = (
+/obj/structure/table_frame,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorscorched1"
+	},
+/area/space)
+"z" = (
+/turf/open/floor/plating/airless{
+	tag = "icon-platingdmg1";
+	icon_state = "platingdmg1"
+	},
+/area/space)
+"A" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"B" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"C" = (
+/obj/structure/table,
+/obj/item/weapon/tank/internals/plasma/full,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"D" = (
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"E" = (
+/mob/living/simple_animal/hostile/asteroid/basilisk,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"F" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering";
+	req_access_txt = "10"
+	},
+/turf/open/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"G" = (
+/obj/structure/table,
+/obj/item/clothing/head/welding,
+/obj/item/weapon/stock_parts/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/turf/open/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"H" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"I" = (
+/obj/structure/sign/securearea,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"J" = (
+/obj/structure/sign/nosmoking_2,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"K" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/airless{
+	tag = "icon-platingdmg1";
+	icon_state = "platingdmg1"
+	},
+/area/space)
+"L" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"M" = (
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/plasteel/airless{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"N" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/airless{
+	tag = "icon-platingdmg2";
+	icon_state = "platingdmg2"
+	},
+/area/space)
+"O" = (
+/obj/structure/closet/crate/bin,
+/obj/item/weapon/grenade/clusterbuster/inferno,
+/turf/open/floor/plasteel{
+	icon_state = "floorgrime"
+	},
+/area/space)
+"P" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/airless,
+/area/space)
+"Q" = (
+/obj/machinery/door/airlock/external{
+	name = "Arrival Airlock"
+	},
+/turf/open/floor/plating,
+/area/space)
+"R" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/securearea{
+	name = "EXTERNAL AIRLOCK";
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/turf/open/floor/plating,
+/area/space)
+"S" = (
+/obj/structure/barricade/wooden,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/space)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+n
+n
+o
+o
+o
+o
+n
+n
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+n
+u
+A
+C
+G
+L
+D
+n
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+o
+v
+B
+D
+D
+D
+H
+o
+o
+o
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+c
+c
+c
+c
+c
+E
+H
+D
+D
+Q
+S
+Q
+a
+"}
+(5,1,1) = {"
+a
+a
+c
+c
+h
+k
+w
+c
+c
+D
+M
+D
+R
+o
+o
+a
+"}
+(6,1,1) = {"
+a
+a
+c
+e
+i
+p
+x
+k
+c
+I
+D
+D
+n
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+c
+f
+j
+k
+k
+k
+F
+D
+D
+O
+n
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+c
+g
+k
+k
+k
+k
+c
+J
+D
+H
+o
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+c
+c
+l
+q
+y
+c
+c
+D
+N
+z
+s
+a
+m
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+c
+c
+r
+z
+t
+z
+K
+t
+P
+o
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+a
+s
+t
+d
+a
+z
+z
+D
+o
+a
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+d
+t
+t
+t
+a
+t
+D
+D
+n
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+b
+a
+a
+a
+a
+a
+d
+a
+t
+s
+n
+n
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+d
+a
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+d
+a
+a
+a
+m
+a
+d
+a
+a
+m
+a
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+a
+a
+m
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

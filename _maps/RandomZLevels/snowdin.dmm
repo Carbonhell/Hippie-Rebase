@@ -161,7 +161,7 @@
 	},
 /area/awaymission/snowdin/post)
 "aw" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel/darkred{
 	baseturf = /turf/open/floor/plating/asteroid/snow
 	},
@@ -2259,7 +2259,7 @@
 /turf/open/floor/plating/asteroid/snow,
 /area/awaymission/snowdin/cave)
 "ge" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/machinery/button/door{
@@ -2699,7 +2699,7 @@
 	},
 /area/awaymission/snowdin/post)
 "hj" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/darkred{
@@ -3884,7 +3884,7 @@
 	},
 /area/awaymission/snowdin/sekret)
 "kt" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel/darkred{
@@ -4375,7 +4375,7 @@
 	},
 /area/awaymission/snowdin/sekret)
 "lD" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /turf/open/floor/plasteel/purple{

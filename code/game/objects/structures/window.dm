@@ -9,6 +9,7 @@
 	flags = ON_BORDER
 	var/maxhealth = 25
 	var/health = 0
+	var/heat_proof = 0
 	var/ini_dir = null
 	var/state = 0
 	var/reinf = 0
@@ -18,7 +19,14 @@
 //	var/icon/silicateIcon = null // the silicated icon
 	var/image/crack_overlay
 	var/list/debris = list()
+	var/temp_resistance = 0
+
 	can_be_unanchored = 1
+
+/obj/structure/window/BlockSuperconductivity()
+    if(heat_proof)
+        return 1
+    return 0
 
 /obj/structure/window/examine(mob/user)
 	..()
@@ -411,7 +419,7 @@
 		add_overlay(crack_overlay)
 
 /obj/structure/window/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(exposed_temperature > T0C + (reinf ? 1600 : 800))
+	if(exposed_temperature > T0C + (reinf ? 1600 : 800) + temp_resistance)
 		take_damage(round(exposed_volume / 100), BURN, 0)
 	..()
 
@@ -547,3 +555,18 @@
 	fulltile = 1
 	dir = NORTHEAST
 	maxhealth = 150
+
+/obj/structure/window/crystalwindow
+	name = "crystal window"
+	desc = "A very strong, air-locked, temperature resistant glass made from some kind of super strong crystal."
+	icon_state = "rwindow"
+	reinf = 1
+	dir = 5
+	maxhealth = 200
+	fulltile = 1
+	pressure_resistance = 32*ONE_ATMOSPHERE
+	temp_resistance = 120000
+	color = "#aa20aa"
+	heat_proof = 1
+	var/thermal_conductivity = 0.0
+	var/heat_capacity = 312500 * 25 //a little over 5 cm thick , 312500 for 1 m by 2.5 m by 0.25 m plasteel wall

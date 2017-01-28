@@ -6093,7 +6093,7 @@
 /turf/open/floor/wood,
 /area/security/vacantoffice)
 "ano" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/wood,
@@ -6375,7 +6375,7 @@
 /turf/open/floor/carpet,
 /area/security/vacantoffice)
 "aob" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/carpet,
@@ -6433,7 +6433,7 @@
 /turf/open/floor/plasteel/darkred,
 /area/security/checkpoint)
 "aoi" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -6955,7 +6955,7 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "apq" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood/old,
@@ -10616,7 +10616,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -11107,7 +11107,7 @@
 	},
 /area/medical/virology)
 "axG" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -13125,7 +13125,7 @@
 	},
 /area/medical/exam_room)
 "aBF" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/machinery/airalarm{
@@ -13137,7 +13137,7 @@
 	},
 /area/medical/exam_room)
 "aBG" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/machinery/airalarm{
@@ -14286,7 +14286,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "aDT" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -15189,7 +15189,7 @@
 /turf/open/floor/plasteel/cmo,
 /area/medical/cmo)
 "aFN" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/structure/cable/cyan{
 	tag = "icon-2-8";
 	icon_state = "2-8"
@@ -16298,7 +16298,7 @@
 	tag = "icon-2-9";
 	icon_state = "2-9"
 	},
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark{
 	name = "blobstart"
 	},
@@ -16636,7 +16636,7 @@
 	},
 /area/medical/genetics)
 "aIV" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
@@ -16645,7 +16645,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
 "aIX" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -16825,7 +16825,7 @@
 	tag = ""
 	},
 /obj/effect/landmark/start/depsec/engineering,
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -17159,7 +17159,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/exam_room)
 "aJZ" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -18389,7 +18389,7 @@
 /turf/open/floor/plating,
 /area/medical/exam_room)
 "aMM" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -19117,7 +19117,7 @@
 /obj/effect/landmark/start{
 	name = "Geneticist"
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -22297,7 +22297,7 @@
 	},
 /area/tcommsat/computer)
 "aUM" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -22554,7 +22554,7 @@
 	},
 /area/engine/chiefs_office)
 "aVe" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -23921,7 +23921,7 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -24689,7 +24689,7 @@
 	name = "Chemist"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/whiteyellow/corner{
@@ -24794,7 +24794,7 @@
 	},
 /area/medical/medbay)
 "aZB" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/machinery/button/door{
 	desc = "A remote control switch for the medbay foyer.";
 	id = "MedbayFoyer";
@@ -25702,7 +25702,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
 "bbq" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -26234,7 +26234,7 @@
 /turf/open/floor/wood,
 /area/lawoffice)
 "bcr" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Lawyer"
 	},
@@ -27082,7 +27082,7 @@
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
 "bej" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -27165,7 +27165,7 @@
 	tag = "90Curve"
 	},
 /obj/effect/landmark/start/depsec/medical,
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -27323,7 +27323,7 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
 "beH" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
@@ -32945,7 +32945,7 @@
 	},
 /area/security/brig)
 "bpu" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -33374,11 +33374,11 @@
 /turf/open/floor/carpet,
 /area/library)
 "bqh" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/carpet,
 /area/library)
 "bqi" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
 /area/library)
@@ -33744,7 +33744,7 @@
 	tag = "icon-manifold-r-f (EAST)";
 	dir = 4
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/item/device/radio/intercom{
@@ -33853,7 +33853,7 @@
 /turf/open/floor/plasteel/black,
 /area/crew_quarters/heads)
 "brh" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -34048,7 +34048,7 @@
 /turf/open/floor/carpet,
 /area/security/detectives_office)
 "brz" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/structure/cable{
@@ -34594,7 +34594,7 @@
 /turf/open/floor/carpet,
 /area/library)
 "bst" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -34620,7 +34620,7 @@
 /turf/open/floor/carpet,
 /area/library)
 "bsw" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/carpet,
@@ -35198,7 +35198,7 @@
 /turf/closed/wall/r_wall,
 /area/bridge)
 "btH" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/machinery/requests_console{
@@ -35575,7 +35575,7 @@
 	},
 /area/hallway/secondary/exit)
 "buo" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/brown{
@@ -35660,7 +35660,7 @@
 /turf/open/floor/carpet,
 /area/library)
 "buz" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -36931,13 +36931,13 @@
 /turf/open/floor/wood,
 /area/library)
 "bwE" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/carpet,
 /area/library)
 "bwF" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -37210,7 +37210,7 @@
 /turf/open/floor/plasteel/black,
 /area/crew_quarters/heads)
 "bxs" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel/black,
@@ -39299,7 +39299,7 @@
 	},
 /area/security/warden)
 "bBz" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/structure/cable{
@@ -41820,7 +41820,7 @@
 	},
 /area/security/main)
 "bFP" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4;
 	name = "Interrogator"
 	},
@@ -42070,7 +42070,7 @@
 	},
 /area/security/warden)
 "bGe" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -45849,7 +45849,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/captain)
 "bMN" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/wood,
@@ -46429,7 +46429,7 @@
 /turf/open/floor/wood,
 /area/library)
 "bNX" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Librarian"
 	},
@@ -46975,7 +46975,7 @@
 /turf/open/floor/plating,
 /area/maintenance/asmaint)
 "bPe" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -53898,7 +53898,7 @@
 	},
 /area/quartermaster/office)
 "ccq" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/brown{
@@ -54557,7 +54557,7 @@
 /obj/effect/landmark/start{
 	name = "Scientist"
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/warnwhite{
@@ -54664,7 +54664,7 @@
 /obj/effect/landmark/start{
 	name = "Roboticist"
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
@@ -54869,7 +54869,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "cex" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -58736,7 +58736,7 @@
 	},
 /area/toxins/lab)
 "cmu" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Scientist"
 	},
@@ -60038,7 +60038,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/landmark/start/depsec/supply,
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -62109,7 +62109,7 @@
 	},
 /area/security/checkpoint/science)
 "ctp" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/structure/cable{
@@ -62998,7 +62998,7 @@
 /turf/open/floor/plasteel/black,
 /area/crew_quarters/hor)
 "cuU" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Research Director"
 	},
@@ -64053,7 +64053,7 @@
 	},
 /area/quartermaster/miningdock)
 "cwY" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -64438,7 +64438,7 @@
 /turf/open/floor/plasteel/black,
 /area/toxins/server)
 "cxQ" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1;
 	pixel_y = 3
 	},
@@ -65865,7 +65865,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
@@ -66027,7 +66027,7 @@
 	},
 /area/quartermaster/qm)
 "cAI" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -70590,7 +70590,7 @@
 /turf/open/floor/plasteel/purple/corner,
 /area/toxins/mixing)
 "cJv" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/machinery/button/massdriver{
 	dir = 2;
 	id = "toxinsdriver";
@@ -73137,7 +73137,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
@@ -73196,7 +73196,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/effect/landmark/start{

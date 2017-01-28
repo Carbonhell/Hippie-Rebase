@@ -2992,7 +2992,7 @@
 	name = "UO45 Central Hall"
 	})
 "eL" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel/red/side{
@@ -9068,7 +9068,7 @@
 	name = "UO45 Research"
 	})
 "np" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel{
@@ -10162,7 +10162,7 @@
 	name = "UO45 Research"
 	})
 "oz" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1;
 	pixel_y = 3
 	},
@@ -11973,7 +11973,7 @@
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 9
 	},
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/black{
 	heat_capacity = 1e+006
@@ -13561,7 +13561,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump{
@@ -15106,7 +15106,7 @@
 	dir = 5;
 	level = 1
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel{
@@ -16676,7 +16676,7 @@
 	name = "UO45 Engineering"
 	})
 "xc" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1;
 	pixel_y = 3
 	},
