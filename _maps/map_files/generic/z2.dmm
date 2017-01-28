@@ -2528,7 +2528,7 @@
 	desc = "A altar dedicated to the Wizard's Federation"
 	},
 /obj/item/weapon/kitchen/knife/ritual,
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "hM" = (
 /obj/structure/flora/bush,
@@ -2940,14 +2940,11 @@
 /turf/open/floor/plasteel/black,
 /area/centcom/evac)
 "iZ" = (
-/obj/item/weapon/shard{
+/turf/closed/indestructible/fakeglass{
 	color = "#008000";
-	icon_state = "small"
+	dir = 8;
+	icon_state = "fakewindows"
 	},
-/obj/structure/grille/broken{
-	color = "#008000"
-	},
-/turf/open/floor/plating/airless,
 /area/wizard_station)
 "ja" = (
 /turf/closed/indestructible/fakeglass{
@@ -3076,25 +3073,22 @@
 	},
 /area/tdome/tdomeobserve)
 "ju" = (
-/obj/structure/lattice,
-/turf/open/space/transit,
+/obj/structure/table/wood/poker,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jv" = (
-/obj/item/weapon/shard{
-	color = "#008000"
-	},
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage5"
-	},
+/obj/machinery/computer/arcade/battle,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jw" = (
-/obj/machinery/computer/shuttle,
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage"
+/obj/machinery/computer{
+	name = "Shuttle Console"
 	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jx" = (
-/turf/open/floor/engine/cult/airless,
+/obj/machinery/computer/arcade/orion_trail,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jy" = (
 /obj/item/clothing/head/collectable/paper,
@@ -3191,27 +3185,40 @@
 	},
 /area/centcom/evac)
 "jN" = (
-/obj/structure/lattice,
-/obj/item/weapon/shard{
+/obj/structure/window/reinforced{
 	color = "#008000";
-	icon_state = "medium"
+	dir = 4
 	},
-/turf/open/space/transit,
+/obj/structure/table/wood,
+/obj/item/documents{
+	desc = "A whole pile worth of fines, charges include drunk driving, joyriding and driving without license.";
+	name = "wizard federation fines"
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jO" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage2"
-	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jP" = (
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage3"
+/obj/structure/chair/wood/wings{
+	tag = "icon-wooden_chair_wings (NORTH)";
+	icon_state = "wooden_chair_wings";
+	dir = 1
 	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jQ" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/engine/cult/airless,
+/obj/structure/table/wood,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
+	},
+/obj/item/weapon/paper{
+	desc = "";
+	info = "If only you had one.";
+	name = "Wizard Driving License"
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "jR" = (
 /turf/closed/indestructible/riveted,
@@ -3330,7 +3337,11 @@
 	icon_state = "processor";
 	name = "byond random number generator"
 	},
-/turf/open/floor/plasteel/cult/airless,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "kj" = (
 /turf/open/floor/plasteel/cult/airless{
@@ -3348,7 +3359,11 @@
 	icon_state = "nim";
 	name = "wizard of yendor showcase"
 	},
-/turf/open/floor/engine/cult/airless,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "km" = (
 /turf/closed/indestructible/fakeglass{
@@ -3471,11 +3486,15 @@
 	},
 /area/wizard_station)
 "kF" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/engine/cult,
+/obj/machinery/door/airlock{
+	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
+	name = "Bridge"
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "kG" = (
-/turf/open/floor/engine/cult,
+/obj/machinery/vending/cigarette,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "kH" = (
 /turf/closed/indestructible/fakeglass,
@@ -3532,7 +3551,9 @@
 	},
 /area/shuttle/assault_pod)
 "kP" = (
-/turf/closed/wall/mineral/titanium,
+/obj/structure/rack,
+/obj/item/weapon/greentext,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "kQ" = (
 /turf/closed/indestructible/fakedoor{
@@ -3546,12 +3567,15 @@
 	},
 /area/wizard_station)
 "kS" = (
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
+	},
 /turf/open/floor/plasteel/cult,
-/turf/closed/wall/mineral/titanium/interior,
 /area/wizard_station)
 "kT" = (
-/obj/effect/forcefield,
-/turf/open/floor/engine/cult,
+/obj/machinery/vending/cola,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "kU" = (
 /turf/open/floor/plasteel/cult{
@@ -3559,10 +3583,11 @@
 	},
 /area/wizard_station)
 "kV" = (
-/obj/effect/forcefield,
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage"
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
 	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "kW" = (
 /turf/open/floor/plasteel/darkred/side{
@@ -3631,22 +3656,24 @@
 /turf/open/floor/plasteel/redblue,
 /area/tdome/tdomeobserve)
 "li" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion";
-	dir = 4
-	},
-/turf/open/space/transit,
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lj" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
+/obj/structure/table/wood,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lk" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/plasteel/airless,
+/obj/structure/chair/wood/wings{
+	dir = 8
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "ll" = (
 /turf/open/floor/plasteel/airless,
@@ -3723,9 +3750,10 @@
 	},
 /area/wizard_station)
 "lz" = (
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage5"
-	},
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/greenwizard,
+/obj/item/clothing/head/wizard/greenwizard,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lA" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
@@ -3735,10 +3763,8 @@
 /area/wizard_station)
 "lB" = (
 /obj/structure/table/wood/poker,
-/obj/item/toy/cards/cardhand,
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage2"
-	},
+/obj/item/toy/cards/deck,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lC" = (
 /obj/machinery/computer/telecrystals/boss,
@@ -3787,16 +3813,17 @@
 /area/wizard_station)
 "lH" = (
 /obj/machinery/vending/magivend,
-/turf/open/floor/plasteel/cult,
+/turf/open/space,
 /area/wizard_station)
 "lI" = (
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage3"
-	},
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/greywizard,
+/obj/item/clothing/head/wizard/greywizard,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lJ" = (
 /obj/machinery/vending/snack,
-/turf/open/floor/engine/cult,
+/turf/open/space,
 /area/wizard_station)
 "lK" = (
 /turf/open/floor/plasteel/darkblue/side{
@@ -3823,11 +3850,11 @@
 /turf/open/floor/plasteel/black,
 /area/syndicate_mothership)
 "lQ" = (
-/obj/structure/door_assembly/door_assembly_uranium{
-	anchored = 1;
+/obj/machinery/door/airlock{
+	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
 	name = "Break Room"
 	},
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lR" = (
 /obj/machinery/door/airlock{
@@ -3855,41 +3882,39 @@
 /area/wizard_station)
 "lX" = (
 /obj/structure/table/wood,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/ointment,
-/turf/open/floor/engine/cult,
+/obj/item/clothing/suit/wizrobe/blackmage,
+/obj/item/clothing/head/wizard/blackmage,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lY" = (
 /obj/structure/table/wood,
-/obj/item/weapon/retractor,
-/turf/open/floor/engine/cult,
+/obj/item/clothing/suit/wizrobe/rainbowwizard,
+/obj/item/clothing/head/wizard/rainbowwizard,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "lZ" = (
-/obj/structure/table/wood,
-/obj/item/clothing/suit/wizrobe/magusblue,
-/obj/item/clothing/head/wizard/magus,
-/obj/item/weapon/staff,
 /obj/structure/mirror/magic{
 	pixel_y = 28
 	},
-/turf/open/floor/engine/cult,
+/obj/structure/dresser,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "ma" = (
 /obj/structure/table/wood,
 /obj/item/clothing/suit/wizrobe/magusred,
 /obj/item/clothing/head/wizard/magus,
 /obj/item/weapon/staff,
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mb" = (
 /obj/structure/rack,
 /obj/item/clothing/head/helmet/space/hardsuit/wizard,
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mc" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "md" = (
 /obj/effect/forcefield,
@@ -3977,15 +4002,12 @@
 /turf/open/floor/holofloor/snow/cold,
 /area/holodeck/rec_center/winterwonderland)
 "mr" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen";
-	opened = 1
-	},
 /obj/item/clothing/suit/wizrobe/red,
 /obj/item/clothing/head/wizard/red,
 /obj/item/weapon/staff,
 /obj/item/clothing/shoes/sandal,
-/turf/open/floor/engine/cult,
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "ms" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -3993,7 +4015,7 @@
 	health = 9999
 	},
 /obj/item/clothing/suit/space/hardsuit/wizard,
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mt" = (
 /turf/open/floor/plasteel/cult,
@@ -4044,13 +4066,15 @@
 "mz" = (
 /turf/closed/indestructible/fakeglass{
 	color = "#008000";
-	dir = 1;
+	dir = 2;
 	icon_state = "fakewindows2"
 	},
 /area/wizard_station)
 "mA" = (
-/obj/structure/bookcase,
-/turf/open/floor/engine/cult,
+/obj/structure/bookcase{
+	name = "bookcase (Adult)"
+	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mB" = (
 /obj/structure/grille/broken{
@@ -4066,14 +4090,12 @@
 /obj/item/clothing/suit/wizrobe/marisa,
 /obj/item/clothing/head/wizard/marisa,
 /obj/item/weapon/staff/broom,
-/turf/open/floor/engine/cult,
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mE" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/mob/living/simple_animal/hostile/creature{
-	name = "Experiment 35b"
-	},
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mF" = (
 /obj/machinery/door/poddoor/preopen,
@@ -4084,7 +4106,7 @@
 "mG" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/remains/human,
-/turf/open/floor/plasteel/airless,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mH" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -4092,11 +4114,11 @@
 /turf/open/floor/plasteel/airless,
 /area/wizard_station)
 "mI" = (
-/obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
-	dir = 4
+/turf/closed/indestructible/fakedoor{
+	color = "#008000";
+	desc = "Leads to the freedom that you'll never get.";
+	name = "Docking Airlock"
 	},
-/turf/open/floor/plating/airless,
 /area/wizard_station)
 "mJ" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -4158,14 +4180,12 @@
 /obj/effect/landmark/start{
 	name = "wizard"
 	},
-/turf/open/floor/plasteel/cult{
-	icon_state = "cultdamage5"
-	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mR" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mS" = (
 /turf/open/floor/plasteel/cult,
@@ -4175,9 +4195,10 @@
 	},
 /area/wizard_station)
 "mT" = (
-/turf/closed/indestructible/fakedoor{
-	name = "Squad 3 Pod"
+/mob/living/simple_animal/hostile/creature{
+	name = "Experiment 35b"
 	},
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mU" = (
 /obj/machinery/camera{
@@ -4195,14 +4216,16 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "mW" = (
-/obj/structure/cult/pylon,
-/turf/open/floor/engine/cult,
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/jesterwizard,
+/obj/item/clothing/head/wizard/jesterwizard,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mX" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/rack,
-/obj/item/weapon/staff,
-/turf/open/floor/engine/cult,
+/obj/item/weapon/antag_spawner/slaughter_demon,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "mY" = (
 /obj/structure/chair/wood,
@@ -4214,16 +4237,16 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "na" = (
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage4"
-	},
+/obj/structure/rack,
+/obj/item/weapon/banhammer,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "nb" = (
-/obj/structure/door_assembly/door_assembly_uranium{
-	anchored = 1;
+/obj/machinery/door/airlock{
+	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
 	name = "Corridor A"
 	},
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "nc" = (
 /obj/machinery/door/airlock{
@@ -4253,9 +4276,17 @@
 /turf/open/floor/plasteel/black,
 /area/tdome/arena)
 "nh" = (
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage2"
+/obj/structure/table/wood,
+/obj/item/toy/prize/fireripley,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
 	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 1
+	},
+/turf/open/space,
 /area/wizard_station)
 "ni" = (
 /obj/effect/forcefield,
@@ -4268,9 +4299,17 @@
 	},
 /area/wizard_station)
 "nk" = (
-/turf/open/floor/plasteel/cult/airless{
-	icon_state = "cultdamage5"
+/obj/structure/table/wood,
+/obj/item/toy/prize/mauler,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
 	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 1
+	},
+/turf/open/space,
 /area/wizard_station)
 "nl" = (
 /obj/structure/table/reinforced,
@@ -4360,7 +4399,7 @@
 	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
 	name = "Personal Quarters"
 	},
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "nz" = (
 /turf/closed/indestructible/riveted,
@@ -4375,12 +4414,9 @@
 /turf/open/floor/plasteel,
 /area/tdome/tdomeadmin)
 "nC" = (
-/obj/structure/table/wood,
 /obj/effect/landmark{
 	name = "Teleport-Scroll"
 	},
-/obj/item/weapon/dice/d20,
-/obj/item/weapon/dice,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "nD" = (
@@ -4463,8 +4499,8 @@
 	},
 /area/wizard_station)
 "nP" = (
-/obj/structure/dresser,
 /obj/item/weapon/storage/backpack/satchel,
+/obj/structure/table/wood,
 /turf/open/floor/carpet,
 /area/wizard_station)
 "nQ" = (
@@ -4493,7 +4529,7 @@
 /area/centcom/holding)
 "nV" = (
 /obj/structure/table/wood,
-/turf/open/floor/engine/cult,
+/turf/open/space,
 /area/wizard_station)
 "nW" = (
 /obj/structure/table/wood,
@@ -4502,7 +4538,7 @@
 	max_charges = 0;
 	name = "wand of emergency engine ignition"
 	},
-/turf/open/floor/engine/cult,
+/turf/open/space,
 /area/wizard_station)
 "nX" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -4588,9 +4624,8 @@
 /turf/open/floor/plating/beach/sand,
 /area/centcom/holding)
 "ok" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
-	name = "Engine Room B"
+/obj/machinery/door/poddoor/shutters{
+	name = "Engine"
 	},
 /turf/open/space,
 /area/wizard_station)
@@ -4616,7 +4651,7 @@
 	desc = "A engine used in powering the wizards ship";
 	name = "magma engine"
 	},
-/turf/open/floor/engine/cult,
+/turf/open/floor/plasteel/cult,
 /area/wizard_station)
 "op" = (
 /obj/structure/table,
@@ -4689,6 +4724,10 @@
 /area/centcom/holding)
 "oz" = (
 /obj/structure/shuttle/engine/heater,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
 /turf/open/floor/plating/lava/airless,
 /area/wizard_station)
 "oA" = (
@@ -4704,7 +4743,9 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
 "oC" = (
-/obj/structure/shuttle/engine/propulsion,
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1
+	},
 /turf/open/space,
 /area/space)
 "oD" = (
@@ -5823,6 +5864,247 @@
 	dir = 8
 	},
 /area/holodeck/rec_center/medical)
+"sO" = (
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
+	},
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sP" = (
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
+	},
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sQ" = (
+/obj/structure/table/wood,
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/weapon/pen,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sR" = (
+/obj/effect/forcefield,
+/obj/structure/door_assembly/door_assembly_uranium{
+	name = "Restricted Area"
+	},
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sS" = (
+/obj/structure/sign/securearea{
+	desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'";
+	icon_state = "monkey_painting";
+	name = "Mr. Deempisi portrait";
+	pixel_x = 4;
+	pixel_y = 28
+	},
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sT" = (
+/obj/structure/rack,
+/obj/item/weapon/katana,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sU" = (
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/whitewizard,
+/obj/item/clothing/head/wizard/whitewizard,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sV" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/libraryconsole/bookmanagement,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sW" = (
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/magusblue,
+/obj/item/clothing/head/wizard/magus,
+/obj/item/weapon/staff,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sX" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/closed/indestructible/riveted/uranium,
+/area/wizard_station)
+"sY" = (
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/pimpwizard,
+/obj/item/clothing/head/wizard/pimpwizard,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"sZ" = (
+/obj/structure/table/wood,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/ointment,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"ta" = (
+/obj/structure/table/wood,
+/obj/item/clothing/suit/wizrobe/yellow,
+/obj/item/clothing/head/wizard/yellow,
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"tb" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/deathripley,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 1
+	},
+/turf/open/space,
+/area/wizard_station)
+"tc" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/durand,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 1
+	},
+/turf/open/space,
+/area/wizard_station)
+"td" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/odysseus,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 1
+	},
+/turf/open/space,
+/area/wizard_station)
+"te" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/phazon,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 1
+	},
+/turf/open/space,
+/area/wizard_station)
+"tf" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/gygax,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
+/turf/open/space,
+/area/wizard_station)
+"tg" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/honk,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
+/turf/open/space,
+/area/wizard_station)
+"th" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/marauder,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
+/turf/open/space,
+/area/wizard_station)
+"ti" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/reticence,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
+/turf/open/space,
+/area/wizard_station)
+"tj" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/ripley,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
+/turf/open/space,
+/area/wizard_station)
+"tk" = (
+/obj/structure/table/wood,
+/obj/item/toy/prize/seraph,
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	color = "#008000";
+	dir = 2
+	},
+/turf/open/space,
+/area/wizard_station)
+"tl" = (
+/obj/machinery/door/airlock{
+	icon = 'icons/obj/doors/airlocks/station/uranium.dmi';
+	name = "Cargo"
+	},
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
+"tm" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/green,
+/turf/open/floor/carpet,
+/area/wizard_station)
+"tn" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet,
+/area/wizard_station)
+"to" = (
+/obj/structure/dresser,
+/turf/open/floor/carpet,
+/area/wizard_station)
+"tp" = (
+/obj/item/weapon/paper{
+	desc = "";
+	info = "You're clever enough to use knock.";
+	name = "Congratulations"
+	},
+/turf/open/floor/plasteel/cult,
+/area/wizard_station)
 "tq" = (
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/airless,
@@ -10376,29 +10658,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+jc
+jc
+jc
+jc
+jc
 jc
 jc
 mo
 mz
+ku
+jc
+jc
+jc
+mo
 mO
 jc
 jc
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jc
+jc
+jc
+jc
+jc
+jc
 aa
 aa
 aa
@@ -10632,30 +10914,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
 jc
-sa
-sb
+jc
+jO
+jO
+jO
+jO
+jc
+lW
+mp
 mA
-sb
-mV
+mp
+jP
 jc
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+jO
+jO
+jO
+jO
+iZ
+tm
+tm
+tm
+nD
+to
+jc
 aa
 aa
 aa
@@ -10889,30 +11171,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-ju
-kV
+jc
+jO
+jO
+jO
+jO
+jO
 lQ
-kG
-kG
-kG
-kG
-kG
+jO
+jO
+jO
+jO
+jO
 nb
-lG
-ju
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-ju
+jO
+jO
+jO
+jO
+jb
+nD
+nD
+nD
+nD
+nD
+jc
 aa
 aa
 aa
@@ -11146,31 +11428,31 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+iZ
+jO
+lW
 li
-aa
-ju
+sQ
+jO
 jc
-kG
-kG
-ln
-lI
-kG
+jO
+jO
+jO
+jO
+jO
 jc
-kj
-ju
+jO
+tb
+tf
+jO
+jc
+mo
+mz
+mO
+tl
+jc
+jc
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-ju
-ju
 aa
 aa
 aa
@@ -11403,31 +11685,31 @@ aa
 aa
 aa
 aa
-aa
-aa
-kP
+jb
+jO
+lW
 lj
-kP
-aa
+li
+jO
 jc
 lW
 mp
-kG
-lz
-mV
+sV
+mp
+jP
+jc
+jO
+tc
+tg
+jO
+tl
+jO
+jO
+jO
+jO
+jO
 jc
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-ju
-nO
-jc
 aa
 aa
 aa
@@ -11660,30 +11942,30 @@ aa
 aa
 aa
 aa
-aa
-ju
-kQ
+jc
+jO
+jO
 lk
-kP
-aa
+lk
+jO
 jc
 jc
 mo
-mB
-mP
+mz
+mO
 jc
 jc
-ju
+jO
 nh
-ju
-aa
-aa
-aa
-nO
-ju
-ju
-kj
-jx
+th
+jO
+jc
+jO
+jO
+jO
+jO
+jO
+jc
 jc
 aa
 aa
@@ -11914,29 +12196,29 @@ aa
 aa
 aa
 aa
-ju
-ju
 jc
 jc
-ju
-kP
-ll
-kP
-ju
+jc
+jc
+jc
+jO
+jO
+jO
+jO
 jc
 lX
-kF
+sU
 lz
 lI
 mW
 jc
-aa
-kj
-ju
-ju
-aa
-aa
-ju
+jO
+jO
+jO
+jO
+jc
+ku
+jc
 jc
 jc
 ok
@@ -12170,33 +12452,33 @@ aa
 aa
 aa
 aa
-aa
-aa
+jc
+jc
 jN
 ki
-jc
+sO
 jc
 kS
-lm
+jO
+jO
 kS
-lG
 jc
 lY
-kF
-ln
-kG
-kG
+jO
+jO
+jO
+sY
 jc
-ju
-aa
-aa
-jc
-jc
-ku
+jO
+jO
+jO
 jc
 jc
-kG
-kG
+nD
+tn
+jc
+jO
+jO
 oo
 ow
 jc
@@ -12430,31 +12712,31 @@ aa
 iZ
 jv
 jO
-kj
+jO
+jO
 ku
-kE
 kT
-kT
-kT
+jO
+jO
 lH
 jc
-kG
-kG
-kG
-kG
-ln
+jO
+jO
+jO
+jO
+jO
 ku
-ne
-ni
-nr
+jO
+jO
+jO
 jc
 nC
 nD
 nP
 jc
 nV
-kG
-kG
+jO
+jO
 ow
 oz
 oC
@@ -12687,31 +12969,31 @@ aa
 ja
 jw
 jP
-sc
-kv
+jO
+jO
 kF
-kU
-kG
-kG
-lI
-lR
-kG
-kG
+jO
+jO
+jO
+jO
+lQ
+jO
+jO
 hL
 mQ
-lI
-nc
-kU
-nj
-ln
+jO
+nb
+jO
+jO
+jO
 ny
 nD
 nK
-nD
+tn
 ku
 nW
-kG
-kG
+jO
+tp
 ow
 oz
 oC
@@ -12943,32 +13225,32 @@ aa
 aa
 jb
 jx
-jx
-kk
+jO
+jO
+jO
 ku
 kG
-kG
-ln
-lz
+jO
+jO
 lJ
 jc
-kG
-kG
-kG
-kG
-kG
+sS
+jO
+jO
+jO
+jO
 ku
-lG
-lG
-ns
+jO
+jO
+jO
 jc
 nD
 nD
 nQ
 jc
 nV
-kG
-kG
+jO
+jO
 ow
 oz
 oC
@@ -13202,29 +13484,29 @@ jc
 jc
 jQ
 kl
-jc
+sP
 jc
 kV
-lo
-ln
-lI
+jO
+jO
+kV
 jc
 lZ
-kG
-kG
-kG
-kG
+jO
+jO
+jO
+sZ
 jc
-aa
-ju
-aa
-jc
-jc
-ku
+jO
+jO
+jO
 jc
 jc
-kG
-kG
+nD
+tn
+jc
+jO
+jO
 oo
 ow
 jc
@@ -13460,28 +13742,28 @@ jc
 jc
 jc
 jc
-aa
-ju
-lp
-lp
-kV
+jc
+jO
+jO
+jO
+jO
 jc
 ma
 mr
 mD
-kG
-mW
+sW
+ta
 jc
-aa
-aa
-aa
-ju
-nh
-nL
-jP
+jO
+jO
+jO
+jO
+jc
+ku
 jc
 jc
-sc
+jc
+ok
 jc
 jc
 jc
@@ -13716,12 +13998,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-ju
-aa
-ju
+jc
+jO
+jO
+jO
+jO
+jO
 jc
 jc
 mo
@@ -13729,18 +14011,18 @@ mz
 mO
 jc
 jc
-ju
+jO
 nk
-aa
-aa
-kS
-kP
-nR
-kP
-aa
-aa
-aa
-aa
+ti
+jO
+jc
+jO
+jO
+jO
+jO
+jO
+jc
+jc
 aa
 aa
 aa
@@ -13973,12 +14255,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+iZ
+jO
+lW
 ju
-lA
 ju
+jO
 jc
 mb
 ms
@@ -13986,17 +14268,17 @@ mE
 mR
 mX
 jc
-aa
-aa
-ju
-ju
-lm
-ll
-ll
-nT
-nX
-aa
-aa
+jO
+td
+tj
+jO
+tl
+jO
+jO
+jO
+jO
+jO
+jc
 aa
 aa
 aa
@@ -14230,30 +14512,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-lB
-aa
-jc
-mc
-kS
-mF
-kS
-mc
-jc
-aa
-aa
-aa
+jb
+jO
+lW
 ju
-kS
-kP
-kP
-kP
-aa
-aa
-aa
+lB
+jO
+jc
+mc
+jO
+mc
+jO
+mc
+jc
+jO
+te
+tk
+jO
+jc
+mo
+mz
+mO
+tl
+jc
+jc
 aa
 aa
 aa
@@ -14487,30 +14769,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-md
-kP
+jc
+jO
+jO
+lk
+lk
+jO
+sR
+jO
+jO
 mG
-kP
-mZ
-ju
-aa
-aa
-aa
-aa
-nF
-jx
-aa
-aa
-aa
-aa
-aa
+jO
+mE
+sR
+jO
+jO
+jO
+jO
+iZ
+nD
+nD
+nD
+nD
+nD
+jc
 aa
 aa
 aa
@@ -14744,30 +15026,30 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-ju
-kF
+jc
+jc
+jO
+jO
+jO
+jO
+jc
+sT
 kP
-mH
+mc
 mT
 na
-ju
-aa
-aa
-aa
-aa
-ju
 jc
-ju
-ju
-ju
-kj
-aa
+jO
+jO
+jO
+jO
+jb
+tm
+tm
+tm
+nD
+to
+jc
 aa
 aa
 aa
@@ -15002,29 +15284,29 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-ju
-kP
+jc
+jc
+jc
+jc
+jc
+jc
+jc
+jc
 mI
-kP
-aa
-ju
-ju
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+sX
+jc
+jc
+jc
+mo
+mO
+jc
+jc
+jc
+jc
+jc
+jc
+jc
+jc
 aa
 aa
 aa
@@ -15265,9 +15547,9 @@ aa
 aa
 aa
 aa
-ju
 aa
-mJ
+aa
+aa
 aa
 aa
 aa
@@ -16271,49 +16553,49 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ab
 ab
@@ -16528,49 +16810,49 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ab
 ab
@@ -16785,49 +17067,49 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ab
 ab
