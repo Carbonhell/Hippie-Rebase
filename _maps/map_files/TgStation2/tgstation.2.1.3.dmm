@@ -1054,6 +1054,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/clock,
 /turf/open/floor/carpet,
 /area/security/hos)
 "abR" = (
@@ -10412,6 +10413,7 @@
 /area/lawoffice)
 "asR" = (
 /obj/structure/closet/lawcloset,
+/obj/machinery/clock,
 /turf/open/floor/carpet,
 /area/lawoffice)
 "asS" = (
@@ -10875,6 +10877,7 @@
 /turf/open/floor/carpet,
 /area/lawoffice)
 "atT" = (
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "blue"
@@ -12441,6 +12444,13 @@
 /area/maintenance/fpmaint2)
 "axs" = (
 /obj/structure/closet/wardrobe/black,
+/obj/machinery/clock{
+	desc = "An old fashioned device used to measure time.";
+	health = 9999;
+	icon_state = "clockold";
+	name = "bar clock";
+	pixel_y = 28
+	},
 /turf/open/floor/wood{
 	tag = "icon-wood-broken7";
 	icon_state = "wood-broken7"
@@ -15508,6 +15518,12 @@
 	},
 /turf/closed/wall,
 /area/maintenance/fpmaint)
+"aGv" = (
+/obj/machinery/clock,
+/turf/open/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/security/brig)
 "aGw" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -15517,6 +15533,21 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/fpmaint)
+"aGx" = (
+/obj/structure/chair/stool,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/clock,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "warning"
+	},
+/area/hallway/secondary/entry)
+"aGy" = (
+/obj/machinery/clock,
+/turf/open/floor/plasteel,
+/area/hallway/primary/port)
 "aGz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -15529,6 +15560,39 @@
 	},
 /turf/closed/wall,
 /area/security/detectives_office)
+"aGB" = (
+/obj/machinery/clock,
+/turf/open/floor/wood,
+/area/bridge/meeting_room)
+"aGC" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/clock,
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "arrival"
+	},
+/area/hallway/secondary/entry)
+"aGD" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/clock,
+/turf/open/floor/plasteel,
+/area/quartermaster/miningdock)
+"aGE" = (
+/obj/machinery/clock,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"aGF" = (
+/obj/machinery/clock{
+	desc = "An old fashioned device used to measure time.";
+	health = 9999;
+	icon_state = "clockold";
+	name = "bar clock";
+	pixel_y = 28
+	},
+/turf/open/floor/wood,
+/area/maintenance/incinerator)
 "aGG" = (
 /obj/item/weapon/nullrod/clown,
 /turf/open/floor/plasteel,
@@ -22452,6 +22516,7 @@
 	dir = 2;
 	network = list("SS13")
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -23319,6 +23384,7 @@
 	pixel_y = 9
 	},
 /obj/item/stack/packageWrap,
+/obj/machinery/clock,
 /turf/open/floor/wood,
 /area/library)
 "aWP" = (
@@ -24540,6 +24606,7 @@
 	c_tag = "Central Hallway North";
 	dir = 2
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "blue"
@@ -25219,6 +25286,13 @@
 "baT" = (
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/machinery/clock{
+	desc = "An old fashioned device used to measure time.";
+	health = 9999;
+	icon_state = "clockold";
+	name = "bar clock";
+	pixel_y = 28
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
@@ -28219,6 +28293,7 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -32835,6 +32910,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/machinery/clock,
 /turf/open/floor/wood,
 /area/crew_quarters/captain)
 "bsL" = (
@@ -33413,6 +33489,7 @@
 /area/hallway/primary/starboard)
 "bua" = (
 /obj/machinery/door/firedoor,
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	dir = 4;
 	icon_state = "whitecorner"
@@ -35890,6 +35967,7 @@
 /area/assembly/robotics)
 "bzB" = (
 /obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -36951,6 +37029,7 @@
 	c_tag = "Cargo Bay North"
 	},
 /obj/structure/closet/wardrobe/cargotech,
+/obj/machinery/clock,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "bBL" = (
@@ -39686,6 +39765,7 @@
 	desc = "Ian's bed! Looks comfy.";
 	name = "Ian's bed"
 	},
+/obj/machinery/clock,
 /mob/living/simple_animal/pet/dog/corgi/Ian{
 	dir = 8
 	},
@@ -42220,6 +42300,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "whiteyellowcorner"
@@ -44940,6 +45021,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	dir = 9;
 	icon_state = "warnwhite"
@@ -47343,6 +47425,7 @@
 /area/medical/cmo)
 "bVJ" = (
 /obj/machinery/suit_storage_unit/cmo,
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	icon_state = "barber"
 	},
@@ -52776,6 +52859,7 @@
 	desc = "A machine used to process slimes and retrieve their extract.";
 	name = "Slime Processor"
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -52992,6 +53076,7 @@
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 4
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel,
 /area/atmos)
 "cgA" = (
@@ -53705,6 +53790,7 @@
 "chS" = (
 /obj/item/weapon/bedsheet,
 /obj/structure/bed,
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -62324,6 +62410,7 @@
 /area/engine/chiefs_office)
 "czO" = (
 /obj/machinery/hologram/holopad,
+/obj/machinery/clock,
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "neutralfull"
@@ -67719,6 +67806,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/clock,
 /turf/open/floor/plasteel,
 /area/engine/port_engineering)
 "cKH" = (
@@ -84409,7 +84497,7 @@ bvo
 bwD
 bmV
 bjY
-bBo
+aGC
 bDg
 azA
 bzM
@@ -85151,7 +85239,7 @@ avo
 aIr
 aJu
 auw
-aLP
+aGx
 aNf
 azt
 aPG
@@ -93129,7 +93217,7 @@ aZZ
 aXp
 aYZ
 aRj
-bbL
+aGy
 bbL
 beJ
 bge
@@ -97013,7 +97101,7 @@ bDD
 bKk
 bPO
 bRr
-bSw
+aGD
 apx
 bUY
 bSw
@@ -97965,7 +98053,7 @@ aba
 abn
 aby
 adp
-aoR
+aGv
 aoR
 aoR
 aoR
@@ -101364,7 +101452,7 @@ bgs
 bnL
 bgs
 bri
-bsA
+aGB
 btA
 buN
 bvO
@@ -106522,7 +106610,7 @@ bNC
 bOV
 bOV
 bKz
-aZs
+aGE
 aZs
 boh
 bWt
@@ -111950,7 +112038,7 @@ bWv
 bWv
 czp
 czp
-cBj
+aGF
 cCy
 cDu
 cBm
