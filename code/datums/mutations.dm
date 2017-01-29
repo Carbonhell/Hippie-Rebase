@@ -282,6 +282,7 @@
 	if(..())
 		return
 	owner.resize = 0.8
+	owner.ventcrawler = 1
 	owner.update_transform()
 	owner.pass_flags |= PASSTABLE
 	owner.visible_message("<span class='danger'>[owner] suddenly shrinks!</span>", "<span class='notice'>Everything around you seems to grow..</span>")
@@ -290,6 +291,7 @@
 	if(..())
 		return
 	owner.resize = 1.25
+	owner.ventcrawler = 0
 	owner.update_transform()
 	owner.pass_flags &= ~PASSTABLE
 	owner.visible_message("<span class='danger'>[owner] suddenly grows!</span>", "<span class='notice'>Everything around you seems to shrink..</span>")
@@ -359,7 +361,7 @@
 	owner.adjust_fire_stacks(1)
 	owner.IgniteMob()
 	owner.dna.add_mutation(CLUWNEMUT)
-	
+
 /datum/mutation/human/tourettes
 	name = "Tourettes Syndrome"
 	quality = NEGATIVE

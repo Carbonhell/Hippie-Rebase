@@ -261,7 +261,7 @@ var/list/slime_colours = list("rainbow", "grey", "purple", "metal", "orange",
 
 /mob/living/simple_animal/slime/attack_hulk(mob/living/carbon/human/user)
 	if(user.a_intent == "harm")
-		adjustBruteLoss(15)
+		adjustBruteLoss(10)
 		discipline_slime(user)
 
 
