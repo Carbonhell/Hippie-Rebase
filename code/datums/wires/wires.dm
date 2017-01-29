@@ -142,6 +142,8 @@ var/list/wire_color_directory = list()
 	var/list/colors = list() // Dictionary of colors to wire.
 	var/list/assemblies = list() // List of attached assemblies.
 	var/randomize = 0 // If every instance of these wires should be random.
+	var/wire_cooldown = 1
+	var/wireused = 0
 
 /datum/wires/New(atom/holder)
 	..()
@@ -308,6 +310,8 @@ var/list/wire_color_directory = list()
 /datum/wires/ui_act(action, params)
 	if(..() || !interactable(usr))
 		return
+	if(wireused)
+		return
 	var/target_wire = params["wire"]
 	var/mob/living/L = usr
 	var/obj/item/I = L.get_active_hand()
@@ -315,15 +319,21 @@ var/list/wire_color_directory = list()
 		if("cut")
 			if(istype(I, /obj/item/weapon/wirecutters) || IsAdminGhost(usr))
 				playsound(holder, 'sound/items/Wirecutter.ogg', 20, 1)
+				wireused = 1
 				cut_color(target_wire)
 				. = TRUE
+				spawn(wire_cooldown)
+					wireused = 0
 			else
 				L << "<span class='warning'>You need wirecutters!</span>"
 		if("pulse")
 			if(istype(I, /obj/item/device/multitool) || IsAdminGhost(usr))
 				playsound(holder, 'sound/weapons/empty.ogg', 20, 1)
+				wireused = 1
 				pulse_color(target_wire)
 				. = TRUE
+				spawn(wire_cooldown)
+					wireused = 0
 			else
 				L << "<span class='warning'>You need a multitool!</span>"
 		if("attach")
@@ -336,9 +346,12 @@ var/list/wire_color_directory = list()
 				if(istype(I, /obj/item/device/assembly))
 					var/obj/item/device/assembly/A = I
 					if(A.attachable)
+						wireused = 1
 						if(!L.drop_item())
 							return
 						attach_assembly(target_wire, A)
 						. = TRUE
+						spawn(wire_cooldown)
+							wireused = 0
 					else
 						L << "<span class='warning'>You need an attachable assembly!</span>"
