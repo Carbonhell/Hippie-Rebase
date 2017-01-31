@@ -94,11 +94,15 @@ var/list/supply_positions = list(
 )
 
 
-var/list/civilian_positions = list(
+var/list/service_positions = list(
 	"Bartender",
 	"Botanist",
 	"Chef",
 	"Janitor",
+)
+
+var/list/civilian_positions = list(
+	"Captain",
 	"Librarian",
 	"Lawyer",
 	"Chaplain",

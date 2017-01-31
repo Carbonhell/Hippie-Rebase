@@ -6,6 +6,7 @@
 //Drone shells
 //Drones as hats
 
+var/list/existingShells = list()
 
 //DRONE SHELL
 /obj/item/drone_shell
@@ -18,9 +19,14 @@
 
 /obj/item/drone_shell/New()
 	..()
+	existingShells |= src
 	var/area/A = get_area(src)
 	if(A)
 		notify_ghosts("A drone shell has been created in \the [A.name].", source = src, action=NOTIFY_ATTACK)
+
+/obj/item/drone_shell/Destroy()
+	existingShells -= src
+	..()
 
 /obj/item/drone_shell/attack_ghost(mob/user)
 	if(jobban_isbanned(user,"drone"))
