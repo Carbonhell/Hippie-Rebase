@@ -5167,9 +5167,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/item/weapon/poster/legit{
-	pixel_y = 32
-	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "red"
@@ -5218,9 +5215,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
-	},
-/obj/item/weapon/poster/legit{
-	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5316,9 +5310,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/item/weapon/poster/legit{
-	pixel_y = 32
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5331,9 +5322,6 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	tag = "icon-manifold-r-f (NORTH)";
 	dir = 1
-	},
-/obj/item/weapon/poster/legit{
-	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -7146,9 +7134,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/item/weapon/poster/legit{
-	pixel_y = 32
-	},
 /turf/open/floor/plasteel/bar,
 /area/security/brig)
 "amB" = (
@@ -7580,10 +7565,6 @@
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 4
-	},
-/obj/item/weapon/poster/legit{
-	pixel_x = 32;
-	pixel_y = 0
 	},
 /turf/open/floor/plasteel/bar,
 /area/security/brig)
@@ -15529,6 +15510,23 @@
 	},
 /turf/closed/wall,
 /area/security/detectives_office)
+"aGC" = (
+/obj/structure/sign/poster/wanted,
+/turf/closed/wall,
+/area/security/main)
+"aGD" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/sign/poster/wanted,
+/turf/closed/wall,
+/area/security/brig)
+"aGE" = (
+/obj/structure/sign/poster/wanted,
+/turf/closed/wall,
+/area/crew_quarters/courtroom)
+"aGF" = (
+/obj/structure/sign/poster/wanted,
+/turf/closed/wall,
+/area/security/brig)
 "aGG" = (
 /obj/item/weapon/nullrod/clown,
 /turf/open/floor/plasteel,
@@ -26676,7 +26674,6 @@
 	dir = 1;
 	layer = 2.9
 	},
-/obj/item/weapon/nullrod/clown,
 /turf/open/floor/plasteel,
 /area/security/checkpoint2)
 "bey" = (
@@ -28470,7 +28467,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/item/weapon/nullrod/clown,
 /turf/open/floor/plasteel{
 	icon_state = "red"
 	},
@@ -29075,13 +29071,11 @@
 /area/rec_room)
 "bjZ" = (
 /obj/machinery/door/firedoor,
-/obj/item/weapon/nullrod/clown,
 /turf/open/floor/plasteel,
 /area/rec_room)
 "bka" = (
 /obj/structure/grille,
 /obj/structure/window/fulltile,
-/obj/item/weapon/nullrod/clown,
 /turf/open/floor/plating,
 /area/rec_room)
 "bkb" = (
@@ -37400,7 +37394,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/item/weapon/nullrod/clown,
 /turf/open/floor/plasteel{
 	icon_state = "red";
 	dir = 4
@@ -84649,7 +84642,7 @@ aPG
 aPG
 aPG
 aPG
-aGG
+aPG
 bex
 bfR
 azt
@@ -85164,7 +85157,7 @@ aYJ
 baq
 aSo
 aPF
-aGX
+aPF
 bCF
 bfP
 biz
@@ -85421,7 +85414,7 @@ bll
 aPG
 aXi
 aPG
-aGG
+aPG
 aNf
 bhd
 biA
@@ -85678,7 +85671,7 @@ awF
 bar
 aSo
 aPI
-aGY
+aPI
 bCG
 aPK
 biB
@@ -85936,10 +85929,10 @@ aSn
 aSo
 bdl
 bey
-aGZ
+bfS
 azt
 biC
-aHD
+bjY
 blz
 bmY
 bmV
@@ -86193,10 +86186,10 @@ aPG
 aPG
 aPG
 bey
-aGZ
-aHa
+bfS
+azt
 biD
-aHD
+bjY
 blA
 bmZ
 boS
@@ -101318,7 +101311,7 @@ abS
 agL
 aiS
 ahZ
-afI
+aGC
 aje
 ajK
 akm
@@ -102603,7 +102596,7 @@ afX
 agO
 agQ
 aib
-afI
+aGC
 ajh
 ajQ
 aqo
@@ -102872,8 +102865,8 @@ amB
 ano
 ant
 apb
-aoc
-aqt
+aGF
+aqq
 axX
 arH
 avd
@@ -103124,7 +103117,7 @@ akx
 aod
 alt
 alP
-adx
+aGD
 amA
 ann
 anH
@@ -103888,7 +103881,7 @@ aga
 aVb
 agm
 aib
-afI
+aGC
 ajn
 ajX
 akB
@@ -104659,7 +104652,7 @@ age
 agS
 ahx
 aik
-afI
+aGC
 ajo
 ajY
 atz
@@ -104671,8 +104664,8 @@ amG
 ans
 anL
 apg
-aoc
-aqx
+aGF
+aAn
 arg
 arM
 aDh
@@ -104925,7 +104918,7 @@ aiJ
 aiJ
 aiJ
 aot
-aot
+aGE
 aot
 aot
 aot
