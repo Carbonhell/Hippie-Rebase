@@ -1054,6 +1054,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/carpet,
 /area/security/hos)
 "abR" = (
@@ -10856,6 +10859,9 @@
 /turf/open/floor/carpet,
 /area/lawoffice)
 "atT" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "blue"
@@ -13479,6 +13485,13 @@
 	pixel_y = 0
 	},
 /obj/structure/mineral_door/wood,
+/obj/machinery/clock{
+	desc = "An old fashioned device used to measure time.";
+	health = 9999;
+	icon_state = "clockold";
+	name = "bar clock";
+	pixel_y = 29
+	},
 /turf/open/floor/wood,
 /area/maintenance/fpmaint2{
 	icon_state = "storage";
@@ -15138,6 +15151,32 @@
 	icon_state = "storage";
 	name = "Speakeasy"
 	})
+"aFp" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	tag = "icon-manifold-r-f (NORTH)";
+	dir = 1
+	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel{
+	dir = 1;
+	icon_state = "red"
+	},
+/area/security/brig)
+"aFq" = (
+/obj/structure/chair,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel/darkblue,
+/area/crew_quarters/courtroom)
+"aFr" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit)
 "aFs" = (
 /obj/structure/table/wood,
 /obj/item/weapon/storage/box/bodybags,
@@ -15147,15 +15186,67 @@
 /obj/structure/chair/stool,
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
+"aFu" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0;
+	tag = ""
+	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/carpet,
+/area/rec_room)
 "aFv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
+"aFw" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/wood,
+/area/bridge/meeting_room)
+"aFx" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/captain)
+"aFy" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
+"aFz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/miningdock)
 "aFA" = (
 /turf/open/floor/carpet,
 /area/security/detectives_office)
+"aFB" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"aFC" = (
+/obj/machinery/clock{
+	pixel_y = 25
+	},
+/turf/open/floor/plasteel{
+	icon_state = "white"
+	},
+/area/medical/virology)
 "aFD" = (
 /turf/closed/wall,
 /area/crew_quarters/sleep)
@@ -15232,6 +15323,16 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall,
 /area/crew_quarters/pool)
+"aFO" = (
+/obj/machinery/clock{
+	desc = "An old fashioned device used to measure time.";
+	health = 9999;
+	icon_state = "clockold";
+	name = "bar clock";
+	pixel_y = 29
+	},
+/turf/open/floor/wood,
+/area/maintenance/incinerator)
 "aFP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
@@ -17985,6 +18086,9 @@
 	c_tag = "Arrivals Shuttle South-East";
 	network = list("SS13","Prison")
 	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	dir = 1;
 	icon_state = "warning"
@@ -19898,6 +20002,9 @@
 	})
 "aPT" = (
 /obj/machinery/seed_extractor,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/construction{
 	name = "\improper Garden"
@@ -22474,6 +22581,9 @@
 	dir = 2;
 	network = list("SS13")
 	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -23346,6 +23456,9 @@
 "aWP" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/wood,
 /area/library)
 "aWQ" = (
@@ -25242,6 +25355,13 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/clock{
+	desc = "An old fashioned device used to measure time.";
+	health = 9999;
+	icon_state = "clockold";
+	name = "bar clock";
+	pixel_y = 29
+	},
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
 "baU" = (
@@ -25691,6 +25811,9 @@
 "bbV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
+	},
+/obj/machinery/clock{
+	pixel_y = 25
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
@@ -28239,6 +28362,9 @@
 /obj/machinery/microwave{
 	pixel_x = -3;
 	pixel_y = 6
+	},
+/obj/machinery/clock{
+	pixel_y = 25
 	},
 /turf/open/floor/plasteel{
 	icon_state = "cafeteria"
@@ -35908,6 +36034,9 @@
 /area/assembly/robotics)
 "bzB" = (
 /obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -39702,6 +39831,9 @@
 	anchored = 1;
 	desc = "Ian's bed! Looks comfy.";
 	name = "Ian's bed"
+	},
+/obj/machinery/clock{
+	pixel_y = 25
 	},
 /mob/living/simple_animal/pet/dog/corgi/Ian{
 	dir = 8
@@ -44957,6 +45089,9 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	dir = 9;
 	icon_state = "warnwhite"
@@ -47360,6 +47495,9 @@
 /area/medical/cmo)
 "bVJ" = (
 /obj/machinery/suit_storage_unit/cmo,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	icon_state = "barber"
 	},
@@ -48226,6 +48364,9 @@
 "bXx" = (
 /obj/item/weapon/storage/box/lights/mixed,
 /obj/item/weapon/storage/box/lights/mixed,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel,
 /area/janitor)
 "bXy" = (
@@ -52793,6 +52934,9 @@
 	desc = "A machine used to process slimes and retrieve their extract.";
 	name = "Slime Processor"
 	},
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	icon_state = "white"
 	},
@@ -53008,6 +53152,9 @@
 "cgz" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 4
+	},
+/obj/machinery/clock{
+	pixel_y = 25
 	},
 /turf/open/floor/plasteel,
 /area/atmos)
@@ -62341,6 +62488,9 @@
 /area/engine/chiefs_office)
 "czO" = (
 /obj/machinery/hologram/holopad,
+/obj/machinery/clock{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel{
 	dir = 2;
 	icon_state = "neutralfull"
@@ -67735,6 +67885,9 @@
 	cable_color = "yellow";
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/machinery/clock{
+	pixel_y = 25
 	},
 /turf/open/floor/plasteel,
 /area/engine/port_engineering)
@@ -84672,7 +84825,7 @@ bfR
 azt
 bix
 bjY
-blz
+aFu
 bmW
 boO
 bqy
@@ -95220,7 +95373,7 @@ bqY
 bqY
 byv
 axN
-bBL
+aFy
 bBL
 bBL
 bGN
@@ -97030,7 +97183,7 @@ bDD
 bKk
 bPO
 bRr
-bSw
+aFz
 apx
 bUY
 bSw
@@ -97473,7 +97626,7 @@ aci
 acF
 aoR
 aoc
-adZ
+aFp
 aeA
 aqo
 afL
@@ -101381,7 +101534,7 @@ bgs
 bnL
 bgs
 bri
-bsA
+aFw
 btA
 buN
 bvO
@@ -106219,7 +106372,7 @@ agW
 ahH
 aiq
 aot
-ajs
+aFq
 akg
 akE
 aVx
@@ -107035,7 +107188,7 @@ bmu
 bog
 bpV
 brq
-bsR
+aFx
 btN
 bsR
 bwd
@@ -107310,7 +107463,7 @@ bNE
 bKz
 bKz
 bKz
-aZs
+aFB
 aZs
 bVy
 bWv
@@ -111967,7 +112120,7 @@ bWv
 bWv
 czp
 czp
-cBj
+aFO
 cCy
 cDu
 cBm
@@ -115032,7 +115185,7 @@ bVI
 ceK
 cfR
 cgN
-chW
+aFC
 chX
 chW
 clA
@@ -124505,7 +124658,7 @@ bet
 beu
 beu
 bet
-bha
+aFr
 blw
 bmT
 boK
