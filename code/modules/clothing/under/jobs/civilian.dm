@@ -80,11 +80,8 @@
 			H.reindex_screams() // Use the more robust version
 		else
 			user.reindex_screams()
-
+		user.dna.add_mutation(CLUWNEMUT)
 	return ..()
-
-/obj/item/clothing/under/rank/clown/cluwne/dropped(mob/user)
-	qdel(src)
 
 
 /obj/item/clothing/under/rank/head_of_personnel
