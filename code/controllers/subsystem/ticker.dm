@@ -426,6 +426,46 @@ var/datum/subsystem/ticker/ticker
 		if (findtext("[handler]","auto_declare_completion_"))
 			call(mode, handler)(force_ending)
 
+	var/list/successfulCrew = list()
+
+	for(var/player in player_list)
+		var/mob/M = player
+
+		if(M.mind && M.mind.objectives)
+			if(locate(/datum/objective/crew) in M.mind.objectives)
+				for(var/datum/objective/crew/C in M.mind.objectives)
+					if(C.check_completion()) successfulCrew += M.name
+
+	world << "<b>The following crewmembers managed to complete all their crew objectives: <span class='greenannounce'>[jointext(successfulCrew, ", ")]</span></b>"
+
+	var/list/winners = list(departments[departmentPoints[1]])
+	var/winningDepartment = "The most efficient department[winners.len == 1 ? "" : "s"] this round"
+
+	for(var/i in 2 to departmentPoints.len)
+		if(departmentPoints[departmentPoints[i]] > departmentPoints[departmentPoints[i - 1]])
+			winners.Cut()
+			winners += departments[departmentPoints[i]]
+			winners[departments[departmentPoints[i]]] = departmentPoints[departmentPoints[i]]
+
+
+		else if(departmentPoints[departmentPoints[i]] == departmentPoints[departmentPoints[i-1]])
+			if(departmentPoints[departmentPoints[i]] < winners[winners[1]])
+				continue
+
+				winners += departments[departmentPoints[i]]
+				winners[departments[departmentPoints[i]]] = departmentPoints[departmentPoints[i]]
+
+ 	winningDepartment += "[winners.len == 1 ? "was" : "were"]<span class='greenannounce'>"
+
+ 	for(var/j in 1 to  winners.len)
+ 		winningDepartment += " [winners[j]]"
+
+ 		if(j != winners.len)
+ 			winningDepartment += " and"
+
+ 	winningDepartment += "</span> with [winners[winners[1]]] [winners[winners[1]] == 1 ? "point" : "points"]."
+ 	world << "<b>[winningDepartment]</b>"
+
 	//Print a list of antagonists to the server log
 	var/list/total_antagonists = list()
 	//Look into all mobs in world, dead or alive
