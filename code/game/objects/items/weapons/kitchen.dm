@@ -143,7 +143,6 @@
 /obj/item/weapon/kitchen/knife/safety
 	name = "dull plastic knife"
 	icon_state = "safety_knife"
-	item_state = "safety_knife"
 	desc = "Duller than dull, you have no idea how it can even slice food."
 	force = 2
 	throwforce = 1
