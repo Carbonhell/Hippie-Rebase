@@ -297,7 +297,6 @@
 	anchored = 1
 	use_power = 0
 	var/health = 30
-	pixel_y = 25
 
 /obj/machinery/clock/take_damage(damage, damage_type = BRUTE, sound_effect = 1)
 	switch(damage_type)
