@@ -89,8 +89,13 @@
 	burn_state = -1
 	flags = NODROP
 
-/obj/item/clothing/shoes/clown_shoes/cluwne/dropped(mob/user)
-	qdel(src)
+/obj/item/clothing/shoes/clown_shoes/cluwne/equipped(mob/user, slot)
+	if(!ishuman(user))
+		return
+	if(slot == slot_shoes)
+		var/mob/living/carbon/human/H = user
+		H.dna.add_mutation(CLUWNEMUT)
+	return
 		
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"

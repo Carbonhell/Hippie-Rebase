@@ -102,9 +102,6 @@
 		var/mob/living/carbon/human/H = user
 		H.dna.add_mutation(CLUWNEMUT)
 	return
-
-/obj/item/clothing/mask/gas/clown_hat/cluwne/dropped(mob/user)
-	qdel(src)
 		
 /obj/item/clothing/mask/gas/sexyclown
 	name = "sexy-clown wig and mask"
