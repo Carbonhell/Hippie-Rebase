@@ -175,6 +175,9 @@
 	if(length(t) < 1)		//No input means nothing needs to be parsed
 		return
 
+	if(findtext(t, "\[sign\]"))
+		feedback_add_details("paperwork", "SIGN|[user.real_name]")
+
 //	t = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
 
 	t = replacetext(t, "\[center\]", "<center>")

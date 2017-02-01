@@ -142,6 +142,8 @@ var/list/wire_color_directory = list()
 	var/list/colors = list() // Dictionary of colors to wire.
 	var/list/assemblies = list() // List of attached assemblies.
 	var/randomize = 0 // If every instance of these wires should be random.
+	var/wire_cooldown = 1
+	var/wireused = FALSE
 
 /datum/wires/New(atom/holder)
 	..()
@@ -308,9 +310,12 @@ var/list/wire_color_directory = list()
 /datum/wires/ui_act(action, params)
 	if(..() || !interactable(usr))
 		return
+	if(wireused)
+		return
 	var/target_wire = params["wire"]
 	var/mob/living/L = usr
 	var/obj/item/I = L.get_active_hand()
+	wireused = TRUE
 	switch(action)
 		if("cut")
 			if(istype(I, /obj/item/weapon/wirecutters) || IsAdminGhost(usr))
@@ -342,3 +347,6 @@ var/list/wire_color_directory = list()
 						. = TRUE
 					else
 						L << "<span class='warning'>You need an attachable assembly!</span>"
+	spawn(wire_cooldown)
+		wireused = FALSE
+

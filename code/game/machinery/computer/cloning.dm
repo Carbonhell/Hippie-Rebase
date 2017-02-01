@@ -332,6 +332,9 @@
 				records.Remove(C)
 				if(active_record == C)
 					active_record = null
+
+				feedback_inc("medicalobjective", 1)
+
 				menu = 1
 			else
 				temp = "[C.fields["name"]] => <font class='bad'>Initialisation failure.</font>"

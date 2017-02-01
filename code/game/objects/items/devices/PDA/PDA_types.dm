@@ -13,8 +13,9 @@
 			if (ishuman(M) && (M.real_name != src.owner))
 				if (istype(src.cartridge, /obj/item/weapon/cartridge/clown))
 					var/obj/item/weapon/cartridge/clown/cart = src.cartridge
-					if(cart.honk_charges < 5)
-						cart.honk_charges++
+					cart.honk_charges++
+
+					feedback_add_details("slips", "[AM]|[type]")
 
 
 // Special AI/pAI PDAs that cannot explode.
@@ -176,9 +177,9 @@
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. This is model is a special edition with a transparent case."
 	note = "Congratulations, you have chosen the Thinktronic 5230 Personal Data Assistant Deluxe Special Max Turbo Limited Edition!"
 
-/obj/item/device/pda/cook
-	name = "cook PDA"
-	icon_state = "pda-cook"
+/obj/item/device/pda/chef
+	name = "chef PDA"
+	icon_state = "pda-chef"
 
 /obj/item/device/pda/bar
 	name = "bartender PDA"

@@ -43,8 +43,8 @@
 
 
 /obj/item/clothing/under/rank/chef
-	name = "cook's suit"
-	desc = "A suit which is given only to the most <b>hardcore</b> cooks in space."
+	name = "chef's suit"
+	desc = "A suit which is given only to the most <b>hardcore</b> chefs in space."
 	icon_state = "chef"
 	item_color = "chef"
 	alt_covers_chest = 1
@@ -80,13 +80,10 @@
 			H.reindex_screams() // Use the more robust version
 		else
 			user.reindex_screams()
-
+		user.dna.add_mutation(CLUWNEMUT)
 	return ..()
 
-/obj/item/clothing/under/rank/clown/cluwne/dropped(mob/user)
-	qdel(src)
-	
-	
+
 /obj/item/clothing/under/rank/head_of_personnel
 	desc = "It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\"."
 	name = "head of personnel's jumpsuit"

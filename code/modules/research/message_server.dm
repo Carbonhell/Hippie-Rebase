@@ -367,3 +367,20 @@ var/obj/machinery/blackbox_recorder/blackbox
 	if (!FV) return
 
 	FV.add_details(details)
+
+/proc/detailsToList(variable, indexDelimiter, valueDelimiter)
+	var/datum/feedback_variable/F = blackbox.find_feedback_datum(variable)
+	var/detailString = F.details
+
+	var/list/indices = splittext(detailString, indexDelimiter)
+	var/list/results = list()
+
+	for(var/i in indices)
+		var/list/tokens = splittext(i, valueDelimiter)
+
+		var/index = tokens[1]
+		var/value = text2num(tokens[2])
+		if(!value) value = 1
+
+		results[index] += value
+	return results

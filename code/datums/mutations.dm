@@ -256,7 +256,7 @@
 		else
 			new_mob = randmuti(owner)
 	else
-		new_mob = randmutg(owner)
+		new_mob = randmutvg(owner)
 	if(new_mob && ismob(new_mob))
 		owner = new_mob
 	. = owner

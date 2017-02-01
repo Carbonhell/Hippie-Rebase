@@ -2093,7 +2093,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/black,
@@ -2131,7 +2131,7 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "aep" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -3790,13 +3790,13 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "ahm" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -8240,7 +8240,7 @@
 	},
 /area/medical/virology)
 "apm" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -8445,7 +8445,7 @@
 /turf/open/floor/plasteel/floorgrime,
 /area/toxins/misc_lab)
 "apH" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -12879,7 +12879,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/crew_quarters/hor)
 "ayl" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
@@ -15362,7 +15362,7 @@
 	name = "Security Post - Research Division"
 	})
 "aDf" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -15878,7 +15878,7 @@
 	},
 /area/medical/genetics)
 "aEd" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Geneticist"
 	},
@@ -16854,7 +16854,7 @@
 	name = "Medbay Central"
 	})
 "aGd" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
@@ -16862,7 +16862,7 @@
 	name = "Medbay Central"
 	})
 "aGe" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 1
 	},
 /obj/item/device/radio/intercom{
@@ -19250,7 +19250,7 @@
 /turf/open/floor/plasteel/white,
 /area/toxins/explab)
 "aKD" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /obj/effect/landmark/start{
 	name = "Scientist"
 	},
@@ -20987,7 +20987,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
@@ -21393,7 +21393,7 @@
 /turf/open/floor/plasteel/barber,
 /area/medical/cmo)
 "aPc" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -22157,7 +22157,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -23595,7 +23595,7 @@
 	},
 /area/security/checkpoint/medical)
 "aTC" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/withwheels/office/light,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay{
 	name = "Medbay Central"
@@ -23609,7 +23609,7 @@
 	pixel_x = 26;
 	req_access_txt = "5"
 	},
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -24008,7 +24008,7 @@
 /turf/open/floor/plasteel,
 /area/medical/chemistry)
 "aUD" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -24019,7 +24019,7 @@
 	},
 /area/medical/chemistry)
 "aUE" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -24910,7 +24910,7 @@
 /area/security/checkpoint/medical)
 "aWx" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -26405,7 +26405,7 @@
 /turf/open/floor/plasteel,
 /area/atmos)
 "aZr" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/structure/cable{
@@ -27723,7 +27723,7 @@
 	},
 /area/security/checkpoint/engineering)
 "bbY" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -28604,13 +28604,13 @@
 	name = "Medical Maintenance"
 	})
 "bef" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel/vault{
 	dir = 5
 	},
 /area/library)
 "beg" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel/black,
 /area/library)
 "beh" = (
@@ -28802,7 +28802,7 @@
 /turf/open/floor/plasteel,
 /area/engine/gravity_generator)
 "beF" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 4
 	},
 /obj/item/device/radio/intercom{
@@ -29089,7 +29089,7 @@
 /turf/open/floor/plating,
 /area/library)
 "bfi" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel/vault{
@@ -29106,7 +29106,7 @@
 /turf/open/floor/plasteel/black,
 /area/library)
 "bfk" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel/vault{
@@ -29114,7 +29114,7 @@
 	},
 /area/library)
 "bfl" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /turf/open/floor/plasteel/black,
@@ -29127,7 +29127,7 @@
 	},
 /area/library)
 "bfn" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/camera{
@@ -29538,7 +29538,7 @@
 	},
 /area/library)
 "bgm" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/vault{
@@ -32331,7 +32331,7 @@
 /turf/open/floor/plasteel/neutral,
 /area/engine/chiefs_office)
 "bmC" = (
-/obj/structure/chair/office/light{
+/obj/structure/chair/withwheels/office/light{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -32990,7 +32990,7 @@
 /turf/open/floor/wood,
 /area/library)
 "bnU" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -33808,7 +33808,7 @@
 	},
 /area/library)
 "bpF" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
@@ -36306,7 +36306,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "buK" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -38091,7 +38091,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -39209,7 +39209,7 @@
 /turf/open/floor/plasteel/black,
 /area/crew_quarters/heads)
 "bAv" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -39561,7 +39561,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
 "bBd" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/landmark/start{
 	name = "Detective"
@@ -39802,7 +39802,7 @@
 	scrub_N2O = 0;
 	scrub_Toxins = 0
 	},
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -40944,7 +40944,7 @@
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
 "bDP" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Quartermaster"
 	},
@@ -41005,7 +41005,7 @@
 	name = "Security Post - Cargo"
 	})
 "bDV" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -42508,7 +42508,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
 "bGO" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -45071,7 +45071,7 @@
 /turf/open/floor/wood,
 /area/lawoffice)
 "bLv" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -46493,7 +46493,7 @@
 /turf/open/floor/plasteel,
 /area/security/main)
 "bOg" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/effect/landmark/start{
 	name = "Head of Security"
 	},
@@ -47750,7 +47750,7 @@
 /turf/open/floor/carpet,
 /area/security/hos)
 "bQO" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/effect/landmark/start{
@@ -49064,7 +49064,7 @@
 	name = "Customs"
 	})
 "bTB" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -51742,7 +51742,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/warden)
 "bYV" = (
-/obj/structure/chair/office/dark{
+/obj/structure/chair/withwheels/office/dark{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -54677,7 +54677,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -54747,7 +54747,7 @@
 	name = "\improper Telecoms Control Room"
 	})
 "cfz" = (
-/obj/structure/chair/office/dark,
+/obj/structure/chair/withwheels/office/dark,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer{
 	name = "\improper Telecoms Control Room"
