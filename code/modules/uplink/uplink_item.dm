@@ -586,7 +586,7 @@ var/list/uplink_items = list() // Global list so we only initialize this once.
 	desc = "A massive and incredibly deadly military-grade exosuit. Features long-range targetting, thrust vectoring, \
 			and deployable smoke."
 	item = /obj/mecha/combat/marauder/mauler/loaded
-	cost = 120
+	cost = 140
 
 // Stealthy Weapons
 /datum/uplink_item/stealthy_weapons
