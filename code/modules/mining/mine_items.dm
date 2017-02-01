@@ -56,7 +56,7 @@
 	desc = "Used to call and send the mining shuttle."
 	circuit = /obj/item/weapon/circuitboard/computer/mining_shuttle
 	shuttleId = "mining"
-	possible_destinations = "mining_home;mining_away;landing_zone_dock"
+	possible_destinations = "mining_home;mining_away;landing_zone_dock;landing_zone_dock_old"
 	no_destination_swap = 1
 	var/global/list/dumb_rev_heads = list()
 
@@ -726,3 +726,6 @@ interface with the mining shuttle at the landing site if a mobile beacon is also
 
 /obj/structure/mining_shuttle_beacon/attack_robot(mob/user)
 	return (attack_hand(user)) //So borgies can help
+	
+/obj/structure/mining_shuttle_beacon/old
+	shuttle_ID = "landing_zone_dock_old"
