@@ -140,6 +140,14 @@
 	origin_tech = "biotech=3;combat=2"
 	attack_verb = list("shanked", "shivved")
 
+/obj/item/weapon/kitchen/knife/safety
+	name = "dull plastic knife"
+	icon_state = "safety_knife"
+	item_state = "safety_knife"
+	desc = "Duller than dull, you have no idea how it can even slice food."
+	force = 2
+	throwforce = 1
+
 /obj/item/weapon/kitchen/rollingpin
 	name = "rolling pin"
 	desc = "Used to knock out the Bartender."
@@ -150,5 +158,12 @@
 	throw_range = 7
 	w_class = 3
 	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "whacked")
+
+/obj/item/weapon/kitchen/rollingpin/safety
+	name = "plastic rolling pin"
+	desc = "Lightweight, definitely not usable to knock out the Warden."
+	icon_state = "safety_rolling_pin"
+	force = 2
+	throwforce = 1
 
 /* Trays  moved to /obj/item/weapon/storage/bag */

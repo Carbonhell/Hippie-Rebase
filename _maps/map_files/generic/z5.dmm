@@ -1469,6 +1469,8 @@
 /obj/item/weapon/reagent_containers/food/condiment/pack/ketchup,
 /obj/item/weapon/reagent_containers/food/drinks/beer,
 /obj/item/weapon/reagent_containers/food/drinks/beer,
+/obj/item/weapon/kitchen/rollingpin/safety,
+/obj/item/weapon/kitchen/knife/safety,
 /turf/open/floor/plasteel/blueyellow,
 /area/mine/permaprison/recreation)
 "eb" = (
@@ -1584,6 +1586,8 @@
 "ep" = (
 /obj/structure/table,
 /obj/item/weapon/storage/box/drinkingglasses,
+/obj/item/weapon/kitchen/knife/safety,
+/obj/item/weapon/kitchen/rollingpin/safety,
 /turf/open/floor/plasteel/blueyellow,
 /area/mine/permaprison/recreation)
 "eq" = (
@@ -9205,6 +9209,10 @@
 	},
 /turf/open/space,
 /area/space)
+"uZ" = (
+/obj/machinery/mineral/equipment_vendor/prison,
+/turf/open/floor/plasteel,
+/area/mine/permaprison/recreation)
 
 (1,1,1) = {"
 aa
@@ -28049,7 +28057,7 @@ ia
 iB
 fw
 dj
-dj
+uZ
 kx
 cr
 lj
