@@ -15458,6 +15458,10 @@
 	icon_state = "storage";
 	name = "Speakeasy"
 	})
+"aGp" = (
+/obj/structure/sign/poster/legit,
+/turf/closed/wall,
+/area/security/brig)
 "aGq" = (
 /obj/structure/rack{
 	dir = 4
@@ -15489,6 +15493,10 @@
 	},
 /turf/closed/wall,
 /area/maintenance/fpmaint)
+"aGv" = (
+/obj/structure/sign/poster/legit,
+/turf/closed/wall,
+/area/security/main)
 "aGw" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -15498,6 +15506,18 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/fpmaint)
+"aGx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/sign/poster/legit,
+/turf/closed/wall,
+/area/security/brig)
+"aGy" = (
+/obj/structure/sign/poster,
+/turf/closed/wall,
+/area/maintenance/fpmaint2{
+	icon_state = "storage";
+	name = "Speakeasy"
+	})
 "aGz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -15510,13 +15530,17 @@
 	},
 /turf/closed/wall,
 /area/security/detectives_office)
+"aGB" = (
+/obj/structure/sign/poster/legit,
+/turf/closed/wall,
+/area/security/checkpoint2)
 "aGC" = (
 /obj/structure/sign/poster/wanted,
 /turf/closed/wall,
 /area/security/main)
 "aGD" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/sign/poster/wanted,
+/obj/structure/sign/poster/legit,
 /turf/closed/wall,
 /area/security/brig)
 "aGE" = (
@@ -84892,13 +84916,13 @@ aVN
 azt
 aPG
 aQT
-aSo
+aGB
 aSn
 aSo
 aXi
 aSo
 aSn
-aSo
+aGB
 bdk
 bex
 bfR
@@ -85920,13 +85944,13 @@ aNg
 aOp
 aPG
 aQW
-aSo
+aGB
 aSn
 aSo
 aXi
 aSo
 aSn
-aSo
+aGB
 bdl
 bey
 bfS
@@ -92330,7 +92354,7 @@ auI
 auI
 auI
 azG
-auI
+aGy
 aBU
 aCR
 auI
@@ -92583,7 +92607,7 @@ aoG
 aaa
 aii
 auI
-auI
+aGy
 axs
 ayK
 azH
@@ -94389,7 +94413,7 @@ apO
 avw
 aBZ
 aBZ
-auI
+aGy
 aFg
 auI
 aDR
@@ -95155,10 +95179,10 @@ auI
 auI
 awr
 awr
-auI
+aGy
 apU
 azO
-auI
+aGy
 auI
 auI
 auI
@@ -98219,7 +98243,7 @@ aoc
 aoc
 aoc
 aoc
-aoc
+aGp
 aee
 aeE
 aqo
@@ -101311,7 +101335,7 @@ abS
 agL
 aiS
 ahZ
-aGC
+aGv
 aje
 ajK
 akm
@@ -102596,7 +102620,7 @@ afX
 agO
 agQ
 aib
-aGC
+aGv
 ajh
 ajQ
 aqo
@@ -102865,7 +102889,7 @@ amB
 ano
 ant
 apb
-aGF
+aGp
 aqq
 axX
 arH
@@ -103114,7 +103138,7 @@ afI
 ajj
 ajS
 akx
-aod
+aGx
 alt
 alP
 aGD
@@ -103881,7 +103905,7 @@ aga
 aVb
 agm
 aib
-aGC
+aGv
 ajn
 ajX
 akB
@@ -104399,7 +104423,7 @@ aiI
 ajp
 ajZ
 akC
-aoc
+aGp
 alx
 alT
 amm
@@ -104645,14 +104669,14 @@ acz
 abY
 adt
 adM
-afI
+aGv
 aeY
 aUv
 age
 agS
 ahx
 aik
-aGC
+aGv
 ajo
 ajY
 atz
@@ -104664,7 +104688,7 @@ amG
 ans
 anL
 apg
-aGF
+aGp
 aAn
 arg
 arM
@@ -104918,7 +104942,7 @@ aiJ
 aiJ
 aiJ
 aot
-aGE
+aot
 aot
 aot
 aot

@@ -988,6 +988,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/seeds/chili,
 /turf/open/floor/plasteel/greenblue,
 /area/mine/permaprison/recreation)
 "cL" = (
@@ -1004,6 +1005,7 @@
 /area/mine/permaprison/recreation)
 "cO" = (
 /obj/item/weapon/storage/bag/plants,
+/obj/item/seeds/cherry,
 /turf/open/floor/plasteel/greenblue,
 /area/mine/permaprison/recreation)
 "cP" = (
@@ -1105,6 +1107,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/item/seeds/banana,
 /turf/open/floor/grass,
 /area/mine/permaprison/recreation)
 "da" = (
@@ -1163,6 +1166,13 @@
 /obj/item/weapon/reagent_containers/glass/bottle/nutrient/l4z,
 /obj/item/weapon/reagent_containers/glass/bottle/nutrient/rh,
 /obj/item/weapon/reagent_containers/glass/bottle/nutrient/rh,
+/obj/item/seeds/carrot,
+/obj/item/seeds/eggplant,
+/obj/item/seeds/cannabis,
+/obj/item/seeds/grape,
+/obj/item/seeds/potato,
+/obj/item/seeds/corn,
+/obj/item/seeds/sugarcane,
 /turf/open/floor/plasteel,
 /area/mine/permaprison/recreation)
 "dj" = (
@@ -1186,8 +1196,8 @@
 /obj/item/weapon/reagent_containers/glass/bowl,
 /obj/item/weapon/reagent_containers/glass/bowl,
 /obj/effect/spawner/lootdrop/plants{
-	lootcount = 5;
-	name = "5plant_spawner"
+	lootcount = 10;
+	name = "10plant_spawner"
 	},
 /turf/open/floor/plasteel,
 /area/mine/permaprison/recreation)
@@ -1348,6 +1358,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/microwave,
+/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/plasteel/blueyellow,
 /area/mine/permaprison/recreation)
 "dK" = (
@@ -1369,6 +1380,7 @@
 	dir = 8;
 	network = list("perma")
 	},
+/mob/living/simple_animal/mouse/white,
 /turf/open/floor/plasteel/freezer,
 /area/mine/permaprison/recreation)
 "dN" = (
@@ -1469,6 +1481,8 @@
 /obj/item/weapon/reagent_containers/food/condiment/pack/ketchup,
 /obj/item/weapon/reagent_containers/food/drinks/beer,
 /obj/item/weapon/reagent_containers/food/drinks/beer,
+/obj/item/weapon/kitchen/rollingpin/safety,
+/obj/item/weapon/kitchen/knife/safety,
 /turf/open/floor/plasteel/blueyellow,
 /area/mine/permaprison/recreation)
 "eb" = (
@@ -1584,6 +1598,9 @@
 "ep" = (
 /obj/structure/table,
 /obj/item/weapon/storage/box/drinkingglasses,
+/obj/item/weapon/kitchen/knife/safety,
+/obj/item/weapon/kitchen/rollingpin/safety,
+/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/plasteel/blueyellow,
 /area/mine/permaprison/recreation)
 "eq" = (
@@ -1594,6 +1611,7 @@
 /obj/structure/table,
 /obj/item/weapon/storage/box/donkpockets,
 /obj/item/weapon/reagent_containers/glass/beaker,
+/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/plasteel/blueyellow,
 /area/mine/permaprison/recreation)
 "es" = (
@@ -1696,6 +1714,7 @@
 	dir = 4
 	},
 /obj/structure/table,
+/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/plasteel,
 /area/mine/permaprison/recreation)
 "eG" = (
@@ -1763,6 +1782,7 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
+/mob/living/simple_animal/mouse/brown,
 /turf/open/floor/plating,
 /area/mine/permaprison/recreation)
 "eO" = (
@@ -2315,6 +2335,7 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
+/mob/living/simple_animal/mouse/gray,
 /turf/open/floor/plasteel,
 /area/mine/permaprison/recreation)
 "fT" = (
@@ -2706,6 +2727,7 @@
 "gK" = (
 /obj/structure/table/wood,
 /obj/item/weapon/lighter,
+/obj/item/seeds/coffee,
 /turf/open/floor/wood,
 /area/mine/permaprison/recreation)
 "gL" = (
@@ -3117,6 +3139,7 @@
 /area/mine/permaprison/recreation)
 "hx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/mob/living/simple_animal/mouse/brown,
 /turf/open/floor/wood,
 /area/mine/permaprison/recreation)
 "hy" = (
@@ -3573,6 +3596,7 @@
 "iv" = (
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/mob/living/simple_animal/mouse/white,
 /turf/open/floor/plasteel,
 /area/mine/permaprison)
 "iw" = (
@@ -4882,6 +4906,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/mob/living/simple_animal/mouse/brown,
 /turf/open/floor/plating,
 /area/mine/permaprison)
 "lc" = (
@@ -5005,6 +5030,7 @@
 /area/mine/permaprison)
 "lr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/mob/living/simple_animal/mouse/gray,
 /turf/open/floor/plasteel,
 /area/mine/permaprison)
 "ls" = (
@@ -5257,6 +5283,7 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
+/mob/living/simple_animal/mouse/gray,
 /turf/open/floor/plasteel,
 /area/mine/permaprison/recreation)
 "ma" = (
@@ -9205,6 +9232,83 @@
 	},
 /turf/open/space,
 /area/space)
+"vj" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/mob/living/simple_animal/mouse/brown,
+/turf/open/floor/plasteel,
+/area/mine/permaprison/recreation)
+"vi" = (
+/obj/machinery/mineral/equipment_vendor/prison,
+/turf/open/floor/plasteel,
+/area/mine/permaprison/recreation)
+"vh" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/mob/living/simple_animal/mouse/gray,
+/turf/open/floor/plasteel,
+/area/mine/permaprison/recreation)
+"vg" = (
+/mob/living/simple_animal/mouse/white,
+/turf/open/floor/plasteel,
+/area/mine/permaprison)
+"vf" = (
+/obj/item/seeds/glowshroom,
+/turf/open/floor/plasteel/freezer,
+/area/mine/permaprison/recreation)
+"ve" = (
+/mob/living/simple_animal/mouse/white,
+/turf/open/floor/plasteel/blueyellow,
+/area/mine/permaprison/recreation)
+"vd" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/mob/living/simple_animal/mouse/white,
+/turf/open/floor/plasteel/freezer,
+/area/mine/permaprison/recreation)
+"vc" = (
+/obj/item/seeds/tea,
+/obj/item/seeds/watermelon,
+/turf/open/floor/plasteel,
+/area/mine/permaprison/recreation)
+"vb" = (
+/obj/machinery/hydroponics/soil,
+/obj/structure/window/reinforced,
+/obj/item/seeds/pumpkin,
+/turf/open/floor/grass,
+/area/mine/permaprison/recreation)
+"va" = (
+/obj/machinery/hydroponics/soil,
+/obj/structure/window/reinforced,
+/obj/item/seeds/wheat,
+/turf/open/floor/grass,
+/area/mine/permaprison/recreation)
+"uZ" = (
+/obj/machinery/hydroponics/soil,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/item/seeds/amanita,
+/turf/open/floor/grass,
+/area/mine/permaprison/recreation)
 
 (1,1,1) = {"
 aa
@@ -22634,7 +22738,7 @@ aa
 cr
 cx
 cK
-cX
+va
 di
 ds
 dD
@@ -22891,7 +22995,7 @@ aa
 cs
 cy
 cL
-cX
+vb
 dj
 dj
 dj
@@ -23403,11 +23507,11 @@ aa
 aa
 aa
 cs
-cz
+uZ
 cN
 cX
 dk
-dj
+vc
 dF
 dV
 dV
@@ -25208,7 +25312,7 @@ cT
 dj
 dy
 dy
-dy
+ve
 eq
 cr
 fe
@@ -25472,7 +25576,7 @@ fe
 dj
 eD
 dB
-gF
+vg
 gY
 dB
 hV
@@ -26000,7 +26104,7 @@ lg
 dG
 dG
 lQ
-mb
+vj
 mu
 dB
 mM
@@ -26235,7 +26339,7 @@ aa
 cr
 dp
 dA
-dL
+vd
 dL
 et
 eK
@@ -26494,7 +26598,7 @@ dq
 dq
 dM
 ec
-ec
+vf
 cr
 fh
 fw
@@ -27790,7 +27894,7 @@ gm
 hz
 ia
 iB
-fw
+vh
 jJ
 cr
 cr
@@ -28049,7 +28153,7 @@ ia
 iB
 fw
 dj
-dj
+vi
 kx
 cr
 lj
