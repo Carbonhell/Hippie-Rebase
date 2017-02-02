@@ -5,7 +5,8 @@
 		var/hulk_verb = pick("smash","pummel")
 		visible_message("<span class='danger'>[user] has [hulk_verb]ed [src]!</span>", \
 								"<span class='userdanger'>[user] has [hulk_verb]ed [src]!</span>")
-		adjustBruteLoss(15)
+		Weaken(4)
+		adjustBruteLoss(5)
 		return 1
 
 /mob/living/carbon/human/attack_hand(mob/living/carbon/human/M)
