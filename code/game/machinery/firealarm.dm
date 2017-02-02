@@ -288,3 +288,45 @@
 	for(var/area/RA in A.related)
 		RA.partyalert()
 	return
+
+/obj/machinery/clock
+	name = "space clock"
+	desc = "A futuristic device used to measure time."
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "clock"
+	anchored = 1
+	use_power = 0
+	var/health = 30
+
+/obj/machinery/clock/take_damage(damage, damage_type = BRUTE, sound_effect = 1)
+	switch(damage_type)
+		if(BRUTE)
+			if(sound_effect)
+				if(damage)
+					playsound(loc, 'sound/weapons/smash.ogg', 50, 1)
+				else
+					playsound(loc, 'sound/weapons/tap.ogg', 50, 1)
+		if(BURN)
+			if(sound_effect)
+				playsound(src.loc, 'sound/items/Welder.ogg', 100, 1)
+		else
+			return
+	if(!(stat & BROKEN))
+		health -= damage
+		if(health <= 0)
+			stat |= BROKEN
+			update_icon()
+			playsound(src, "shatter", 30, 1)
+
+/obj/machinery/clock/update_icon()
+	if((stat & BROKEN))
+		icon_state = "brokenclock"
+	else
+		icon_state = "clock"
+
+/obj/machinery/clock/examine()
+	..()
+	if((stat & BROKEN))
+		usr << "<span class='warning'>It appears to be broken!</span>"
+	else
+		usr << "The current time of the station is [worldtime2text()], Space Standard Time. This means that the shift has been going on for [round(world.time / 600)] minutes."
