@@ -268,8 +268,9 @@ Pipelines + Other Objects -> Pipe network
 	spawn(1)
 		user.canmove = 1
 
-
 /obj/machinery/atmospherics/AltClick(mob/living/L)
+	if(istype(mob/dead/D))
+		return
 	if(is_type_in_list(src, ventcrawl_machinery))
 		L.handle_ventcrawl(src)
 		return
